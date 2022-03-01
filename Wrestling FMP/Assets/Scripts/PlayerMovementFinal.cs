@@ -1,6 +1,8 @@
 using UnityEngine;
+using System.Linq;
 using System.Collections; 
 using UnityEngine.InputSystem;
+using static UnityEngine.InputSystem.InputAction; 
 
 public class PlayerMovementFinal : MonoBehaviour
 {
@@ -22,6 +24,10 @@ public class PlayerMovementFinal : MonoBehaviour
     AnimationEvents animationEvents;
     Animator animator; 
     Vector3 lastVelocity;
+    private PlayerInput playerInput;
+    private Mover mover;
+    public GameObject[] Tags1;
+    public float pinDistance = 6f; 
 
     [SerializeField] public GameObject neutral;
 
@@ -29,10 +35,28 @@ public class PlayerMovementFinal : MonoBehaviour
 
     [SerializeField] GameObject strong;
 
+    [SerializeField] GameObject Pin;
+
+    [SerializeField] private int playerIndex = 0;
+    private void Awake()
+    {
+        //playerInput = GetComponent<PlayerInput>();
+        //var movers = FindObjectOfType<Mover>(); 
+        //var index = playerInput.playerIndex;
+        //mover = movers.FirstOrDefault(m => m.GetPlayerIndex() == index);  
+    }
+
+    public int GetPlayerIndex()
+    {
+        return playerIndex; 
+    }
+
     void Start()
     {
+        
         animationEvents = GetComponent<AnimationEvents>();
-        animator = GetComponent<Animator>(); 
+        animator = GetComponent<Animator>();
+        Tags1 = GameObject.FindGameObjectsWithTag("Enemy"); 
     }
 
     void Update()
@@ -162,6 +186,22 @@ public class PlayerMovementFinal : MonoBehaviour
         speed = baseSpeed;
         isDashing = false; 
     }
+
+    public void Pinning(InputAction.CallbackContext context)
+    {
+        if (context.performed && GetComponent<AnimationEvents>().isAttacking == false && IsGrounded())
+        {
+            Debug.Log("Pressed Pin Button button");
+            foreach(GameObject go in Tags1)
+            {
+                if (Vector3.Distance(transform.position, go.transform.position) < pinDistance)
+                {
+                    Debug.Log("Pin Worked"); 
+                }
+            }
+        }
+    }
+
 
     private void OnCollisionEnter(Collision collision)
     {

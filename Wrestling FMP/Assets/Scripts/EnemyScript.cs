@@ -15,12 +15,15 @@ public class EnemyScript : MonoBehaviour
     {
         
     }
+ 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "Neutral")
+        Debug.Log("COLLISIOn!");
+
+        if (collision.gameObject.name == "Neutral")
         {
-            Debug.Log("I was hit by Neutral"); 
+            Debug.Log("I was hit by Neutral");
         }
         if (collision.gameObject.name == "Special")
         {
