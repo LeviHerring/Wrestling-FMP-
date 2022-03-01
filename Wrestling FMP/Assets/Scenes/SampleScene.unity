@@ -923,14 +923,18 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  isFacingRight: 1
   startDashTime: 0
   Tags1: []
   pinDistance: 2
   neutral: {fileID: 1865944164}
   special: {fileID: 1895270245}
   strong: {fileID: 2000830895}
-  Pin: {fileID: 0}
   playerIndex: 0
+  projectile: {fileID: 0}
+  isShooting: 0
+  bulletSpawnPos: {fileID: 0}
+  timeToDestroy: 1
 --- !u!114 &598684092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1068,6 +1072,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 41c76f69-fc63-428b-bae5-ec0fb6504f90
     m_ActionName: Player/Strong Attack[/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8ffa5dca-bf40-4c2b-9ae8-5436298b8aeb
+    m_ActionName: Player/Mashing[/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5709020a-503e-4543-95d9-fc4ee4039305
+    m_ActionName: Player/Submit[/XInputControllerWindows/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c17b8b14-dafc-4eb2-a814-b1d3db23317c
+    m_ActionName: Player/ToPinSomeone[/XInputControllerWindows/leftTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b04d15c4-6514-47f4-836c-34fcebf359bc
+    m_ActionName: Player/Super Attack[/XInputControllerWindows/rightShoulder]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1594,7 +1614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 1
   superMetreChargeAmount: 0
-  knockback: 1
+  knockback: 10
   hitstun: 0
   player: {fileID: 1298094723}
 --- !u!1 &1007493839
@@ -1838,6 +1858,7 @@ GameObject:
   - component: {fileID: 1298094727}
   - component: {fileID: 1298094728}
   - component: {fileID: 1298094729}
+  - component: {fileID: 1298094730}
   m_Layer: 0
   m_Name: TestCharacter (1)
   m_TagString: Enemy
@@ -1869,7 +1890,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.86, y: 2.72}
+  m_Size: {x: 3.1, y: 3.02}
   m_EdgeRadius: 0
 --- !u!212 &1298094725
 SpriteRenderer:
@@ -1972,7 +1993,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298094723}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1985,6 +2006,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!61 &1298094730
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298094723}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.86, y: 2.72}
+    newSize: {x: 2.86, y: 2.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.86, y: 2.72}
+  m_EdgeRadius: 0
 --- !u!1 &1312730628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,14 +2097,18 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  isFacingRight: 1
   startDashTime: 0
   Tags1: []
   pinDistance: 2
   neutral: {fileID: 932079104}
   special: {fileID: 1129996574}
   strong: {fileID: 1103350223}
-  Pin: {fileID: 0}
   playerIndex: 0
+  projectile: {fileID: 7750513875867062296, guid: 52d24d310ef93304ea523e6a77c9ca45, type: 3}
+  isShooting: 0
+  bulletSpawnPos: {fileID: 911805541}
+  timeToDestroy: 1
 --- !u!114 &1312730631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2181,8 +2232,8 @@ MonoBehaviour:
     m_ActionName: Player/Special[/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1312730640}
-        m_TargetAssemblyTypeName: Porjectiles, Assembly-CSharp
+      - m_Target: {fileID: 1312730630}
+        m_TargetAssemblyTypeName: PlayerMovementFinal, Assembly-CSharp
         m_MethodName: Projectile
         m_Mode: 0
         m_Arguments:
@@ -2464,7 +2515,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312730628}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22a2ba1a0294e3540ba55d5d7f8cd6cd, type: 3}
   m_Name: 
@@ -2472,6 +2523,7 @@ MonoBehaviour:
   projectile: {fileID: 7750513875867062296, guid: 52d24d310ef93304ea523e6a77c9ca45, type: 3}
   isShooting: 0
   bulletSpawnPos: {fileID: 911805541}
+  timeToDestroy: 1
 --- !u!1 &1493500946
 GameObject:
   m_ObjectHideFlags: 0

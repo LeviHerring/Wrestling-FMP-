@@ -14,7 +14,7 @@ public class PlayerMovementFinal : MonoBehaviour
     private float speed = 10f;
     private float baseSpeed = 10f; 
     private float jumpingPower = 10f;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
     private float dashSpeed = 30f;
     private float dashTime = 0.2f;
     public float startDashTime;
@@ -35,9 +35,19 @@ public class PlayerMovementFinal : MonoBehaviour
 
     [SerializeField] GameObject strong;
 
-    [SerializeField] GameObject Pin;
+    //[SerializeField] GameObject Pin;
 
     [SerializeField] private int playerIndex = 0;
+    
+    [SerializeField] public GameObject projectile;
+    public bool isShooting;
+
+    [SerializeField] Transform bulletSpawnPos;
+
+    [SerializeField] float timeToDestroy = 1f;
+
+
+    Projectile projectilex;
     private void Awake()
     {
         //playerInput = GetComponent<PlayerInput>();
@@ -56,7 +66,8 @@ public class PlayerMovementFinal : MonoBehaviour
         
         animationEvents = GetComponent<AnimationEvents>();
         animator = GetComponent<Animator>();
-        Tags1 = GameObject.FindGameObjectsWithTag("Enemy"); 
+        Tags1 = GameObject.FindGameObjectsWithTag("Enemy");
+        projectilex = GetComponent<Projectile>();
     }
 
     void Update()
@@ -200,6 +211,26 @@ public class PlayerMovementFinal : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Projectile(InputAction.CallbackContext context)
+    {
+        if (context.performed && !isShooting)
+        {
+            isShooting = true;
+
+            GameObject b = Instantiate(projectile);
+            b.GetComponent<Projectile>().StartShoot(isFacingRight);
+            b.transform.position = bulletSpawnPos.transform.position;
+            Invoke("ResetShoot", 1f);
+
+
+        }
+    }
+
+    void ResetShoot()
+    {
+        isShooting = false;
     }
 
 

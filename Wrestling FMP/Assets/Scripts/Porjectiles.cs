@@ -8,13 +8,18 @@ public class Porjectiles : MonoBehaviour
     [SerializeField] public GameObject projectile;
     public bool isShooting;
 
-    [SerializeField] Transform bulletSpawnPos; 
+    [SerializeField] Transform bulletSpawnPos;
 
+    [SerializeField] float timeToDestroy = 1f; 
 
+    PlayerMovementFinal playerMovementFinal; 
+
+    Projectile projectilex;
     // Start is called before the first frame update
     void Start()
     {
-        
+        projectilex = GetComponent<Projectile>(); 
+        playerMovementFinal = GetComponent<PlayerMovementFinal>(); 
     }
 
     // Update is called once per frame
@@ -27,12 +32,14 @@ public class Porjectiles : MonoBehaviour
     {
         if(context.performed && !isShooting)
         {
-            isShooting = true;
+                isShooting = true;
 
-            GameObject b = Instantiate(projectile);
-            b.GetComponent<Rigidbody2D>().velocity = new Vector2(3, 0);
-            b.transform.position = bulletSpawnPos.transform.position; 
-            Invoke("ResetShoot", 1f); 
+                GameObject b = Instantiate(projectile);
+                GetComponent<Projectile>().StartShoot(GetComponent<PlayerMovementFinal>().isFacingRight); 
+                b.transform.position = bulletSpawnPos.transform.position;
+                Invoke("ResetShoot", 1f);
+
+
         }
     }
 

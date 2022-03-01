@@ -38,15 +38,15 @@ public class Hitbox : MonoBehaviour
             Debug.Log("DETECTION");
             player.GetComponent<Health>().Damage(damageAmount, superMetreChargeAmount);
 
-            //Rigidbody2D enemy = collision.GetComponent<Rigidbody2D>();
-            //if(enemy != null)
-            //{
-            //    enemy.isKinematic = false;
-            //    Vector2 difference = enemy.transform.position = transform.position;
-            //    difference = difference.normalized * knockback;
-            //    enemy.AddForce(difference, ForceMode2D.Impulse);
-            //    enemy.isKinematic = true; 
-            //}
+            Rigidbody2D enemy = collision.GetComponent<Rigidbody2D>();
+            if (enemy != null)
+            {
+                enemy.isKinematic = false;
+                Vector2 difference = enemy.transform.position - transform.position;
+                difference = difference.normalized * knockback;
+                enemy.AddForce(difference, ForceMode2D.Impulse);
+                enemy.isKinematic = true;
+            }
         }
     }
 
