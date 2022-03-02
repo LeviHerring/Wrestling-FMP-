@@ -17,7 +17,7 @@ public class Hitbox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = GetComponent<Health>(); 
+        health = GetComponent<Health>();
     }
 
     // Update is called once per frame
