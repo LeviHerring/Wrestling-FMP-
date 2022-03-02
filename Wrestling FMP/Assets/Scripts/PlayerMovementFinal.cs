@@ -27,7 +27,8 @@ public class PlayerMovementFinal : MonoBehaviour
     private PlayerInput playerInput;
     private Mover mover;
     public GameObject[] Tags1;
-    public float pinDistance = 6f; 
+    public float pinDistance = 6f;
+    [SerializeField] public CountdownTimer countdownTimer; 
 
     [SerializeField] public GameObject neutral;
 
@@ -207,7 +208,8 @@ public class PlayerMovementFinal : MonoBehaviour
             {
                 if (Vector3.Distance(transform.position, go.transform.position) < pinDistance)
                 {
-                    Debug.Log("Pin Worked"); 
+                    Debug.Log("Pin Worked");
+                    StartCoroutine(countdownTimer.CountdownToStart(3)); 
                 }
             }
         }
@@ -224,6 +226,15 @@ public class PlayerMovementFinal : MonoBehaviour
             b.transform.position = bulletSpawnPos.transform.position;
             Invoke("ResetShoot", 1f);
 
+
+        }
+    }
+
+    public void UpA(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Up A performed");
 
         }
     }

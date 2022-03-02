@@ -11,7 +11,7 @@ public class CountdownTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(CountdownToStart()); 
+        //StartCoroutine(CountdownToStart(3)); 
     }
 
     // Update is called once per frame
@@ -20,15 +20,15 @@ public class CountdownTimer : MonoBehaviour
         
     }
 
-    IEnumerator CountdownToStart()
+    public IEnumerator CountdownToStart(int countdownTime2)
     {
-        while(countdownTime > 0)
+        while(countdownTime2 > 0)
         {
-            countdownDisplay.text = countdownTime.ToString();
+            countdownDisplay.text = countdownTime2.ToString();
 
             yield return new WaitForSeconds(1f);
 
-            countdownTime--; 
+            countdownTime2--; 
         }
 
         countdownDisplay.text = "Pinned!";
