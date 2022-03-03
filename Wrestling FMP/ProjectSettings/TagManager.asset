@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Projectile
   - Grabbable
+  - PictureInPicture
   layers:
   - Default
   - TransparentFX

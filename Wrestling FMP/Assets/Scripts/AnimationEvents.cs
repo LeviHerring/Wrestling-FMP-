@@ -7,7 +7,8 @@ public class AnimationEvents : MonoBehaviour
 
     public bool isAttacking;
     public Animator animator;
-   PlayerMovementFinal playerController;
+    public bool isMoving;
+    PlayerMovementFinal playerController;
 
 
     [SerializeField] GameObject neutral;
@@ -43,5 +44,12 @@ public class AnimationEvents : MonoBehaviour
         special.gameObject.SetActive(false);
         strong.gameObject.SetActive(false);
         GetComponent<PlayerMovementFinal>().neutral.gameObject.SetActive(false);
+    }
+
+    public void Histun()
+    {
+        animator.SetBool("IsHit", false);
+
+        isAttacking = false; 
     }
 }

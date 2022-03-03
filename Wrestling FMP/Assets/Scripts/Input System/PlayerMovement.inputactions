@@ -30,9 +30,81 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Look up",
+                    "name": "Neutral Attack",
                     "type": "Button",
-                    "id": "0f2d0de1-7c3b-4819-a09e-5247cdb63d6d",
+                    "id": "205c49b8-4dd5-4caa-a442-e54a6099fb38",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Special",
+                    "type": "Button",
+                    "id": "150ae4b6-d978-4c91-a482-e05c236cefac",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Down B",
+                    "type": "Button",
+                    "id": "e463154f-8f4d-45d2-b875-0e6b747d9c2a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold"
+                },
+                {
+                    "name": "Pickup",
+                    "type": "Button",
+                    "id": "02db68ba-e410-465e-804f-297bbb9e995c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Up Tilt",
+                    "type": "PassThrough",
+                    "id": "ac58de69-d6ff-4c73-bdf8-cbba580136ee",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Super Attack",
+                    "type": "Button",
+                    "id": "b04d15c4-6514-47f4-836c-34fcebf359bc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ToPinSomeone",
+                    "type": "Button",
+                    "id": "c17b8b14-dafc-4eb2-a814-b1d3db23317c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Submit",
+                    "type": "Button",
+                    "id": "5709020a-503e-4543-95d9-fc4ee4039305",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Mashing",
+                    "type": "Button",
+                    "id": "8ffa5dca-bf40-4c2b-9ae8-5436298b8aeb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Strong Attack",
+                    "type": "Button",
+                    "id": "41c76f69-fc63-428b-bae5-ec0fb6504f90",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -62,73 +134,9 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Neutral Attack",
+                    "name": "Look up",
                     "type": "Button",
-                    "id": "205c49b8-4dd5-4caa-a442-e54a6099fb38",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Special",
-                    "type": "Button",
-                    "id": "150ae4b6-d978-4c91-a482-e05c236cefac",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Strong Attack",
-                    "type": "Button",
-                    "id": "41c76f69-fc63-428b-bae5-ec0fb6504f90",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Mashing",
-                    "type": "Button",
-                    "id": "8ffa5dca-bf40-4c2b-9ae8-5436298b8aeb",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Submit",
-                    "type": "Button",
-                    "id": "5709020a-503e-4543-95d9-fc4ee4039305",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "ToPinSomeone",
-                    "type": "Button",
-                    "id": "c17b8b14-dafc-4eb2-a814-b1d3db23317c",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Super Attack",
-                    "type": "Button",
-                    "id": "b04d15c4-6514-47f4-836c-34fcebf359bc",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Up Tilt",
-                    "type": "PassThrough",
-                    "id": "ac58de69-d6ff-4c73-bdf8-cbba580136ee",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Pickup",
-                    "type": "Button",
-                    "id": "02db68ba-e410-465e-804f-297bbb9e995c",
+                    "id": "0f2d0de1-7c3b-4819-a09e-5247cdb63d6d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -165,17 +173,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Air Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b922f8fc-ea28-4916-b416-6edbd001afb3",
-                    "path": "<Gamepad>/leftStick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Look up",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -319,6 +316,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pickup",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d1643c95-b243-4659-9594-42bb9d7b0186",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Down B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b922f8fc-ea28-4916-b416-6edbd001afb3",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look up",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

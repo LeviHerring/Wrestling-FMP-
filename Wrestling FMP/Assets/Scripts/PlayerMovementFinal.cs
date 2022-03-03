@@ -2,7 +2,8 @@ using UnityEngine;
 using System.Linq;
 using System.Collections; 
 using UnityEngine.InputSystem;
-using static UnityEngine.InputSystem.InputAction; 
+using static UnityEngine.InputSystem.InputAction;
+using UnityEngine.UI; 
 
 public class PlayerMovementFinal : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerMovementFinal : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
 
+    public Text countdownText; 
     private float horizontal;
     private float speed = 10f;
     private float baseSpeed = 10f; 
@@ -27,7 +29,7 @@ public class PlayerMovementFinal : MonoBehaviour
     private PlayerInput playerInput;
     private Mover mover;
     public GameObject[] Tags1;
-    public float pinDistance = 6f;
+    public float pinDistance = 10f;
     [SerializeField] public CountdownTimer countdownTimer; 
 
     [SerializeField] public GameObject neutral;
@@ -47,6 +49,7 @@ public class PlayerMovementFinal : MonoBehaviour
 
     [SerializeField] float timeToDestroy = 1f;
 
+    PinningButtonMash buttonMashing; 
 
     Projectile projectilex;
     private void Awake()
@@ -69,6 +72,7 @@ public class PlayerMovementFinal : MonoBehaviour
         animator = GetComponent<Animator>();
         Tags1 = GameObject.FindGameObjectsWithTag("Enemy");
         projectilex = GetComponent<Projectile>();
+        buttonMashing = GetComponent<PinningButtonMash>(); 
     }
 
     void Update()
@@ -83,6 +87,7 @@ public class PlayerMovementFinal : MonoBehaviour
         {
             Flip();
         }
+
     }
 
     private void FixedUpdate()
@@ -92,7 +97,7 @@ public class PlayerMovementFinal : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && IsGrounded())
+        if (context.performed && IsGrounded() && GetComponent<AnimationEvents>().isAttacking == false)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             canDoubleJump = true; 
@@ -124,7 +129,11 @@ public class PlayerMovementFinal : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        horizontal = context.ReadValue<Vector2>().x;
+        if(GetComponent<AnimationEvents>().isAttacking == false)
+        {
+            horizontal = context.ReadValue<Vector2>().x;
+        }
+      
     }
 
     public void AirDash(InputAction.CallbackContext context)
@@ -133,7 +142,7 @@ public class PlayerMovementFinal : MonoBehaviour
         {
             Debug.Log("Pressed");
         }
-        if(!IsGrounded() && context.performed && !isDashing)
+        if (!IsGrounded() && context.performed && !isDashing)
         {
             if(isFacingRight)
             {
@@ -161,6 +170,7 @@ public class PlayerMovementFinal : MonoBehaviour
 
         if(context.performed && GetComponent<AnimationEvents>().isAttacking == false && IsGrounded())
         {
+            GetComponent<AnimationEvents>().isAttacking = true; 
             neutral.gameObject.SetActive(true); 
             animator.SetBool("isNeutral", true);
             Debug.Log("Pressed neutral button"); 
@@ -209,7 +219,25 @@ public class PlayerMovementFinal : MonoBehaviour
                 if (Vector3.Distance(transform.position, go.transform.position) < pinDistance)
                 {
                     Debug.Log("Pin Worked");
+                    countdownText.gameObject.SetActive(true); 
                     StartCoroutine(countdownTimer.CountdownToStart(3)); 
+
+                }
+            }
+        }
+    }
+
+    public void Submission(InputAction.CallbackContext context)
+    {
+        if (context.performed && GetComponent<AnimationEvents>().isAttacking == false && IsGrounded())
+        {
+            Debug.Log("Pressed Submission Button button");
+            foreach (GameObject go in Tags1)
+            {
+                if (Vector3.Distance(transform.position, go.transform.position) < pinDistance)
+                {
+                    GetComponent<PinningButtonMash>().SubmissionTest(); 
+
                 }
             }
         }

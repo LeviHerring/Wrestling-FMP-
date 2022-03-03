@@ -31,4 +31,9 @@ public class Buttons : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void CSS()
+    {
+        SceneManager.LoadScene("CharacterSelectScreen");
+    }
 }

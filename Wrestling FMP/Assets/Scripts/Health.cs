@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
 
     [SerializeField] string playerNo; 
 
-    float health = 0f; 
+    public float health = 0f; 
     
     // Start is called before the first frame update
     void Start()

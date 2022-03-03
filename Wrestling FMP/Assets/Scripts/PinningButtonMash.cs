@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem; 
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement; 
 
 public class PinningButtonMash : MonoBehaviour
 {
     public Image metre;
     public GameObject text; 
     public float mashDelay = .5f;
+    public Text winner; 
+
+    [SerializeField] string winnerText; 
 
     float mash;
     bool pressed;
@@ -19,8 +23,9 @@ public class PinningButtonMash : MonoBehaviour
     public int submissionNo;
     public int minrange = 1;
     public int maxrange = 10000;
-    int randomSubmit; 
-
+    int randomSubmit;
+    public bool hasWon;
+    public bool isMashingNeeded; 
 
     // Start is called before the first frame update
     void Start()
@@ -44,15 +49,24 @@ public class PinningButtonMash : MonoBehaviour
 
     public void Mashing(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        if(isMashingNeeded == true)
         {
-            havePressed++;
-            fillAmount = havePressed / 10;
-            metre.fillAmount = fillAmount;
-            
-           
+            if (context.performed)
+            {
+                havePressed++;
+                fillAmount = havePressed / 10;
+                metre.fillAmount = fillAmount;
+
+
+            }
+            if(havePressed == pressAmount)
+            {
+                //hasWon = true; 
+            }
         }
+      
     }
+
 
     public void submission(InputAction.CallbackContext context)
     {
@@ -62,6 +76,8 @@ public class PinningButtonMash : MonoBehaviour
             if (submissionNo == randomSubmit)
             {
                 Debug.Log("SUBMIT");
+                winner.gameObject.SetActive(true);
+                winner.text = winnerText; 
             }
             else
             {
@@ -69,5 +85,21 @@ public class PinningButtonMash : MonoBehaviour
             }
         }
       
+    }
+
+    public void SubmissionTest()
+    {
+            randomSubmit = Random.Range(minrange, maxrange);
+            if (submissionNo == randomSubmit)
+            {
+                Debug.Log("SUBMIT");
+                winner.gameObject.SetActive(true);
+                winner.text = winnerText;
+            }
+            else
+            {
+                Debug.Log("DON'T SUBMIT");
+            }
+
     }
 }

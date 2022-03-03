@@ -48,6 +48,12 @@ public class Hitbox : MonoBehaviour
                 enemy.isKinematic = true;
             }
         }
+
+        if(collision.tag == "PictureInPicture")
+        {
+            Debug.Log("And we'll be back after these messages");
+
+        }
     }
 
 
