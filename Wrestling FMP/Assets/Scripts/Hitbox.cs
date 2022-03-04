@@ -6,18 +6,22 @@ public class Hitbox : MonoBehaviour
 {
 
     [SerializeField] public float damageAmount;
-
+    [SerializeField] public float damageAmountDivide;
+    public DamageManager dm; 
     [SerializeField] public float superMetreChargeAmount;
     [SerializeField] public float knockback;
     [SerializeField] public float hitstun;
 
-    public GameObject player; 
+    public GameObject player;
+
+
 
     Health health; 
     // Start is called before the first frame update
     void Start()
     {
         health = GetComponent<Health>();
+        damageAmount = dm.damage * dm.damageMultiplier; 
     }
 
     // Update is called once per frame
@@ -35,6 +39,8 @@ public class Hitbox : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemy")
         {
+           
+
             Debug.Log("DETECTION");
             player.GetComponent<Health>().Damage(damageAmount, superMetreChargeAmount);
 
@@ -49,11 +55,11 @@ public class Hitbox : MonoBehaviour
             }
         }
 
-        if(collision.tag == "PictureInPicture")
-        {
-            Debug.Log("And we'll be back after these messages");
+        //if(collision.tag == "PictureInPicture")
+        //{
+        //    Debug.Log("And we'll be back after these messages");
 
-        }
+        //}
     }
 
 

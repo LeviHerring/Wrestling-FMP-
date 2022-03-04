@@ -8,6 +8,7 @@ TagManager:
   - Projectile
   - Grabbable
   - PictureInPicture
+  - Hitbox
   layers:
   - Default
   - TransparentFX

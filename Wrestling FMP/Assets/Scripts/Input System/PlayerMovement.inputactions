@@ -51,7 +51,7 @@
                     "id": "e463154f-8f4d-45d2-b875-0e6b747d9c2a",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Hold"
+                    "interactions": ""
                 },
                 {
                     "name": "Pickup",
@@ -140,6 +140,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Picture in Picture",
+                    "type": "Button",
+                    "id": "2729ec44-c565-4ce6-a557-ae712605259d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold"
                 }
             ],
             "bindings": [
@@ -338,6 +346,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Look up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "37c92566-1381-4412-938c-8a3b934d420a",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Picture in Picture",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
