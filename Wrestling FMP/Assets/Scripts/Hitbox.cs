@@ -35,7 +35,7 @@ public class Hitbox : MonoBehaviour
     {
         
 
-        Debug.Log("HIT DETECTED");
+        //Debug.Log("HIT DETECTED");
 
         if (collision.gameObject.tag == "Enemy")
         {

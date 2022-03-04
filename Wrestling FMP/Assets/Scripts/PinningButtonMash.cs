@@ -61,7 +61,7 @@ public class PinningButtonMash : MonoBehaviour
             }
             if(havePressed == pressAmount)
             {
-                //hasWon = true; 
+                hasWon = true; 
             }
         }
       

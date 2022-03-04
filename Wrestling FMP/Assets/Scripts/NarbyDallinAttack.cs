@@ -36,7 +36,6 @@ public class NarbyDallinAttack : MonoBehaviour
             damageManager.damageMultiplier = damageManager.damageMultiplier - 5;
             darbyHitbox.isActivated = false;
             isActivatedHere = false;
-            Debug.Log("Less than 0");
             if (damageManager.damageMultiplier <= 1)
             {
                 damageManager.damageMultiplier = 1;
