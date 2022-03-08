@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Hitbox : MonoBehaviour
@@ -7,12 +5,15 @@ public class Hitbox : MonoBehaviour
 
     [SerializeField] public float damageAmount;
     [SerializeField] public float damageAmountDivide;
-    public DamageManager dm; 
+    public DamageManager damageManager; 
     [SerializeField] public float superMetreChargeAmount;
     [SerializeField] public float knockback;
     [SerializeField] public float hitstun;
 
     public GameObject player;
+    //public GameObject player;
+    //public GameObject player;
+    //public GameObject player;
 
 
 
@@ -21,7 +22,7 @@ public class Hitbox : MonoBehaviour
     void Start()
     {
         health = GetComponent<Health>();
-        damageAmount = dm.damage * dm.damageMultiplier; 
+        damageAmount = damageManager.damage * damageManager.damageMultiplier; 
     }
 
     // Update is called once per frame
@@ -37,7 +38,7 @@ public class Hitbox : MonoBehaviour
 
         //Debug.Log("HIT DETECTED");
 
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.name == player.gameObject.name)
         {
            
 

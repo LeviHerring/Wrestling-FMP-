@@ -5,7 +5,10 @@ using UnityEngine;
 public class PlayerHurtboxes : MonoBehaviour
 {
     public Animator animator;
-    public AnimationEvents animationEvents; 
+    public AnimationEvents animationEvents;
+    public bool isHit;
+    public float stopwatch;
+    public float stopwatchTime; 
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +18,13 @@ public class PlayerHurtboxes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        stopwatch = Time.deltaTime; 
+
+        if(stopwatch < 0 && isHit == true)
+        {
+            isHit = false;
+            animationEvents.isAttacking = false; 
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,7 +32,9 @@ public class PlayerHurtboxes : MonoBehaviour
         if(tag == "Hitbox")
         {
             animator.SetBool("IsHit", true);
-            animationEvents.isAttacking = true; 
+            isHit = true; 
+            animationEvents.isAttacking = true;
+            stopwatchTime = stopwatchTime; 
             //wait amount of time which will be from the hitbox variable
             
             
