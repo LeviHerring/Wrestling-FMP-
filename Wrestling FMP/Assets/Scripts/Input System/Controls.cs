@@ -6,10 +6,10 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @PlayerMovement : IInputActionCollection, IDisposable
+public class @Controls : IInputActionCollection, IDisposable
 {
     public InputActionAsset asset { get; }
-    public @PlayerMovement()
+    public @Controls()
     {
         asset = InputActionAsset.FromJson(@"{
     ""name"": ""PlayerMovement"",
@@ -488,8 +488,8 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Select;
     public struct PlayerActions
     {
-        private @PlayerMovement m_Wrapper;
-        public PlayerActions(@PlayerMovement wrapper) { m_Wrapper = wrapper; }
+        private @Controls m_Wrapper;
+        public PlayerActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @AirDash => m_Wrapper.m_Player_AirDash;
