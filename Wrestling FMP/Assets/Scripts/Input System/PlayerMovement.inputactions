@@ -63,7 +63,7 @@
                 },
                 {
                     "name": "Up Tilt",
-                    "type": "PassThrough",
+                    "type": "Button",
                     "id": "ac58de69-d6ff-4c73-bdf8-cbba580136ee",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -336,15 +336,37 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "d1643c95-b243-4659-9594-42bb9d7b0186",
-                    "path": "<Gamepad>/leftTrigger",
+                    "name": "Down and B",
+                    "id": "9887810d-6d9a-4dd9-a9a0-a381cf91579e",
+                    "path": "ButtonWithOneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Down B",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "b571a815-7f74-4481-a4ac-17f95ca4b2ee",
+                    "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Down B",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "button",
+                    "id": "2b18f2a1-f7cb-4376-9e9f-95ff4294b38c",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Down B",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",

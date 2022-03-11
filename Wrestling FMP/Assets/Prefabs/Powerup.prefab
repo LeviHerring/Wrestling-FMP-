@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2806094937896362951}
   - component: {fileID: 2806094937896362948}
   - component: {fileID: 2806094937896362949}
+  - component: {fileID: 5368841661549023353}
   m_Layer: 0
   m_Name: Powerup
   m_TagString: Untagged
@@ -107,9 +108,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2806094937896362970}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 567f304fa6537074ab2f5abe83c61c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupEffect: {fileID: 0}
+  pickupEffect: {fileID: 5580383213512831059, guid: d7b2572af42f3aa44b5bf01f1ca01ad4, type: 3}
+--- !u!114 &5368841661549023353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2806094937896362970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffef1516909bd014088c48d34bcc8e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 5580383213512831059, guid: d7b2572af42f3aa44b5bf01f1ca01ad4, type: 3}
+  player: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+  playerDamage: {fileID: 0}

@@ -197,6 +197,11 @@ public class PlayerMovementFinal : MonoBehaviour
         }
     }
 
+    public void UpNeutral(InputAction.CallbackContext context)
+    {
+
+    }
+
 
     IEnumerator Dash()
     {

@@ -7,7 +7,8 @@ public class Powerups : MonoBehaviour
 
     public GameObject pickupEffect;
     Hitbox hitbox;
-    Health health; 
+    Health health;
+    GameObject player; 
 
 
     public void Start()
@@ -17,13 +18,13 @@ public class Powerups : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.tag == "Player")
         {
             StartCoroutine(Pickup());
         }
     }
 
-     IEnumerator Pickup()
+     public IEnumerator Pickup()
     {
         Instantiate(pickupEffect, transform.position, transform.rotation);
         pickupEffect.gameObject.SetActive(true);
