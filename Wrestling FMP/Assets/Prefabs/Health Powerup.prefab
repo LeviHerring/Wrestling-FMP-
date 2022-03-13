@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1136754580548086275}
   - component: {fileID: 1136754580548086272}
   - component: {fileID: 1136754580548086273}
+  - component: {fileID: 6188403258985027975}
   m_Layer: 0
   m_Name: Health Powerup
   m_TagString: Untagged
@@ -113,3 +114,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 5580383213512831059, guid: d7b2572af42f3aa44b5bf01f1ca01ad4, type: 3}
+--- !u!114 &6188403258985027975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136754580548086302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6764c993ba13cca4890bc8c50654c49c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 5580383213512831059, guid: d7b2572af42f3aa44b5bf01f1ca01ad4, type: 3}
+  player: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+  playerDamage: {fileID: 0}

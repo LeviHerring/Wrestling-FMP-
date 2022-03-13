@@ -34,6 +34,8 @@ public class AnimationEvents : MonoBehaviour
         animator.SetBool("isNeutral", false);
         animator.SetBool("isStrong", false);
         animator.SetBool("isSpecial", false);
+        animator.SetBool("isUp", false);
+        animator.SetBool("isDown", false);
 
         isAttacking = false; 
     }
