@@ -17,6 +17,7 @@ public class PlayerMovementFinal : MonoBehaviour
     private float baseSpeed = 10f; 
     private float jumpingPower = 10f;
     public bool isFacingRight = true;
+    public float directionFloat; 
     private float dashSpeed = 30f;
     private float dashTime = 0.2f;
     public float startDashTime;

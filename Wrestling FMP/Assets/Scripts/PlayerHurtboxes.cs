@@ -8,7 +8,8 @@ public class PlayerHurtboxes : MonoBehaviour
     public AnimationEvents animationEvents;
     public bool isHit;
     public float stopwatch;
-    public float stopwatchTime; 
+    public float stopwatchTime;
+    public float disabledTime; 
 
     // Start is called before the first frame update
     void Start()
@@ -23,22 +24,29 @@ public class PlayerHurtboxes : MonoBehaviour
         if(stopwatch < 0 && isHit == true)
         {
             isHit = false;
-            animationEvents.isAttacking = false; 
+            //animationEvents.isAttacking = false; 
+            Debug.Log("Attacking is false"); 
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(tag == "Hitbox")
+        if (collision.tag == "Hitbox")
         {
-            animator.SetBool("IsHit", true);
-            isHit = true; 
-            animationEvents.isAttacking = true;
-            stopwatchTime = stopwatchTime; 
-            //wait amount of time which will be from the hitbox variable
-            
-            
-            //do 
+            //StartCoroutine(DisablePlayerMovement(disabledTime));
+
+
         }
+    }
+
+
+
+    IEnumerator DisablePlayerMovement(float time)
+    {
+        animator.SetBool("IsHit", true);
+        animationEvents.isAttacking = true;
+
+        yield return new WaitForSeconds(time);
+        animationEvents.isAttacking = false;
     }
 }
