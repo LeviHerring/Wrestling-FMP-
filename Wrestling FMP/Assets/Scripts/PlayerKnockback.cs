@@ -21,10 +21,10 @@ public class PlayerKnockback : MonoBehaviour
         animationEvents = GetComponent<AnimationEvents>(); 
     }
 
-    public void DoKnockBack(float knockbackLength, float knockbackForce)
+    public void DoKnockBack(float knockbackLength, float knockbackForce, float verticalKnockbackForce)
     {
         StartCoroutine(DisablePlayerMovement(knockbackLength)); 
-        rigidbody2d.velocity = new Vector2(knockbackForce, knockbackForce); 
+        rigidbody2d.velocity = new Vector2(knockbackForce, verticalKnockbackForce); 
 
     }
 

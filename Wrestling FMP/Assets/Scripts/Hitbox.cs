@@ -8,6 +8,7 @@ public class Hitbox : MonoBehaviour
     public DamageManager damageManager; 
     [SerializeField] public float superMetreChargeAmount;
     [SerializeField] public float knockback;
+    [SerializeField] public float verticalKnockbackForce;
     [SerializeField] public float hitstun;
     public GameObject playerWithHitboxes;
     PlayerMovementFinal playerMovementFinal; 
@@ -49,13 +50,12 @@ public class Hitbox : MonoBehaviour
             player.GetComponent<Health>().Damage(damageAmount, superMetreChargeAmount);
             if(playerWithHitboxes.GetComponent<PlayerMovementFinal>().isFacingRight == true)
             {
-                knockback *= -1; 
-                player.GetComponent<PlayerKnockback>().DoKnockBack(hitstun, knockback);
+                player.GetComponent<PlayerKnockback>().DoKnockBack(hitstun, knockback*-1, verticalKnockbackForce);
             }
             else
             {
                 knockback *= 1;
-                player.GetComponent<PlayerKnockback>().DoKnockBack(hitstun, knockback);
+                player.GetComponent<PlayerKnockback>().DoKnockBack(hitstun, knockback*1, verticalKnockbackForce);
             }
            
             

@@ -9,6 +9,7 @@ TagManager:
   - Grabbable
   - PictureInPicture
   - Hitbox
+  - Ropes
   layers:
   - Default
   - TransparentFX

@@ -281,12 +281,9 @@ public class PlayerMovementFinal : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(tag == "Ropes")
+        if(collision.gameObject.tag == "Ropes")
         {
-            var speed = lastVelocity.magnitude;
-            var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
-
-            rb.velocity = direction * Mathf.Max(speed, 0f); 
+            rb.AddForce(new Vector2(10f, 0f));
         }
        
 
