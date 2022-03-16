@@ -237,6 +237,7 @@ public class PlayerMovementFinal : MonoBehaviour
     {
         if (context.performed && GetComponent<AnimationEvents>().isAttacking == false && IsGrounded())
         {
+            GetComponent<AnimationEvents>().isAttacking = true; 
             Debug.Log("Pressed Submission Button button");
             foreach (GameObject go in Tags1)
             {

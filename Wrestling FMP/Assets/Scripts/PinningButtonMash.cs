@@ -10,7 +10,8 @@ public class PinningButtonMash : MonoBehaviour
     public Image metre;
     public GameObject text; 
     public float mashDelay = .5f;
-    public Text winner; 
+    public Text winner;
+    public GameObject Hitbox; 
 
     [SerializeField] string winnerText; 
 
@@ -102,4 +103,6 @@ public class PinningButtonMash : MonoBehaviour
             }
 
     }
+
+
 }
