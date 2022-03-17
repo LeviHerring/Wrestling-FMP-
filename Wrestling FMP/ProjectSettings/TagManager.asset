@@ -10,6 +10,8 @@ TagManager:
   - PictureInPicture
   - Hitbox
   - Ropes
+  - Pin
+  - Submission
   layers:
   - Default
   - TransparentFX

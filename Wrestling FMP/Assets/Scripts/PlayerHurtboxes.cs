@@ -9,7 +9,8 @@ public class PlayerHurtboxes : MonoBehaviour
     public bool isHit;
     public float stopwatch;
     public float stopwatchTime;
-    public float disabledTime; 
+    public float disabledTime;
+    public GloablVariablesManager globalVariablesManager;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class PlayerHurtboxes : MonoBehaviour
     {
         stopwatch = Time.deltaTime; 
 
-        if(stopwatch < 0 && isHit == true)
+        if(stopwatch <= 0 && isHit == true)
         {
             isHit = false;
             //animationEvents.isAttacking = false; 
@@ -36,6 +37,11 @@ public class PlayerHurtboxes : MonoBehaviour
             //StartCoroutine(DisablePlayerMovement(disabledTime));
 
 
+        }
+
+        if(collision.gameObject.tag == "Pin")
+        {
+            animationEvents.isAttacking = true; 
         }
     }
 
