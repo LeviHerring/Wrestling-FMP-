@@ -73,6 +73,7 @@ public class PlayerOneHurtboxes : MonoBehaviour
             if (globalVariablesManager.player1MashingDone == mashingAmountNeeded)
             {
                 hasWon = true;
+                isMashingNeeded = false; 
             }
         }
 
@@ -103,6 +104,9 @@ public class PlayerOneHurtboxes : MonoBehaviour
         if (hasWon == true)
         {
             countdownDisplay.text = "Pin broken!";
+            yield return new WaitForSeconds(1f);
+            countdownDisplay.gameObject.SetActive(false);
+            hasWon = false; 
         }
         else
         {

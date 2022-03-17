@@ -68,6 +68,7 @@ public class Player2Hurtboxes : MonoBehaviour
             if (globalVariablesManager.player2MashingDone == mashingAmountNeeded)
             {
                 hasWon = true;
+                isMashingNeeded = false; 
             }
         }
 
