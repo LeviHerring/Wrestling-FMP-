@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.InputSystem; 
 
-public class PlayerHurtboxes : MonoBehaviour
+public class Player2Hurtboxes : MonoBehaviour
 {
     public Animator animator;
     public AnimationEvents animationEvents;
@@ -11,7 +13,11 @@ public class PlayerHurtboxes : MonoBehaviour
     public float stopwatchTime;
     public float disabledTime;
     public GloablVariablesManager globalVariablesManager;
-
+    public bool hasWon;
+    public bool isMashingNeeded;
+    public float fillAmount;
+    public Image metre;
+    public int mashingAmountNeeded;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,13 +26,13 @@ public class PlayerHurtboxes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        stopwatch = Time.deltaTime; 
+        stopwatch = Time.deltaTime;
 
-        if(stopwatch <= 0 && isHit == true)
+        if (stopwatch <= 0 && isHit == true)
         {
             isHit = false;
             //animationEvents.isAttacking = false; 
-            Debug.Log("Attacking is false"); 
+            Debug.Log("Attacking is false");
         }
     }
 
@@ -39,12 +45,33 @@ public class PlayerHurtboxes : MonoBehaviour
 
         }
 
-        if(collision.gameObject.tag == "Pin")
+        if (collision.gameObject.tag == "Pin")
         {
-            animationEvents.isAttacking = true; 
+            animationEvents.isAttacking = true;
+            isMashingNeeded = true;
         }
     }
 
+
+    public void Mashing(InputAction.CallbackContext context)
+    {
+        if (isMashingNeeded == true)
+        {
+            if (context.performed)
+            {
+                globalVariablesManager.player2MashingDone++;
+                fillAmount = globalVariablesManager.player2MashingDone / 10;
+                metre.fillAmount = fillAmount;
+
+
+            }
+            if (globalVariablesManager.player2MashingDone == mashingAmountNeeded)
+            {
+                hasWon = true;
+            }
+        }
+
+    }
 
 
     IEnumerator DisablePlayerMovement(float time)
