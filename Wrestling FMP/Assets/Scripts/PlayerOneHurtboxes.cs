@@ -8,23 +8,27 @@ public class PlayerOneHurtboxes : MonoBehaviour
 {
     public Animator animator;
     public AnimationEvents animationEvents;
-    Rigidbody2D rigidbody; 
+    Rigidbody2D rigidbody2d; 
     public bool isHit;
     public float stopwatch;
     public float stopwatchTime;
     public float disabledTime;
     public GloablVariablesManager globalVariablesManager;
+    public PlayerMovementFinal playerMovement; 
     public bool hasWon;
+    public bool hasWonSubmit;
     public bool isMashingNeeded;
     public float fillAmount;
     public Image metre;
     public int mashingAmountNeeded;
     public int countdownTime;
+    public int randomSubmit;
+    public int submissionNo; 
     public Text countdownDisplay;
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>(); 
+        rigidbody2d = GetComponent<Rigidbody2D>(); 
     }
 
     // Update is called once per frame
@@ -54,6 +58,24 @@ public class PlayerOneHurtboxes : MonoBehaviour
             animationEvents.isAttacking = true;
             isMashingNeeded = true;
             StartCoroutine(CountdownToStart(3));
+        }
+        if(collision.gameObject.tag == "Submission")
+        {
+            animationEvents.isAttacking = true;
+            randomSubmit = Random.Range(1, globalVariablesManager.maxrange); 
+            submissionNo = Random.Range(1, globalVariablesManager.maxrange);
+            if (submissionNo == randomSubmit)
+            {
+                Debug.Log("Submitted");
+                hasWonSubmit = false; 
+                //go to gave overscreen!!!
+            }
+            else
+            {
+              Debug.Log("DON'T SUBMIT");
+                KnockBack();
+                hasWonSubmit = true; 
+            }
         }
     }
 
@@ -125,5 +147,19 @@ public class PlayerOneHurtboxes : MonoBehaviour
 
         yield return new WaitForSeconds(time);
         animationEvents.isAttacking = false;
+    }
+
+    public void KnockBack()
+    {
+        if (playerMovement.isFacingRight == true)
+        {
+            rigidbody2d.velocity = new Vector2(5, 5);
+            animationEvents.isAttacking = false; 
+        }
+        else
+        {
+            rigidbody2d.velocity = new Vector2(-5, -5);
+            animationEvents.isAttacking = false;
+        }
     }
 }
