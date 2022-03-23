@@ -293,6 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   animationEvents: {fileID: 0}
+  rigidbody2d: {fileID: 0}
   isHit: 0
   stopwatch: 0
   stopwatchTime: 0
@@ -471,7 +472,7 @@ GameObject:
   - component: {fileID: 302693013}
   m_Layer: 0
   m_Name: Ropes (2)
-  m_TagString: Ropes
+  m_TagString: RopesUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -580,7 +581,7 @@ GameObject:
   - component: {fileID: 484396549}
   m_Layer: 0
   m_Name: Ropes (1)
-  m_TagString: Ropes
+  m_TagString: RopesRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1057,7 +1058,7 @@ GameObject:
   - component: {fileID: 577333372}
   m_Layer: 0
   m_Name: Ropes
-  m_TagString: Ropes
+  m_TagString: RopesLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2480,6 +2481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5817951292900122660}
   animationEvents: {fileID: 5817951292900122659}
+  rigidbody2d: {fileID: 1312730635}
   isHit: 0
   stopwatch: 0
   stopwatchTime: 0
@@ -2496,6 +2498,11 @@ MonoBehaviour:
   randomSubmit: 0
   submissionNo: 0
   countdownDisplay: {fileID: 1852863267}
+--- !u!50 &1312730635 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5817951291928251931, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+  m_PrefabInstance: {fileID: 5817951292900122654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1312730638 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5817951291928251920, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
@@ -3528,14 +3535,42 @@ PrefabInstance:
       propertyPath: countdownTimer
       value: 
       objectReference: {fileID: 43271952}
+    - target: {fileID: 5817951291928251929, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
       propertyPath: m_Name
       value: TestCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 5817951293639195665, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 5817951292900122660}
+    - target: {fileID: 5817951293639195665, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+      propertyPath: rigidbody2d
+      value: 
+      objectReference: {fileID: 1312730635}
+    - target: {fileID: 5817951293639195665, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 5817951292900122661}
+    - target: {fileID: 5817951293639195665, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+      propertyPath: animationEvents
+      value: 
+      objectReference: {fileID: 5817951292900122659}
+    - target: {fileID: 5817951293639195665, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+      propertyPath: globalVariablesManager
+      value: 
+      objectReference: {fileID: 1507708906}
     - target: {fileID: 5817951293646849565, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1298094723}
+    - target: {fileID: 5817951293646849565, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+      propertyPath: verticalKnockbackForce
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7277123650702459947, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.959

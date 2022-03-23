@@ -7,7 +7,7 @@ public class Hitbox : MonoBehaviour
     [SerializeField] public float damageAmountDivide;
     public DamageManager damageManager; 
     [SerializeField] public float superMetreChargeAmount;
-    [SerializeField] public float knockback;
+    [SerializeField] public float knockback = 10;
     [SerializeField] public float verticalKnockbackForce;
     [SerializeField] public float hitstun;
     public GameObject playerWithHitboxes;
@@ -48,31 +48,34 @@ public class Hitbox : MonoBehaviour
 
             Debug.Log("DETECTION");
             player.GetComponent<Health>().Damage(damageAmount, superMetreChargeAmount);
-            if(playerWithHitboxes.GetComponent<PlayerMovementFinal>().isFacingRight == true)
+            if (playerWithHitboxes.GetComponent<PlayerMovementFinal>().isFacingRight == true)
             {
-                player.GetComponent<PlayerKnockback>().DoKnockBack(hitstun, knockback*-1, verticalKnockbackForce);
+                knockback = knockback * -1;
+                player.GetComponent<PlayerKnockback>().DoKnockBack(/*hitstun,*/ knockback, verticalKnockbackForce);
             }
             else
             {
                 knockback *= 1;
-                player.GetComponent<PlayerKnockback>().DoKnockBack(hitstun, knockback*1, verticalKnockbackForce);
+                player.GetComponent<PlayerKnockback>().DoKnockBack(/*hitstun,*/ knockback, verticalKnockbackForce);
             }
-           
-            
-
-
-            //player.GetComponentInChildren<PlayerHurtboxes>().disabledTime = hitstun; 
-
-            //Rigidbody2D enemy = collision.GetComponent<Rigidbody2D>();
-            //if (enemy != null)
-            //{
-            //    enemy.isKinematic = false;
-            //    Vector2 difference = enemy.transform.position - transform.position;
-            //    difference = difference.normalized * knockback;
-            //    enemy.AddForce(difference, ForceMode2D.Impulse);
-            //    enemy.isKinematic = true;
-            //}
         }
+        
+
+
+
+
+        //player.GetComponentInChildren<PlayerHurtboxes>().disabledTime = hitstun; 
+
+        //Rigidbody2D enemy = collision.GetComponent<Rigidbody2D>();
+        //if (enemy != null)
+        //{
+        //    enemy.isKinematic = false;
+        //    Vector2 difference = enemy.transform.position - transform.position;
+        //    difference = difference.normalized * knockback;
+        //    enemy.AddForce(difference, ForceMode2D.Impulse);
+        //    enemy.isKinematic = true;
+        //}
+    }
         //if (collision.gameObject.name == player2.gameObject.name)
         //{
 
@@ -130,8 +133,9 @@ public class Hitbox : MonoBehaviour
         //    Debug.Log("And we'll be back after these messages");
 
         //}
-    }
+    //}
 
 
 
 }
+

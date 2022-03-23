@@ -8,7 +8,7 @@ public class PlayerOneHurtboxes : MonoBehaviour
 {
     public Animator animator;
     public AnimationEvents animationEvents;
-    Rigidbody2D rigidbody2d; 
+    public Rigidbody2D rigidbody2d; 
     public bool isHit;
     public float stopwatch;
     public float stopwatchTime;
@@ -28,7 +28,7 @@ public class PlayerOneHurtboxes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody2d = GetComponent<Rigidbody2D>(); 
+        //rigidbody2d = GetComponent<Rigidbody2D>(); 
     }
 
     // Update is called once per frame
@@ -76,6 +76,21 @@ public class PlayerOneHurtboxes : MonoBehaviour
                 KnockBack();
                 hasWonSubmit = true; 
             }
+        }
+
+        if (collision.gameObject.tag == "RopesRight")
+        {
+            Debug.Log("Hit Right");
+            rigidbody2d.AddForce(transform.right * -10f);
+        }
+        if (collision.gameObject.tag == "RopesLeft")
+        {
+            rigidbody2d.AddForce(transform.right * 10f);
+            Debug.Log("Hit Left");
+        }
+        if (collision.gameObject.tag == "RopesUp")
+        {
+            rigidbody2d.AddForce(transform.up * -10f);
         }
     }
 

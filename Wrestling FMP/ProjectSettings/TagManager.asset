@@ -12,6 +12,9 @@ TagManager:
   - Ropes
   - Pin
   - Submission
+  - RopesRight
+  - RopesLeft
+  - RopesUp
   layers:
   - Default
   - TransparentFX

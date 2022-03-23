@@ -21,20 +21,20 @@ public class PlayerKnockback : MonoBehaviour
         animationEvents = GetComponent<AnimationEvents>(); 
     }
 
-    public void DoKnockBack(float knockbackLength, float knockbackForce, float verticalKnockbackForce)
+    public void DoKnockBack(/*float knockbackLength,*/ float knockback, float verticalKnockbackForce)
     {
-        StartCoroutine(DisablePlayerMovement(knockbackLength)); 
-        rigidbody2d.velocity = new Vector2(knockbackForce, verticalKnockbackForce); 
+        //StartCoroutine(DisablePlayerMovement(knockbackLength)); 
+        rigidbody2d.velocity = new Vector2(knockback, verticalKnockbackForce); 
 
     }
 
-    IEnumerator DisablePlayerMovement(float time)
-    {
-        animationEvents.isAttacking = true;
+    //IEnumerator DisablePlayerMovement(float time)
+    //{
+    //    animationEvents.isAttacking = true;
 
-        yield return new WaitForSeconds(time);
-        animationEvents.isAttacking = false; 
-    }
+    //    yield return new WaitForSeconds(time);
+    //    animationEvents.isAttacking = false; 
+    //}
 
 
 }

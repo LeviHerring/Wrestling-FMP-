@@ -280,13 +280,23 @@ public class PlayerMovementFinal : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Ropes")
-        {
-            rb.AddForce(new Vector2(10f, 0f));
-        }
-       
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if(collision.gameObject.tag == "RopesRight")
+    //    {
+    //        Debug.Log("Hit Right");
+    //        rb.velocity = new Vector2(-10f, 0f);
+    //    }
+    //    if (collision.gameObject.tag == "RopesLeft")
+    //    {
+    //        rb.velocity = new Vector2(10f, 0f);
+    //        Debug.Log("Hit Left");
+    //    }
+    //    if (collision.gameObject.tag == "RopesUp")
+    //    {
+    //        rb.velocity = new Vector2(0f, -10f);
+    //    }
 
-    }
+
+    //}
 }
