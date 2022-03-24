@@ -14,17 +14,19 @@ public class PlayerOneHurtboxes : MonoBehaviour
     public float stopwatchTime;
     public float disabledTime;
     public GloablVariablesManager globalVariablesManager;
-    public PlayerMovementFinal playerMovement; 
+    public PlayerMovementFinal playerMovement;
+    public Health health; 
     public bool hasWon;
     public bool hasWonSubmit;
     public bool isMashingNeeded;
     public float fillAmount;
     public Image metre;
-    public int mashingAmountNeeded;
+    public float mashingAmountNeeded;
     public int countdownTime;
-    public int randomSubmit;
-    public int submissionNo; 
+    public float randomSubmit;
+    public float submissionNo; 
     public Text countdownDisplay;
+    int loopNumber = 0; 
     // Start is called before the first frame update
     void Start()
     {
@@ -39,9 +41,23 @@ public class PlayerOneHurtboxes : MonoBehaviour
         if(stopwatch <= 0 && isHit == true)
         {
             isHit = false;
+
             //animationEvents.isAttacking = false; 
-            Debug.Log("Attacking is false"); 
+            Debug.Log("Attacking is false");
+            loopNumber = 0; 
         }
+
+        if(isHit == true)
+        {
+            while(loopNumber == 0)
+            {
+                  globalVariablesManager.maxrange -= health.health;
+                  mashingAmountNeeded += health.health;
+                 loopNumber++; 
+            }
+          
+        }
+      
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -62,8 +78,8 @@ public class PlayerOneHurtboxes : MonoBehaviour
         if(collision.gameObject.tag == "Submission")
         {
             animationEvents.isAttacking = true;
-            randomSubmit = Random.Range(1, globalVariablesManager.maxrange); 
-            submissionNo = Random.Range(1, globalVariablesManager.maxrange);
+            randomSubmit = Random.Range(1f, globalVariablesManager.maxrange); 
+            submissionNo = Random.Range(1f, globalVariablesManager.maxrange);
             if (submissionNo == randomSubmit)
             {
                 Debug.Log("Submitted");
@@ -81,7 +97,7 @@ public class PlayerOneHurtboxes : MonoBehaviour
         if (collision.gameObject.tag == "RopesRight")
         {
             Debug.Log("Hit Right");
-            rigidbody2d.AddForce(transform.right * -10f);
+            rigidbody2d.velocity = new Vector2(10f, 10f);
         }
         if (collision.gameObject.tag == "RopesLeft")
         {
@@ -177,4 +193,11 @@ public class PlayerOneHurtboxes : MonoBehaviour
             animationEvents.isAttacking = false;
         }
     }
+
+    public void SubmissionNumberChanger()
+    {
+
+    }
+
+
 }

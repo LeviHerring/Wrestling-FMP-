@@ -300,6 +300,7 @@ MonoBehaviour:
   disabledTime: 0
   globalVariablesManager: {fileID: 0}
   playerMovement: {fileID: 0}
+  health: {fileID: 0}
   hasWon: 0
   hasWonSubmit: 0
   isMashingNeeded: 0
@@ -2488,6 +2489,7 @@ MonoBehaviour:
   disabledTime: 0
   globalVariablesManager: {fileID: 1507708906}
   playerMovement: {fileID: 5817951292900122661}
+  health: {fileID: 1312730636}
   hasWon: 0
   hasWonSubmit: 0
   isMashingNeeded: 0
@@ -2503,6 +2505,17 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 5817951291928251931, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
   m_PrefabInstance: {fileID: 5817951292900122654}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1312730636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5817951291928251921, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+  m_PrefabInstance: {fileID: 5817951292900122654}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312730628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93101b4934b2441478b71bcf5b974cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1312730638 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5817951291928251920, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
@@ -3544,6 +3557,10 @@ PrefabInstance:
       value: TestCharacter
       objectReference: {fileID: 0}
     - target: {fileID: 5817951293639195665, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 1312730636}
+    - target: {fileID: 5817951293639195665, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 5817951292900122660}
@@ -3563,6 +3580,10 @@ PrefabInstance:
       propertyPath: globalVariablesManager
       value: 
       objectReference: {fileID: 1507708906}
+    - target: {fileID: 5817951293639195667, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5817951293646849565, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
       propertyPath: player
       value: 
