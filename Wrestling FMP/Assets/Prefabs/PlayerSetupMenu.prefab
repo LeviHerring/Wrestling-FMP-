@@ -171,6 +171,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetupPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 7250104693470943436, guid: faa7a1ba0f8a64041b1bd2a2853f836a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250104693470943436, guid: faa7a1ba0f8a64041b1bd2a2853f836a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250104693470943436, guid: faa7a1ba0f8a64041b1bd2a2853f836a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250104693470943436, guid: faa7a1ba0f8a64041b1bd2a2853f836a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250104693470943436, guid: faa7a1ba0f8a64041b1bd2a2853f836a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250104693470943436, guid: faa7a1ba0f8a64041b1bd2a2853f836a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerSetupMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250104693470943436, guid: faa7a1ba0f8a64041b1bd2a2853f836a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250104693470943436, guid: faa7a1ba0f8a64041b1bd2a2853f836a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: faa7a1ba0f8a64041b1bd2a2853f836a, type: 3}
 --- !u!224 &6130035596332241455 stripped
