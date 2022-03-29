@@ -426,8 +426,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: c5484728-15d7-4497-9d1d-70a9ed0d6e8c
-    m_ActionName: CharacterSelectScreen/Right[/XInputControllerWindows/leftStick/right,/SwitchProControllerHID/leftStick/right]
+    m_ActionId: 889e5c6c-dd66-4092-a46d-0840cd00dcd1
+    m_ActionName: CharacterSelectScreen/Right[/XInputControllerWindows/leftStick/right]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1272461331}
@@ -442,8 +442,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: ebadc94f-926a-4b1d-b6b1-3bc12d4e09be
-    m_ActionName: CharacterSelectScreen/Left[/XInputControllerWindows/leftStick/left,/SwitchProControllerHID/leftStick/left]
+    m_ActionId: 9f665a85-195b-41be-ace5-488a10244e72
+    m_ActionName: CharacterSelectScreen/Left[/XInputControllerWindows/leftStick/left]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1272461331}
@@ -458,12 +458,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 20e295d5-a768-41f9-8801-e97cb11e5a02
-    m_ActionName: CharacterSelectScreen/Select[/XInputControllerWindows/buttonSouth,/SwitchProControllerHID/buttonSouth]
+    m_ActionId: 91a77a51-eff0-47c6-80f3-341100eb53b4
+    m_ActionName: CharacterSelectScreen/Select[/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: b16766b9-8a3b-4697-8b30-3e99906ad414
-    m_ActionName: CharacterSelectScreen/Back[/XInputControllerWindows/buttonEast,/SwitchProControllerHID/buttonEast]
+    m_ActionId: 5d3ffe3b-08e1-48a7-84b4-40625a2b4ba4
+    m_ActionName: CharacterSelectScreen/Back[/XInputControllerWindows/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CharacterSelectScreen
@@ -624,4 +624,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2061811941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2061811943}
+  - component: {fileID: 2061811942}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2061811942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061811941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7687587cd4b5854db6da6d9a9fa91b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOne: {fileID: 1272461330}
+--- !u!4 &2061811943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061811941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.7519836, y: -0.39698517, z: -1.3246598}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

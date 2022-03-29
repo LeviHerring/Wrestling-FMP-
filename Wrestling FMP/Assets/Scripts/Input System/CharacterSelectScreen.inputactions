@@ -3,12 +3,12 @@
     "maps": [
         {
             "name": "CharacterSelectScreen",
-            "id": "1970d8f6-f21a-47e8-a3bc-32b3756b09bb",
+            "id": "695a1ef2-87f4-4a47-90c0-8506791ac7b9",
             "actions": [
                 {
                     "name": "Right",
                     "type": "Button",
-                    "id": "c5484728-15d7-4497-9d1d-70a9ed0d6e8c",
+                    "id": "889e5c6c-dd66-4092-a46d-0840cd00dcd1",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -16,7 +16,7 @@
                 {
                     "name": "Left",
                     "type": "Button",
-                    "id": "ebadc94f-926a-4b1d-b6b1-3bc12d4e09be",
+                    "id": "9f665a85-195b-41be-ace5-488a10244e72",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -24,7 +24,7 @@
                 {
                     "name": "Select",
                     "type": "Button",
-                    "id": "20e295d5-a768-41f9-8801-e97cb11e5a02",
+                    "id": "91a77a51-eff0-47c6-80f3-341100eb53b4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -32,7 +32,7 @@
                 {
                     "name": "Back",
                     "type": "Button",
-                    "id": "b16766b9-8a3b-4697-8b30-3e99906ad414",
+                    "id": "5d3ffe3b-08e1-48a7-84b4-40625a2b4ba4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -41,7 +41,7 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "cf675a70-394e-476f-ac0b-9b3b5afc55df",
+                    "id": "4127bfe3-7771-4f0a-a54b-06d70714b20f",
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
@@ -52,7 +52,7 @@
                 },
                 {
                     "name": "",
-                    "id": "0f2c6541-480e-465b-bf73-4ef8060b4b4b",
+                    "id": "230f369c-5290-4991-85ca-bd9a4a488a01",
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
@@ -63,7 +63,7 @@
                 },
                 {
                     "name": "",
-                    "id": "6ac69d99-9316-40d2-bcd0-1e7f9b2ab702",
+                    "id": "e8b3eca2-a47b-4be9-83f9-2a39dab041a8",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
@@ -74,7 +74,7 @@
                 },
                 {
                     "name": "",
-                    "id": "74f7699c-0f36-4d5d-b912-290275f29f80",
+                    "id": "14243685-0724-454c-aa46-4e15874a7bf8",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
@@ -86,11 +86,5 @@
             ]
         }
     ],
-    "controlSchemes": [
-        {
-            "name": "New control scheme",
-            "bindingGroup": "New control scheme",
-            "devices": []
-        }
-    ]
+    "controlSchemes": []
 }

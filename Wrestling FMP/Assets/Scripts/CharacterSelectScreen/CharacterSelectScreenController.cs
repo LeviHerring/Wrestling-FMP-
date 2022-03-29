@@ -51,6 +51,7 @@ public class CharacterSelectScreenController : MonoBehaviour
 
     public void Select(InputAction.CallbackContext context)
     {
+        Debug.Log("Pressed"); 
         if (context.performed)
         {
             isSelected = true;
