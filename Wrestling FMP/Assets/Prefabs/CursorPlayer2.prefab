@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4909575955567756282}
   - component: {fileID: 4909575955567756277}
   - component: {fileID: 4909575955567756276}
+  - component: {fileID: 8873351427029141530}
   m_Layer: 0
   m_Name: CursorPlayer2
   m_TagString: Untagged
@@ -95,6 +96,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed3ce7106b7c244994f0a8821c72626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 4909575955567756277}
   position: 0
   bounds: 0000000001000000
   isSelected: 0
+--- !u!114 &8873351427029141530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909575955567756279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc0f56d3824fe1438af716e3bde77dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joinText: {fileID: 0}

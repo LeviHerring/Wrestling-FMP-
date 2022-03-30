@@ -790,13 +790,13 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  countdownText: {fileID: 0}
+  countdownText: {fileID: 5515707254003693708, guid: 61f5c26e6ac61874f97f42e7125c4f99, type: 3}
   isFacingRight: 1
   directionFloat: 0
   startDashTime: 0
   Tags1: []
   pinDistance: 3
-  countdownTimer: {fileID: 0}
+  countdownTimer: {fileID: 8479601176483674282, guid: 57782f0644b5f034a9b4fa0abb74f4cc, type: 3}
   neutral: {fileID: 5817951293646849566}
   special: {fileID: 5817951291838316800}
   strong: {fileID: 5817951291797006801}
@@ -875,10 +875,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a23bfddff8cc844e8bb95ad220b570f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  metre: {fileID: 0}
-  text: {fileID: 0}
+  metre: {fileID: 4796760775967715796, guid: 8b1a526f253044341b11232a099f5628, type: 3}
+  text: {fileID: 283069583658673831, guid: 7727462a7f7853c4cb32bf101d18983c, type: 3}
   mashDelay: 0.5
-  winner: {fileID: 0}
+  winner: {fileID: 283069583658673829, guid: 7727462a7f7853c4cb32bf101d18983c, type: 3}
   Hitbox: {fileID: 0}
   winnerText: 'Player 1 '
   pressAmount: 2
@@ -901,8 +901,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93101b4934b2441478b71bcf5b974cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthText: {fileID: 0}
-  superMetre: {fileID: 0}
+  healthText: {fileID: 5241569525726061479, guid: 686a4fb12b80360468ee7690ecd2fe5a, type: 3}
+  superMetre: {fileID: 3431569404317302472, guid: 6e4ea1de81fdd084781e9cffb1fca327, type: 3}
   superMetreCharge: 0
   playerNo: 
   health: 0
@@ -1276,10 +1276,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   animationEvents: {fileID: 0}
+  rigidbody2d: {fileID: 0}
   isHit: 0
   stopwatch: 0
   stopwatchTime: 0
   disabledTime: 0
+  globalVariablesManager: {fileID: 0}
+  playerMovement: {fileID: 0}
+  health: {fileID: 0}
+  hasWon: 0
+  hasWonSubmit: 0
+  isMashingNeeded: 0
+  fillAmount: 0
+  metre: {fileID: 0}
+  mashingAmountNeeded: 0
+  countdownTime: 0
+  randomSubmit: 0
+  submissionNo: 0
+  countdownDisplay: {fileID: 0}
 --- !u!1 &5817951293646849566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,7 +1368,7 @@ MonoBehaviour:
   damageAmountDivide: 0.5
   damageManager: {fileID: 5817951292325062604}
   superMetreChargeAmount: 0
-  knockback: 10
+  knockback: {x: 0, y: 0}
   verticalKnockbackForce: 0
   hitstun: 10
   playerWithHitboxes: {fileID: 5817951291928251930}

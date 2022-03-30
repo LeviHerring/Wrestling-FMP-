@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MultiplayerSetup : MonoBehaviour
 {
+    public Transform parent; 
     public GameObject playerOne;
     public GameObject playerTwo;
     //public GameObject playerThree;
@@ -19,10 +20,10 @@ public class MultiplayerSetup : MonoBehaviour
         switch (Player2)
         {
             case "PlayerOne":
-                Instantiate(playerOne, spawnPosition.transform.position, Quaternion.identity); 
+                Instantiate(playerOne, spawnPosition.transform.position, Quaternion.identity, gameObject.transform); 
                 break;
             case "PlayerTwo":
-                Instantiate(playerTwo, spawnPosition.transform.position, Quaternion.identity);
+                Instantiate(playerTwo, spawnPosition.transform.position, Quaternion.identity, gameObject.transform);
                 break;
             //case "PlayerThree":
             //    Instantiate(playerThree, spawnPosition.transform.position, Quaternion.identity);

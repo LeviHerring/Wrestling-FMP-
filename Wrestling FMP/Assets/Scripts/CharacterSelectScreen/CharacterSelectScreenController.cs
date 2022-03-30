@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CharacterSelectScreenController : MonoBehaviour
 {
+    public SpriteRenderer spriteRenderer; 
 
     [SerializeField] public int position = 2;
 
@@ -55,7 +56,7 @@ public class CharacterSelectScreenController : MonoBehaviour
         if (context.performed)
         {
             isSelected = true;
-            gameObject.SetActive(false);
+            spriteRenderer.enabled = false; 
         }
       
     }

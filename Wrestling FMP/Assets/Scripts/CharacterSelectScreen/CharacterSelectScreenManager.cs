@@ -19,6 +19,25 @@ public class CharacterSelectScreenManager : MonoBehaviour
     {
         if(playerOne.GetComponent<CharacterSelectScreenController>().isSelected == true)
         {
+            switch (playerOne.GetComponent<CharacterSelectScreenController>().position)
+            {
+                case 0:
+                    PlayerPrefs.SetString("playerOne", "PlayerTwo");
+                    Debug.Log("Player 1 selected"); 
+                    break;
+
+                case 1:
+                    PlayerPrefs.SetString("playerOne", "PlayerOne");
+                    break;
+
+                //case 2:
+                //    PlayerPrefs.SetString("playerOne", "PlayerThree");
+                //    break;
+
+                //case 3:
+                //    PlayerPrefs.SetString("playerOne", "PlayerFour");
+                //    break; 
+            }
             SceneManager.LoadScene("SampleScene"); 
         }
     }

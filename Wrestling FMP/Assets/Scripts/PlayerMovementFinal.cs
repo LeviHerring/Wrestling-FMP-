@@ -68,7 +68,7 @@ public class PlayerMovementFinal : MonoBehaviour
 
     void Start()
     {
-        
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         animationEvents = GetComponent<AnimationEvents>();
         animator = GetComponent<Animator>();
         Tags1 = GameObject.FindGameObjectsWithTag("Enemy");
