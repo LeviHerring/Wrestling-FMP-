@@ -20,13 +20,15 @@ public class TwoPlayerManagerCharacterSelectScreen : MonoBehaviour
     {
         if(globalMultiplayerVariables.playerIndex == 1)
         {
-            Instantiate(playerOne, spawnPositionOne.transform.position, Quaternion.identity, gameObject.transform);
+            Instantiate(playerOne, spawnPositionOne.transform.position, Quaternion.identity/*, gameObject.transform*/);
             globalMultiplayerVariables.playerIndex++; 
         }
         else
         {
-            Instantiate(playerTwo, spawnPositionTwo.transform.position, Quaternion.identity, gameObject.transform);
+            Instantiate(playerTwo, spawnPositionTwo.transform.position, Quaternion.identity/*, gameObject.transform*/);
+            globalMultiplayerVariables.playerIndex = 1;
         }
+        Destroy(gameObject); 
     }
 
     // Update is called once per frame

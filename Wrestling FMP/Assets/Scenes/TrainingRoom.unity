@@ -319,7 +319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &298305602
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -330,7 +330,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -354,7 +354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298305601}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5432582, y: -0.45849597, z: -923.59534}
+  m_LocalPosition: {x: -0.5432582, y: -0.45849597, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3617,6 +3617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair
       objectReference: {fileID: 0}
+    - target: {fileID: 4363422349925212083, guid: 46405ba003f83814f810f83dfeacc17f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5340328036708872512, guid: 46405ba003f83814f810f83dfeacc17f, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -4107,11 +4111,11 @@ PrefabInstance:
       objectReference: {fileID: 1298094723}
     - target: {fileID: 5817951293646849565, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
       propertyPath: knockback.x
-      value: 10
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5817951293646849565, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
       propertyPath: knockback.y
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5817951293646849565, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
       propertyPath: verticalKnockbackForce

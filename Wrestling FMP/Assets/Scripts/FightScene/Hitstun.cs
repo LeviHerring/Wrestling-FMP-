@@ -34,7 +34,7 @@ public class Hitstun : MonoBehaviour
         Debug.Log("In the coroutine"); 
         //animator.SetBool("IsHit", true);
         animationEvents.isAttacking = true;
-
+        rigidbody2D.velocity = new Vector2(10f, 0); 
         yield return new WaitForSeconds(time);
         animationEvents.isAttacking = false;
     }

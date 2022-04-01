@@ -93,7 +93,12 @@ public class PlayerMovementFinal : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        if(GetComponent<AnimationEvents>().isAttacking == false)
+        {
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        }
+        
+   
     }
 
     public void Jump(InputAction.CallbackContext context)
