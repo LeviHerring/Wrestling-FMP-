@@ -446,6 +446,42 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2729ec44-c565-4ce6-a557-ae712605259d
     m_ActionName: Player/Picture in Picture[/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a4402376-a96d-47e3-ae50-e0721e1b453e
+    m_ActionName: Player/Select[/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c0ae2745-1f03-41f2-96f5-b35371c64b63
+    m_ActionName: Player/Down tilt[/XInputControllerWindows/leftStick/down,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5accc085-d357-4494-86dc-eaf37e84d331
+    m_ActionName: Player/down smash[/XInputControllerWindows/leftStick/down,/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 58d6ae47-942e-4c00-aec3-87573990563d
+    m_ActionName: Player/up smash[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4f4738db-2ad4-4660-847c-c0688028abce
+    m_ActionName: Player/up b[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d414642f-128b-4195-89f6-3e412dc35558
+    m_ActionName: Player/down air[/XInputControllerWindows/leftStick/down,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: aefc8477-1da6-426e-b218-7c3f7238563b
+    m_ActionName: Player/up air[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b7193009-2984-416d-934b-dfa1a4fe3d41
+    m_ActionName: Player/down strong air[/XInputControllerWindows/rightStick/down,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3087c61a-54f1-4776-9ba3-3ef83846a72e
+    m_ActionName: Player/up strong air[/XInputControllerWindows/leftStick/left,/XInputControllerWindows/buttonWest]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -470,6 +506,7 @@ MonoBehaviour:
     m_Bits: 64
   countdownText: {fileID: 0}
   isFacingRight: 1
+  directionFloat: 0
   startDashTime: 0
   Tags1: []
   pinDistance: 3
@@ -511,7 +548,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097543221296233371}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 25b0479f8eae5414aa3a4c937a548d43, type: 2}
   m_CullingMode: 0
@@ -556,6 +593,7 @@ MonoBehaviour:
   text: {fileID: 0}
   mashDelay: 0.5
   winner: {fileID: 0}
+  Hitbox: {fileID: 0}
   winnerText: 'Player 1 '
   pressAmount: 2
   havePressed: 0
@@ -1186,9 +1224,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   animationEvents: {fileID: 0}
+  rigidbody2d: {fileID: 0}
   isHit: 0
   stopwatch: 0
   stopwatchTime: 0
+  disabledTime: 0
+  globalVariablesManager: {fileID: 0}
+  playerMovement: {fileID: 0}
+  health: {fileID: 0}
+  hasWon: 0
+  hasWonSubmit: 0
+  isMashingNeeded: 0
+  fillAmount: 0
+  metre: {fileID: 0}
+  mashingAmountNeeded: 0
+  countdownTime: 0
+  randomSubmit: 0
+  submissionNo: 0
+  countdownDisplay: {fileID: 0}
 --- !u!1 &1097543222228965883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,8 +1346,10 @@ MonoBehaviour:
   damageAmountDivide: 0.5
   damageManager: {fileID: 1097543220886770253}
   superMetreChargeAmount: 0
-  knockback: 10
+  knockback: {x: 0, y: 0}
+  verticalKnockbackForce: 0
   hitstun: 0
+  playerWithHitboxes: {fileID: 0}
   player: {fileID: 0}
 --- !u!1 &1097543222611400095
 GameObject:
