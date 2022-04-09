@@ -50,12 +50,12 @@ public class Hitbox : MonoBehaviour
             player.GetComponent<Health>().Damage(damageAmount, superMetreChargeAmount);
             if (playerWithHitboxes.GetComponent<PlayerMovementFinal>().isFacingRight == true)
             {
-                Vector2 newKnockback = new Vector2(knockback.x, knockback.y);
+                Vector2 newKnockback = new Vector2(knockback.x * damageManager.knockbackMultiplierX, knockback.y * damageManager.knockbackMultiplierY);
                 player.GetComponent<PlayerKnockback>().DoKnockBack(/*hitstun,*/ newKnockback);
             }
             else
             {
-                Vector2 newKnockback = new Vector2(-knockback.x, knockback.y);
+                Vector2 newKnockback = new Vector2(-knockback.x * damageManager.knockbackMultiplierX, knockback.y * damageManager.knockbackMultiplierY);
                 player.GetComponent<PlayerKnockback>().DoKnockBack(/*hitstun,*/ newKnockback);
             }
         }

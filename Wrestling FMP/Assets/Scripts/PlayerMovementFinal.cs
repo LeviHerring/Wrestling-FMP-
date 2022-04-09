@@ -12,7 +12,7 @@ public class PlayerMovementFinal : MonoBehaviour
     public LayerMask groundLayer;
 
     public Text countdownText; 
-    private float horizontal;
+    public float horizontal;
     private float speed = 10f;
     private float baseSpeed = 10f; 
     private float jumpingPower = 10f;
