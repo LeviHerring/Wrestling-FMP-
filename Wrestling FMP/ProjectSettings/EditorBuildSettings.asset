@@ -17,5 +17,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 297247f4f669edf45a46b4b5467ce2bc
+  - enabled: 1
+    path: Assets/Scenes/ParkourTraining.unity
+    guid: 3484b60b99f23424f9d88772a77f5e5a
+  - enabled: 1
+    path: Assets/Scenes/FinishParkourScene.unity
+    guid: f4fa814b5988e7348880d91b42c598e5
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 0548df431f91f394f912d7a317f6332e, type: 2}
