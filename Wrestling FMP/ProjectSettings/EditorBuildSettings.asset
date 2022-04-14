@@ -23,5 +23,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinishParkourScene.unity
     guid: f4fa814b5988e7348880d91b42c598e5
+  - enabled: 1
+    path: Assets/Scenes/Loss.unity
+    guid: 30ff7800bc214e245bdbdad702d27b31
+  - enabled: 1
+    path: Assets/Scenes/BreakTheTargets.unity
+    guid: 043e32a978f9cad40aeda2fe952b77f7
+  - enabled: 1
+    path: Assets/Scenes/ButtonMashingPractice.unity
+    guid: cd382fdaf1a29c042adb1c3746a2ff77
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 0548df431f91f394f912d7a317f6332e, type: 2}

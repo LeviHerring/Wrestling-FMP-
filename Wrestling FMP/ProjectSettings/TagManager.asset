@@ -15,6 +15,7 @@ TagManager:
   - RopesRight
   - RopesLeft
   - RopesUp
+  - RopesDown
   layers:
   - Default
   - TransparentFX
