@@ -6,35 +6,30 @@ public class EndlessRunnerGenerator : MonoBehaviour
 {
     private const float playerDistanceSpawnLevel = 200f; 
     [SerializeField] private Transform levelPartstart;
-    [SerializeField] private Transform levelPartEnding;
-    [SerializeField] private Transform levelPartOne;
     [SerializeField] private List<Transform> levelPartList;
     [SerializeField] private GameObject player;
-    [SerializeField] private PlayerMovementFinal playerMovement;
+    //[SerializeField] private PlayerMovementFinal playerMovement;
     private Transform chosenLevelPart;
     private Transform lastLevelPartTransform;
     private Vector3 lastEndPosition;
     int loopCounter;
     private void Awake()
     {
-        loopCounter = 0;
-        Transform lastLevelPartTransform;
         lastEndPosition = levelPartstart.Find("EndPosition").position;
-        SpawnLevelPart();
-        while (loopCounter < 7)
+        int startingSpawnLevelParts = 5; 
+        for(int i = 0; i < startingSpawnLevelParts; i++)
         {
             SpawnLevelPart();
-            loopCounter++;
-
         }
-        if (loopCounter >= 7)
-        {
-            SpawnEnding();
-        }
+      
     }
 
     private void Update()
     {
+        if(Vector3.Distance(player.transform.position, lastEndPosition) < playerDistanceSpawnLevel)
+        {
+            SpawnLevelPart(); 
+        }
     }
 
 
@@ -51,9 +46,4 @@ public class EndlessRunnerGenerator : MonoBehaviour
         return levelPartTransform;
     }
 
-    public void SpawnEnding()
-    {
-        lastEndPosition = lastLevelPartTransform.Find("EndPosition").position;
-        Instantiate(levelPartEnding, lastEndPosition, Quaternion.identity);
-    }
 }

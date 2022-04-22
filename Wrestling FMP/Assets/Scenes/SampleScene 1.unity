@@ -1324,6 +1324,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   countdownText: {fileID: 0}
+  horizontal: 0
   isFacingRight: 1
   directionFloat: 0
   startDashTime: 0
@@ -2167,13 +2168,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1134749743}
   - component: {fileID: 1134749742}
+  - component: {fileID: 1134749744}
   m_Layer: 0
   m_Name: Multiplayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1134749742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2188,8 +2190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NotificationBehavior: 0
   m_MaxPlayerCount: -1
-  m_AllowJoining: 1
-  m_JoinBehavior: 0
+  m_AllowJoining: 0
+  m_JoinBehavior: 2
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2207,7 +2209,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
     m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 1827468746184864902, guid: 92e81fdb5b3121e419fc34f34e4cd010, type: 3}
+  m_PlayerPrefab: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
@@ -2231,6 +2233,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1134749744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134749741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc1909a4c6c8aa4c9a7fc16554b0d2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOne: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+  playerTwo: {fileID: 1097543221296233371, guid: 1b9f1519aed982140975a2a9fb928d2d, type: 3}
 --- !u!1 &1158478371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2520,6 +2536,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   countdownText: {fileID: 0}
+  horizontal: 0
   isFacingRight: 1
   directionFloat: 0
   startDashTime: 0
@@ -4075,7 +4092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5817951293639195665, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
       propertyPath: health
