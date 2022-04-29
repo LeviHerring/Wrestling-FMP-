@@ -22,12 +22,12 @@ public class TrainingCharacterSelectScreenmanager : MonoBehaviour
             switch (playerOne.GetComponent<CharacterSelectScreenController>().position)
             {
                 case 0:
-                    PlayerPrefs.SetString("playerOne", "PlayerTwo");
+                    PlayerPrefs.SetString("playerOne", "RedCircle");
                     Debug.Log("Player 1 selected");
                     break;
 
                 case 1:
-                    PlayerPrefs.SetString("playerOne", "PlayerOne");
+                    PlayerPrefs.SetString("playerOne", "GreenSquare");
                     break;
 
                     //case 2:

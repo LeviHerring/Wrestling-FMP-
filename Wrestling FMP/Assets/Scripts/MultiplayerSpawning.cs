@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 public class MultiplayerSpawning : MonoBehaviour
 {
     PlayerInputManager playerInput;
-    public GameObject playerOne;
-    public GameObject playerTwo;
+    public GameObject greenSquare;
+    public GameObject redCircle;
     Transform playerOneSpawn;
     Transform playerTwoSpawn;
     
@@ -18,7 +18,9 @@ public class MultiplayerSpawning : MonoBehaviour
         string player1 = PlayerPrefs.GetString("playerOne");
         string player2 = PlayerPrefs.GetString("playerTwo");
         PlayerOne(player1);
-        PlayerTwo(player2); 
+        PlayerTwo(player2);
+
+
 
     }
 
@@ -41,13 +43,13 @@ public class MultiplayerSpawning : MonoBehaviour
 
         switch (player1)
         {
-            case "PlayerOne":
-                playerInput.playerPrefab = playerTwo;
-                playerInput.JoinPlayer(0);
+            case "RedCircle":
+                playerInput.playerPrefab = redCircle;
+                PlayerInputManager.instance.JoinPlayer(0, -1, null);
                 break;
-            case "PlayerTwo":
-                playerInput.playerPrefab = playerTwo;
-                playerInput.JoinPlayer(0);
+            case "GreenSquare":
+                playerInput.playerPrefab = greenSquare;
+                PlayerInputManager.instance.JoinPlayer(0, -1, null);
                 break;
                 //case "PlayerThree":
                 //    Instantiate(playerThree, spawnPosition.transform.position, Quaternion.identity);
@@ -62,13 +64,13 @@ public class MultiplayerSpawning : MonoBehaviour
     {
         switch (player2)
         {
-            case "PlayerOne":
-                playerInput.playerPrefab = playerOne;
-                playerInput.JoinPlayer(1);
+            case "RedCircle":
+                playerInput.playerPrefab = redCircle;
+                PlayerInputManager.instance.JoinPlayer(1, -1, null);
                 break;
-            case "PlayerTwo":
-                playerInput.playerPrefab = playerTwo;
-                playerInput.JoinPlayer(0);
+            case "GreenSquare":
+                playerInput.playerPrefab = greenSquare;
+                PlayerInputManager.instance.JoinPlayer(1, -1, null);
                 break;
                 //case "PlayerThree":
                 //    Instantiate(playerThree, spawnPosition.transform.position, Quaternion.identity);
@@ -77,6 +79,11 @@ public class MultiplayerSpawning : MonoBehaviour
                 //    Instantiate(playerFour, spawnPosition.transform.position, Quaternion.identity);
                 //    break;
         }
+    }
+
+    void OnPlayerJoined(PlayerInput playerInput)
+    {
+        Debug.Log("Player joined the game - Hello!"); 
     }
 
 }

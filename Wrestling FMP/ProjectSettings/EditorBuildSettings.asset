@@ -32,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ButtonMashingPractice.unity
     guid: cd382fdaf1a29c042adb1c3746a2ff77
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 1c1fb3c8e378eae4d9b184a114358196
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 0548df431f91f394f912d7a317f6332e, type: 2}

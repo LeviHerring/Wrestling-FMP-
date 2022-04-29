@@ -2797,13 +2797,21 @@ MonoBehaviour:
   m_JoinAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Join
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 8c1a917b-d7e0-49c4-bad9-2d7012a46ad8
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings: []
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 021bf104-42e9-43ee-ad6b-d6d503a75b21
+        m_Path: <Gamepad>/buttonEast
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
   m_SplitScreen: 0
@@ -2841,8 +2849,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc1909a4c6c8aa4c9a7fc16554b0d2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerOne: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
-  playerTwo: {fileID: 1097543221296233371, guid: 1b9f1519aed982140975a2a9fb928d2d, type: 3}
+  greenSquare: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+  redCircle: {fileID: 1097543221296233371, guid: 1b9f1519aed982140975a2a9fb928d2d, type: 3}
 --- !u!1 &1158478371
 GameObject:
   m_ObjectHideFlags: 0
