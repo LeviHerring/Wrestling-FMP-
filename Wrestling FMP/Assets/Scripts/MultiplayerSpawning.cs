@@ -62,6 +62,7 @@ public class MultiplayerSpawning : MonoBehaviour
 
     public void PlayerTwo(string player2)
     {
+        Debug.Log("Entered Function");
         switch (player2)
         {
             case "RedCircle":

@@ -100,7 +100,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 416707759196887305}
   position: 1
   bounds: 0000000001000000
-  isSelected: 0
+  isSelected: 1
 --- !u!114 &416707759196887307
 MonoBehaviour:
   m_ObjectHideFlags: 0

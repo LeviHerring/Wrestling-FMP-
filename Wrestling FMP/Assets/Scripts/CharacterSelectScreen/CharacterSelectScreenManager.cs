@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class CharacterSelectScreenManager : MonoBehaviour
 {
     public GameObject playerOne;
-    //public GameObject playerTwo; 
+    public GameObject playerTwo; 
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class CharacterSelectScreenManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerOne.GetComponent<CharacterSelectScreenController>().isSelected == true)
+        if(playerOne.GetComponent<CharacterSelectScreenController>().isSelected == true && playerTwo.GetComponent<CharacterSelectScreenController>().isSelected)
         {
             switch (playerOne.GetComponent<CharacterSelectScreenController>().position)
             {
@@ -37,6 +37,26 @@ public class CharacterSelectScreenManager : MonoBehaviour
                 //case 3:
                 //    PlayerPrefs.SetString("playerOne", "PlayerFour");
                 //    break; 
+            }
+            switch (playerTwo.GetComponent<CharacterSelectScreenController>().position)
+            {
+                case 0:
+                    PlayerPrefs.SetString("playerTwo", "RedCircle");
+                    Debug.Log("Player 2 selected Red circle");
+                    break;
+
+                case 1:
+                    PlayerPrefs.SetString("playerTwo", "GreenSquare");
+                    Debug.Log("Player 2 selected Green Square");
+                    break;
+
+                    //case 2:
+                    //    PlayerPrefs.SetString("playerOne", "PlayerThree");
+                    //    break;
+
+                    //case 3:
+                    //    PlayerPrefs.SetString("playerOne", "PlayerFour");
+                    //    break; 
             }
             SceneManager.LoadScene("SampleScene"); 
         }
