@@ -17,7 +17,7 @@ public class CharacterSelectScreenManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerOne.GetComponent<CharacterSelectScreenController>().isSelected == true && playerTwo.GetComponent<CharacterSelectScreenController>().isSelected)
+        if(playerOne.GetComponent<CharacterSelectScreenController>().isSelected == true && playerTwo.GetComponent<CharacterSelectScreenController>().isSelected == true)
         {
             switch (playerOne.GetComponent<CharacterSelectScreenController>().position)
             {

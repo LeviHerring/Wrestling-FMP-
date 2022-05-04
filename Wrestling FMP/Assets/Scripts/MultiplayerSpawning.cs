@@ -10,7 +10,7 @@ public class MultiplayerSpawning : MonoBehaviour
     public GameObject redCircle;
     Transform playerOneSpawn;
     Transform playerTwoSpawn;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,7 @@ public class MultiplayerSpawning : MonoBehaviour
 
     private void Awake()
     {
-        
+
     }
 
 
@@ -44,12 +44,14 @@ public class MultiplayerSpawning : MonoBehaviour
         switch (player1)
         {
             case "RedCircle":
-                playerInput.playerPrefab = redCircle;
+                //playerInput.playerPrefab = redCircle;
                 PlayerInputManager.instance.JoinPlayer(0, -1, null);
+                Debug.Log("PLAYER 1 RED CIRCLE");
                 break;
             case "GreenSquare":
-                playerInput.playerPrefab = greenSquare;
+                //playerInput.playerPrefab = greenSquare;
                 PlayerInputManager.instance.JoinPlayer(0, -1, null);
+                Debug.Log("PLAYER 1 Green Square");
                 break;
                 //case "PlayerThree":
                 //    Instantiate(playerThree, spawnPosition.transform.position, Quaternion.identity);
@@ -66,12 +68,14 @@ public class MultiplayerSpawning : MonoBehaviour
         switch (player2)
         {
             case "RedCircle":
-                playerInput.playerPrefab = redCircle;
-                PlayerInputManager.instance.JoinPlayer(1, -1, null);
+                //playerInput.playerPrefab = redCircle;
+                PlayerInputManager.instance.JoinPlayer(1, 1, null);
+                Debug.Log("Spawned player 2 as red circle");
                 break;
             case "GreenSquare":
-                playerInput.playerPrefab = greenSquare;
-                PlayerInputManager.instance.JoinPlayer(1, -1, null);
+                //playerInput.playerPrefab = greenSquare;
+                PlayerInputManager.instance.JoinPlayer(1, 1, null);
+                Debug.Log("Spawned player 2 as green square"); 
                 break;
                 //case "PlayerThree":
                 //    Instantiate(playerThree, spawnPosition.transform.position, Quaternion.identity);
@@ -84,7 +88,7 @@ public class MultiplayerSpawning : MonoBehaviour
 
     void OnPlayerJoined(PlayerInput playerInput)
     {
-        Debug.Log("Player joined the game - Hello!"); 
+        Debug.Log("Player joined the game - Hello!");
     }
 
 }

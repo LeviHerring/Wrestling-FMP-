@@ -11,6 +11,8 @@ public class CharacterSelectScreenController : MonoBehaviour
 
     [SerializeField] public int[] bounds;
 
+    [SerializeField] public string player; 
+
     public bool isSelected; 
     // Start is called before the first frame update
     void Start()
@@ -59,5 +61,10 @@ public class CharacterSelectScreenController : MonoBehaviour
             spriteRenderer.enabled = false; 
         }
       
+    }
+
+    public void Trigger(InputAction.CallbackContext context)
+    {
+        Debug.Log(player + "Pressed Trigger"); 
     }
 }

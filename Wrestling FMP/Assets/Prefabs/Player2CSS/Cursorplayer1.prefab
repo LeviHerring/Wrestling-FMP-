@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416707759196887311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: -7, y: 0, z: -1}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,9 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 416707759196887305}
-  position: 1
+  position: 0
   bounds: 0000000001000000
-  isSelected: 1
+  player: Player 1
+  isSelected: 0
 --- !u!114 &416707759196887307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +179,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 5d3ffe3b-08e1-48a7-84b4-40625a2b4ba4
     m_ActionName: CharacterSelectScreen/Back[/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 416707759196887310}
+        m_TargetAssemblyTypeName: CharacterSelectScreenController, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d89132c4-1dde-4bed-8d3f-48becc9d295b
+    m_ActionName: CharacterSelectScreen/Trigger[/XInputControllerWindows/rightTrigger]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CharacterSelectScreen
