@@ -89,6 +89,12 @@ public class PlayerMovementFinal : MonoBehaviour
             Flip();
         }
 
+        if(FindObjectOfType<GloablVariablesManager>().playersJoined == 2)
+        {
+            animationEvents.isAttacking = false;
+            FindObjectOfType<GloablVariablesManager>().playersJoined = 0; 
+        }
+
     }
 
     private void FixedUpdate()

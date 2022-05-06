@@ -48,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   damageMultiplier: 1
+  knockbackMultiplierX: 0
+  knockbackMultiplierY: 0
 --- !u!1 &1097543221138047387
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,6 +101,7 @@ GameObject:
   - component: {fileID: 1097543221296233359}
   - component: {fileID: 1097543221296233358}
   - component: {fileID: 1097543221296233357}
+  - component: {fileID: -447327266426939530}
   m_Layer: 0
   m_Name: TestCharacter (2)
   m_TagString: Player
@@ -114,7 +117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097543221296233371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.85, y: -2.66, z: 0}
+  m_LocalPosition: {x: -6.0911174, y: -3.5098383, z: -433.68524}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1097543222064609103}
@@ -505,6 +508,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   countdownText: {fileID: 0}
+  horizontal: 0
   isFacingRight: 1
   directionFloat: 0
   startDashTime: 0
@@ -571,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15bc4cc5e0855db4d909f893f7beb461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAttacking: 0
+  isAttacking: 1
   animator: {fileID: 1097543221296233362}
   isMoving: 0
   neutral: {fileID: 1097543222240949151}
@@ -667,6 +671,20 @@ MonoBehaviour:
   detector: {fileID: 1097543221424677174}
   darbyHitbox: {fileID: 1097543221424677171}
   isActivatedHere: 0
+--- !u!114 &-447327266426939530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097543221296233371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0416edeb942bbbe4085f5a30a4d4501e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redCircle: {fileID: 1097543221296233371}
+  greenSquare: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
 --- !u!1 &1097543221314417836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1097543222136721808
 Transform:
   m_ObjectHideFlags: 0
@@ -1289,7 +1307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1097543222240949150
 Transform:
   m_ObjectHideFlags: 0
@@ -1397,7 +1415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8626d1e1361a1eb4691c3a268689dc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedWeapon: 0
+  selectedWeapon: 2
 --- !u!1 &1097543222696732684
 GameObject:
   m_ObjectHideFlags: 0
