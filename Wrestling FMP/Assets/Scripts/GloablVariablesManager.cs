@@ -17,7 +17,8 @@ public class GloablVariablesManager : MonoBehaviour
     public float maxrangePlayer3 = 10000;
     public float minrangePlayer4 = 1;
     public float maxrangePlayer4 = 10000;
-    public float playersJoined = 0; 
+    public float playersJoined = 0;
+    public int playerNo; 
 
     // Start is called before the first frame update
     void Start()

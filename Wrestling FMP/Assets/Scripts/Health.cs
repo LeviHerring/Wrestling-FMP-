@@ -6,18 +6,29 @@ using UnityEngine.InputSystem;
 
 public class Health : MonoBehaviour
 {
-    public Text healthText;
+    Text healthText;
 
-    public Image superMetre;
+    Image superMetre;
     public float superMetreCharge = 0f; 
 
     [SerializeField] string playerNo; 
 
-    public float health = 0f; 
+    public float health = 0f;
+
     
     // Start is called before the first frame update
     void Start()
     {
+        if (GetComponent<PlayerAttachedMultiplayer>().playerNo == 1)
+        {
+            healthText = ComponentManager.instance.player1HealthText;
+            superMetre = ComponentManager.instance.player1Metre;
+        }
+        else
+        {
+            healthText = ComponentManager.instance.player2HealthText;
+            superMetre = ComponentManager.instance.player2Metre;
+        }
         
     }
 

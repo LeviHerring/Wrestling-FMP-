@@ -9,7 +9,8 @@ public class MainSceneMultiplayerAwake : MonoBehaviour
     public GameObject redCircle;
     public Transform playerOneSpawn;
     public Transform playerTwoSpawn; 
-    PlayerInputManager playerInputManager; 
+    PlayerInputManager playerInputManager;
+    public int playerCount = 1; 
 
     // Start is called before the first frame update
     void Start()

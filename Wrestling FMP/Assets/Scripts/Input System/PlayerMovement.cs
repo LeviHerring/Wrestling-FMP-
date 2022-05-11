@@ -249,6 +249,17 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""64def2b0-4fd1-4068-94fe-4b022b2d2986"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""9addc66c-3fc9-44fd-a632-7d75651e2472"",
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
@@ -448,7 +459,7 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""732fd603-0f13-4df3-ba3a-d79d202d5526"",
-                    ""path"": ""<Keyboard>/anyKey"",
+                    ""path"": ""<Keyboard>/p"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

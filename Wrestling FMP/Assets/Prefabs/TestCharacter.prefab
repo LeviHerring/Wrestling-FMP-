@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: dbb5d49c7a58e4544a3702883bde1fd2, type: 3}
+  m_Actions: {fileID: 0}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -903,8 +903,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93101b4934b2441478b71bcf5b974cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthText: {fileID: 5241569525726061479, guid: 686a4fb12b80360468ee7690ecd2fe5a, type: 3}
-  superMetre: {fileID: 3431569404317302472, guid: 6e4ea1de81fdd084781e9cffb1fca327, type: 3}
   superMetreCharge: 0
   playerNo: 
   health: 0
@@ -981,7 +979,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redCircle: {fileID: 1097543221296233371, guid: 1b9f1519aed982140975a2a9fb928d2d, type: 3}
   greenSquare: {fileID: 5817951291928251930}
-  text: {fileID: 3215891740044389212, guid: d19ddeaa595d9b649b9f80f1bff70cf9, type: 3}
 --- !u!1 &5817951292325062606
 GameObject:
   m_ObjectHideFlags: 0

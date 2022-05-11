@@ -8,6 +8,7 @@ public class PlayerAttachedMultiplayer : MonoBehaviour
 {
     public GameObject redCircle;
     public GameObject greenSquare;
+    public int playerNo; 
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +43,16 @@ public class PlayerAttachedMultiplayer : MonoBehaviour
                 //    break;
         }
 
-        FindObjectOfType<GloablVariablesManager>().playersJoined++; 
+        FindObjectOfType<GloablVariablesManager>().playersJoined++;
+
+        if (FindObjectOfType<GloablVariablesManager>().playersJoined == 1)
+        {
+            playerNo = 1;
+        }
+        else
+        {
+            playerNo = 2; 
+        }
 
     }
 }

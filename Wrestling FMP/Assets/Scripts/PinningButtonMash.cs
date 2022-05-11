@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class PinningButtonMash : MonoBehaviour
 {
-    public Image metre;
-    public GameObject text; 
+    Image metre;
+    GameObject text; 
     public float mashDelay = .5f;
-    public Text winner;
+    Text winner;
     public GameObject Hitbox; 
 
     [SerializeField] string winnerText; 
@@ -31,6 +31,18 @@ public class PinningButtonMash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (GetComponent<PlayerAttachedMultiplayer>().playerNo == 1)
+        {
+            //text = ComponentManager.instance.text;
+            metre = ComponentManager.instance.player1Metre;
+            winner = ComponentManager.instance.player1WinnerText;
+        }
+        else
+        {
+            //text = ComponentManager.instance.player2HealthText;
+            metre = ComponentManager.instance.player2Metre;
+            winner = ComponentManager.instance.player2WinnerText;
+        }
         minrange = 1;
         maxrange = 10;
         submissionNo = Random.Range(1, 9); 
