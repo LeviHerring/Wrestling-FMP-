@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 3285904727967292471}
   m_Layer: 0
   m_Name: Pin
-  m_TagString: Untagged
+  m_TagString: Pin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 7277123650702459947}
   m_Layer: 0
   m_Name: Submission
-  m_TagString: Untagged
+  m_TagString: Submission
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1152,6 +1152,7 @@ GameObject:
   - component: {fileID: 5817951291928251916}
   - component: {fileID: 1312730629}
   - component: {fileID: -4433272338499864133}
+  - component: {fileID: -4432146637140137289}
   m_Layer: 0
   m_Name: TestCharacter
   m_TagString: Player
@@ -1271,7 +1272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
+  m_Actions: {fileID: -944628639613478452, guid: dbb5d49c7a58e4544a3702883bde1fd2, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -1414,9 +1415,9 @@ MonoBehaviour:
     m_ActionName: Player/Mashing[/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5817951291928251928}
-        m_TargetAssemblyTypeName: PlayerMovementFinal, Assembly-CSharp
-        m_MethodName: Submission
+      - m_Target: {fileID: -4432146637140137289}
+        m_TargetAssemblyTypeName: PinningAndSubmissionAttacks, Assembly-CSharp
+        m_MethodName: Pin
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1430,9 +1431,9 @@ MonoBehaviour:
     m_ActionName: Player/Submit[/XInputControllerWindows/rightTrigger]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5817951291928251928}
-        m_TargetAssemblyTypeName: PlayerMovementFinal, Assembly-CSharp
-        m_MethodName: Pinning
+      - m_Target: {fileID: -4432146637140137289}
+        m_TargetAssemblyTypeName: PinningAndSubmissionAttacks, Assembly-CSharp
+        m_MethodName: Pin
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1756,6 +1757,20 @@ MonoBehaviour:
   redCircle: {fileID: 1097543221296233371, guid: 1b9f1519aed982140975a2a9fb928d2d, type: 3}
   greenSquare: {fileID: 5817951291928251930}
   playerNo: 0
+--- !u!114 &-4432146637140137289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5817951291928251930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d7edf64bfc61c4c926e640703e61c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinHitbox: {fileID: 1376136415303738116}
+  opponentOne: {fileID: 0}
 --- !u!1 &5817951292325062606
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,7 +2586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3936001018315170362
 Transform:
   m_ObjectHideFlags: 0

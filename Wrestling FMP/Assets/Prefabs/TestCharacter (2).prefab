@@ -31,6 +31,7 @@ Transform:
   - {fileID: 1097543222240949150}
   - {fileID: 1097543221373514880}
   - {fileID: 1097543221329960015}
+  - {fileID: 5230835110102696494}
   m_Father: {fileID: 1097543221296233364}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -102,6 +103,7 @@ GameObject:
   - component: {fileID: 1097543221296233358}
   - component: {fileID: 1097543221296233357}
   - component: {fileID: -447327266426939530}
+  - component: {fileID: 2958498870681795801}
   m_Layer: 0
   m_Name: TestCharacter (2)
   m_TagString: Player
@@ -593,10 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a23bfddff8cc844e8bb95ad220b570f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  metre: {fileID: 0}
-  text: {fileID: 0}
   mashDelay: 0.5
-  winner: {fileID: 0}
   Hitbox: {fileID: 0}
   winnerText: 'Player 1 '
   pressAmount: 2
@@ -619,8 +618,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93101b4934b2441478b71bcf5b974cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthText: {fileID: 0}
-  superMetre: {fileID: 0}
   superMetreCharge: 0
   playerNo: 
   health: 0
@@ -685,6 +682,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redCircle: {fileID: 1097543221296233371}
   greenSquare: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+  playerNo: 0
+--- !u!114 &2958498870681795801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097543221296233371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d7edf64bfc61c4c926e640703e61c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinHitbox: {fileID: 3408424059331805061}
+  opponentOne: {fileID: 0}
 --- !u!1 &1097543221314417836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,3 +1458,82 @@ Transform:
   m_Father: {fileID: 1097543221296233364}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3408424059331805061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5230835110102696494}
+  - component: {fileID: 5649692497803072250}
+  - component: {fileID: 4618781977775972067}
+  m_Layer: 0
+  m_Name: Pin
+  m_TagString: Pin
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5230835110102696494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3408424059331805061}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.93, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1097543220886770254}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &5649692497803072250
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3408424059331805061}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.07553053, y: 0.28337693}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8522959, y: 1.5667539}
+  m_EdgeRadius: 0
+--- !u!114 &4618781977775972067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3408424059331805061}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  damageAmountDivide: 0.5
+  damageManager: {fileID: 1097543220886770253}
+  superMetreChargeAmount: 0
+  knockback: {x: 0, y: 0}
+  verticalKnockbackForce: 0
+  hitstun: 0
+  playerWithHitboxes: {fileID: 0}
+  player: {fileID: 0}

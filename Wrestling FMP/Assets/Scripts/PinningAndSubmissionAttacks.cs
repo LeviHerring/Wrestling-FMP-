@@ -5,19 +5,24 @@ using UnityEngine.InputSystem;
 
 public class PinningAndSubmissionAttacks : MonoBehaviour
 {
-    GameObject pinHitbox;
+    public GameObject pinHitbox;
     Animator animator;
-    public AnimationEvents animationEvents;
-    public PlayerMovementFinal playerMovement;
+     AnimationEvents animationEvents;
+     PlayerMovementFinal playerMovement;
     public GameObject opponentOne;
-    public GloablVariablesManager globalVariables;
+     GloablVariablesManager globalVariables;
     Rigidbody2D rigidbody2d; 
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        rigidbody2d = GetComponent<Rigidbody2D>(); 
+        rigidbody2d = GetComponent<Rigidbody2D>();
+        animationEvents = GetComponent<AnimationEvents>();
+        playerMovement = GetComponent<PlayerMovementFinal>();
+        globalVariables = FindObjectOfType<GloablVariablesManager>(); 
+
+
     }
 
     // Update is called once per frame
