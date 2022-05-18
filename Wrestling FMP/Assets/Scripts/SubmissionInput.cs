@@ -5,19 +5,32 @@ using UnityEngine.InputSystem;
 
 public class SubmissionInput : MonoBehaviour
 {
-    GameObject submitHitbox;
+    public GameObject submitHitbox;
     Animator animator;
-    public AnimationEvents animationEvents;
-    public PlayerMovementFinal playerMovement;
+    AnimationEvents animationEvents;
+    PlayerMovementFinal playerMovement;
     public GameObject opponentOne;
-    public GloablVariablesManager globalVariables;
+    GloablVariablesManager globalVariables;
     Rigidbody2D rigidbody2d;
+    PlayerAttachedMultiplayer playerAttachedMultiplayer; 
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         rigidbody2d = GetComponent<Rigidbody2D>();
+        animationEvents = GetComponent<AnimationEvents>();
+        playerMovement = GetComponent<PlayerMovementFinal>();
+        globalVariables = FindObjectOfType<GloablVariablesManager>();
+        playerAttachedMultiplayer = GetComponent<PlayerAttachedMultiplayer>();
+        if (GetComponent<PlayerAttachedMultiplayer>().playerNo == 1)
+        {
+            opponentOne = GameObject.FindGameObjectWithTag("PlayerTwo");
+        }
+        else
+        {
+            opponentOne = GameObject.FindGameObjectWithTag("PlayerOne");
+        }
     }
 
     // Update is called once per frame
@@ -44,16 +57,16 @@ public class SubmissionInput : MonoBehaviour
         animator.SetBool("IsGrabbing", false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            animationEvents.isAttacking = true;
-            animator.SetBool("IsPinning", true);
-            HasOpponentWon();
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == opponentOne.tag)
+    //    {
+    //        animationEvents.isAttacking = true;
+    //        animator.SetBool("IsPinning", true);
+    //        HasOpponentWon();
 
-        }
-    }
+    //    }
+    //}
 
     public void HasOpponentWon()
     {

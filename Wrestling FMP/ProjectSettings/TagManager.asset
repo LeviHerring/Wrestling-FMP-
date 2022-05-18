@@ -16,6 +16,8 @@ TagManager:
   - RopesLeft
   - RopesUp
   - RopesDown
+  - PlayerOne
+  - PlayerTwo
   layers:
   - Default
   - TransparentFX

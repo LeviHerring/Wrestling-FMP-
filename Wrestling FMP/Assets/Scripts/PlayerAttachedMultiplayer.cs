@@ -48,10 +48,12 @@ public class PlayerAttachedMultiplayer : MonoBehaviour
         if (FindObjectOfType<GloablVariablesManager>().playersJoined == 1)
         {
             playerNo = 1;
+            gameObject.tag = "PlayerOne"; 
         }
         else
         {
-            playerNo = 2; 
+            playerNo = 2;
+            gameObject.tag = "PlayerTwo";
         }
 
     }

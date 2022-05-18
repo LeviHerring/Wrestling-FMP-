@@ -32,6 +32,7 @@ Transform:
   - {fileID: 1097543221373514880}
   - {fileID: 1097543221329960015}
   - {fileID: 5230835110102696494}
+  - {fileID: 5073132816774818851}
   m_Father: {fileID: 1097543221296233364}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -104,6 +105,7 @@ GameObject:
   - component: {fileID: 1097543221296233357}
   - component: {fileID: -447327266426939530}
   - component: {fileID: 2958498870681795801}
+  - component: {fileID: -530986793204823909}
   m_Layer: 0
   m_Name: TestCharacter (2)
   m_TagString: Player
@@ -365,9 +367,9 @@ MonoBehaviour:
     m_ActionName: Player/Mashing[/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1097543221296233369}
-        m_TargetAssemblyTypeName: PlayerMovementFinal, Assembly-CSharp
-        m_MethodName: Submission
+      - m_Target: {fileID: -530986793204823909}
+        m_TargetAssemblyTypeName: SubmissionInput, Assembly-CSharp
+        m_MethodName: Pin
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -381,9 +383,9 @@ MonoBehaviour:
     m_ActionName: Player/Submit[/XInputControllerWindows/rightTrigger]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1097543221296233369}
-        m_TargetAssemblyTypeName: PlayerMovementFinal, Assembly-CSharp
-        m_MethodName: Pinning
+      - m_Target: {fileID: 2958498870681795801}
+        m_TargetAssemblyTypeName: PinningAndSubmissionAttacks, Assembly-CSharp
+        m_MethodName: Pin
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -696,6 +698,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinHitbox: {fileID: 3408424059331805061}
+--- !u!114 &-530986793204823909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097543221296233371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d115fc16acdd904aa9f48c62597b753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  submitHitbox: {fileID: 8112981955954163366}
   opponentOne: {fileID: 0}
 --- !u!1 &1097543221314417836
 GameObject:
@@ -868,6 +883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1097543221373514880}
   - component: {fileID: 1097543221373514943}
+  - component: {fileID: 7860181187160484929}
   m_Layer: 0
   m_Name: Strong
   m_TagString: Hitbox
@@ -915,6 +931,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.7426758, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7860181187160484929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097543221373514881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 0
+  damageAmountDivide: 0
+  damageManager: {fileID: 1097543220886770253}
+  superMetreChargeAmount: 0
+  knockback: {x: 0, y: 0}
+  verticalKnockbackForce: 0
+  hitstun: 0
+  playerWithHitboxes: {fileID: 1097543221296233371}
 --- !u!1 &1097543221424677174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,7 +1040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1097543221855127841
 Transform:
   m_ObjectHideFlags: 0
@@ -1116,7 +1152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1097543222136721808
 Transform:
   m_ObjectHideFlags: 0
@@ -1252,26 +1288,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 365787bcea37faf43b5b35f2099ab4b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  animationEvents: {fileID: 0}
-  rigidbody2d: {fileID: 0}
+  player: {fileID: 1097543221296233371}
+  animator: {fileID: 1097543221296233362}
+  rigidbody2d: {fileID: 1097543221296233370}
   isHit: 0
   stopwatch: 0
   stopwatchTime: 0
   disabledTime: 0
-  globalVariablesManager: {fileID: 0}
-  playerMovement: {fileID: 0}
-  health: {fileID: 0}
   hasWon: 0
   hasWonSubmit: 0
   isMashingNeeded: 0
   fillAmount: 0
-  metre: {fileID: 0}
   mashingAmountNeeded: 0
   countdownTime: 0
   randomSubmit: 0
   submissionNo: 0
-  countdownDisplay: {fileID: 0}
 --- !u!1 &1097543222228965883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,7 +1350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1097543222240949150
 Transform:
   m_ObjectHideFlags: 0
@@ -1379,8 +1410,7 @@ MonoBehaviour:
   knockback: {x: 0, y: 0}
   verticalKnockbackForce: 0
   hitstun: 0
-  playerWithHitboxes: {fileID: 0}
-  player: {fileID: 0}
+  playerWithHitboxes: {fileID: 1097543221296233371}
 --- !u!1 &1097543222611400095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,7 +1457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8626d1e1361a1eb4691c3a268689dc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedWeapon: 2
+  selectedWeapon: 0
 --- !u!1 &1097543222696732684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,4 +1566,81 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
-  player: {fileID: 0}
+--- !u!1 &8112981955954163366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5073132816774818851}
+  - component: {fileID: 6499507578553425498}
+  - component: {fileID: 1126893171549585149}
+  m_Layer: 0
+  m_Name: Submission
+  m_TagString: Submission
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5073132816774818851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8112981955954163366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.93, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1097543220886770254}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &6499507578553425498
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8112981955954163366}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.006600857, y: 0.4138987}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9901552, y: 1.8277974}
+  m_EdgeRadius: 0
+--- !u!114 &1126893171549585149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8112981955954163366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  damageAmountDivide: 0.5
+  damageManager: {fileID: 1097543220886770253}
+  superMetreChargeAmount: 0
+  knockback: {x: 0, y: 0}
+  verticalKnockbackForce: 0
+  hitstun: 0
+  playerWithHitboxes: {fileID: 0}

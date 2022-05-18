@@ -9,9 +9,10 @@ public class PinningAndSubmissionAttacks : MonoBehaviour
     Animator animator;
      AnimationEvents animationEvents;
      PlayerMovementFinal playerMovement;
-    public GameObject opponentOne;
+     GameObject opponentOne;
      GloablVariablesManager globalVariables;
-    Rigidbody2D rigidbody2d; 
+    Rigidbody2D rigidbody2d;
+    PlayerAttachedMultiplayer playerAttachedMultiplayer; 
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,17 @@ public class PinningAndSubmissionAttacks : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         animationEvents = GetComponent<AnimationEvents>();
         playerMovement = GetComponent<PlayerMovementFinal>();
-        globalVariables = FindObjectOfType<GloablVariablesManager>(); 
+        globalVariables = FindObjectOfType<GloablVariablesManager>();
+        playerAttachedMultiplayer = GetComponent<PlayerAttachedMultiplayer>(); 
+        if(GetComponent<PlayerAttachedMultiplayer>().playerNo == 1)
+        {
+            opponentOne = GameObject.FindGameObjectWithTag("PlayerTwo");
+        }
+        else
+        {
+            opponentOne = GameObject.FindGameObjectWithTag("PlayerOne");
+        }
+        
 
 
     }

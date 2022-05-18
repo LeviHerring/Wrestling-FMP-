@@ -13,7 +13,7 @@ public class Hitbox : MonoBehaviour
     public GameObject playerWithHitboxes;
     PlayerMovementFinal playerMovementFinal; 
 
-    public GameObject player;
+    GameObject player;
     //public GameObject player2;
     //public GameObject player3;
     //public GameObject player4;
@@ -27,6 +27,14 @@ public class Hitbox : MonoBehaviour
         health = GetComponent<Health>();
         damageAmount = damageManager.damage * damageManager.damageMultiplier;
         playerMovementFinal = GetComponent<PlayerMovementFinal>(); 
+        if(playerWithHitboxes.GetComponent<PlayerAttachedMultiplayer>().playerNo == 1)
+        {
+            player = GameObject.FindGameObjectWithTag("PlayerOne");
+        }
+        else
+        {
+            player = GameObject.FindGameObjectWithTag("PlayerTwo");
+        }
     }
 
     // Update is called once per frame

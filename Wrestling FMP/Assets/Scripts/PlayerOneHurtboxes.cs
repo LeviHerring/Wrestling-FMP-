@@ -2,35 +2,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem; 
+using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerOneHurtboxes : MonoBehaviour
 {
-    public Animator animator;
-    public AnimationEvents animationEvents;
-    public Rigidbody2D rigidbody2d; 
+     public GameObject player; 
+     public Animator animator;
+     AnimationEvents animationEvents;
+     public Rigidbody2D rigidbody2d; 
     public bool isHit;
     public float stopwatch;
     public float stopwatchTime;
     public float disabledTime;
-    public GloablVariablesManager globalVariablesManager;
-    public PlayerMovementFinal playerMovement;
-    public Health health; 
+     GloablVariablesManager globalVariables;
+     PlayerMovementFinal playerMovement;
+     Health health; 
     public bool hasWon;
     public bool hasWonSubmit;
     public bool isMashingNeeded;
     public float fillAmount;
-    public Image metre;
+     Image metre;
     public float mashingAmountNeeded;
     public int countdownTime;
     public float randomSubmit;
     public float submissionNo; 
-    public Text countdownDisplay;
+     Text countdownDisplay;
     int loopNumber = 0; 
     // Start is called before the first frame update
     void Start()
     {
         //rigidbody2d = GetComponent<Rigidbody2D>(); 
+        //animator = player.GetComponent<Animator>();
+        animationEvents = player.GetComponent<AnimationEvents>();
+        //rigidbody2d = player.GetComponent<Rigidbody2D>();
+        playerMovement = player.GetComponent<PlayerMovementFinal>(); 
+        health = player.GetComponent<Health>();
+        globalVariables = FindObjectOfType<GloablVariablesManager>();
+        if (player.GetComponent<PlayerAttachedMultiplayer>().playerNo == 1)
+        {
+            metre = ComponentManager.instance.player1MashingMetre;
+            countdownDisplay = ComponentManager.instance.player1Countdown;
+       }
+        else
+        {
+            metre = ComponentManager.instance.player2MashingMetre;
+            countdownDisplay = ComponentManager.instance.player2Countdown;
+        }
     }
 
     // Update is called once per frame
@@ -51,7 +69,7 @@ public class PlayerOneHurtboxes : MonoBehaviour
         {
             while(loopNumber == 0)
             {
-                  globalVariablesManager.maxrange -= health.health;
+                  globalVariables.maxrange -= health.health;
                   mashingAmountNeeded += health.health;
                  loopNumber++; 
             }
@@ -78,8 +96,8 @@ public class PlayerOneHurtboxes : MonoBehaviour
         if(collision.gameObject.tag == "Submission")
         {
             animationEvents.isAttacking = true;
-            randomSubmit = Random.Range(1f, globalVariablesManager.maxrange); 
-            submissionNo = Random.Range(1f, globalVariablesManager.maxrange);
+            randomSubmit = Random.Range(1f, globalVariables.maxrange); 
+            submissionNo = Random.Range(1f, globalVariables.maxrange);
             if (submissionNo == randomSubmit)
             {
                 Debug.Log("Submitted");
@@ -117,13 +135,13 @@ public class PlayerOneHurtboxes : MonoBehaviour
         {
             if (context.performed)
             {
-                globalVariablesManager.player1MashingDone++;
-                fillAmount = globalVariablesManager.player1MashingDone / 10;
+                globalVariables.player1MashingDone++;
+                fillAmount = globalVariables.player1MashingDone / 10;
                 metre.fillAmount = fillAmount;
 
 
             }
-            if (globalVariablesManager.player1MashingDone == mashingAmountNeeded)
+            if (globalVariables.player1MashingDone == mashingAmountNeeded)
             {
                 hasWon = true;
                 isMashingNeeded = false; 
