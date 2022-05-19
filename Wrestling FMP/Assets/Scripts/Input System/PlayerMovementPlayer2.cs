@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Input System/PlayerMovement 1.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Input System/PlayerMovementPlayer2.inputactions'
 
 using System;
 using System.Collections;
@@ -6,13 +6,13 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @PlayerMovement1 : IInputActionCollection, IDisposable
+public class @PlayerMovementPlayer2 : IInputActionCollection, IDisposable
 {
     public InputActionAsset asset { get; }
-    public @PlayerMovement1()
+    public @PlayerMovementPlayer2()
     {
         asset = InputActionAsset.FromJson(@"{
-    ""name"": ""PlayerMovement 1"",
+    ""name"": ""PlayerMovementPlayer2"",
     ""maps"": [
         {
             ""name"": ""Player"",
@@ -1118,8 +1118,8 @@ public class @PlayerMovement1 : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_upstrongair;
     public struct PlayerActions
     {
-        private @PlayerMovement1 m_Wrapper;
-        public PlayerActions(@PlayerMovement1 wrapper) { m_Wrapper = wrapper; }
+        private @PlayerMovementPlayer2 m_Wrapper;
+        public PlayerActions(@PlayerMovementPlayer2 wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @AirDash => m_Wrapper.m_Player_AirDash;

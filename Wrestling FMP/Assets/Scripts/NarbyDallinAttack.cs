@@ -62,7 +62,7 @@ public class NarbyDallinAttack : MonoBehaviour
                 break;
             case InputActionPhase.Canceled:
                 UnityEngine.Debug.Log("Cancelled");
-    a       
+         
                 //DamageMultiplier();
                 damageManager.damageMultiplier += 5;
                 break;

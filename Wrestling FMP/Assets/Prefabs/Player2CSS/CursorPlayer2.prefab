@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4909575955567756276}
   - component: {fileID: 8873351427029141530}
   - component: {fileID: 4857426581667517088}
+  - component: {fileID: 4638338739332035518}
   m_Layer: 0
   m_Name: CursorPlayer2
   m_TagString: Untagged
@@ -97,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed3ce7106b7c244994f0a8821c72626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNo: 0
   spriteRenderer: {fileID: 4909575955567756277}
   position: 1
   bounds: 0000000001000000
@@ -213,3 +215,17 @@ MonoBehaviour:
   m_DefaultActionMap: CharacterSelectScreen
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &4638338739332035518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909575955567756279}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c82e2b61796484e8ff14774ca7a590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActionAssetPlayerOne: {fileID: -944628639613478452, guid: 8dc532a95373a944686dfadd05c46079, type: 3}
+  inputActionAssetPlayerTwo: {fileID: -944628639613478452, guid: d264af006cd2a594f8101f16fdf47f48, type: 3}

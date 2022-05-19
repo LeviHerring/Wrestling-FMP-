@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GloablVariablesManager : MonoBehaviour
 {
+    public Transform playerOneSpawn;
+    public Transform playerTwoSpawn;
     public int player1MashingDone;
     public int player2MashingDone;
     public int player3MashingDone;

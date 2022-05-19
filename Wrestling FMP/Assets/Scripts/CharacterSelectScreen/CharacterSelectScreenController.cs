@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class CharacterSelectScreenController : MonoBehaviour
 {
+    [SerializeField] public int playerNo;
+
     public SpriteRenderer spriteRenderer; 
 
     [SerializeField] public int position = 2;

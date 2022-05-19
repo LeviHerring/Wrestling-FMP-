@@ -381,6 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3285904727967292471}
   - component: {fileID: 605957444045952621}
+  - component: {fileID: 5047844900293849019}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Pin
@@ -428,6 +429,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5897417, y: 1.8458896}
   m_EdgeRadius: 0
+--- !u!114 &5047844900293849019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376136415303738116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d4f82fa60f58c4d8a6c9bf154dcd51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5817951291928251930}
 --- !u!1 &1702437917118527287
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7277123650702459947}
   - component: {fileID: 7418616424908998439}
+  - component: {fileID: 8061200352587696915}
   m_Layer: 0
   m_Name: Submission
   m_TagString: Submission
@@ -485,6 +500,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8935461, y: 1.8578038}
   m_EdgeRadius: 0
+--- !u!114 &8061200352587696915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702437917118527287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bff21309d346eb4c942bbab4d0430f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5817951291928251930}
 --- !u!1 &2561687079778411850
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,7 +1376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: dbb5d49c7a58e4544a3702883bde1fd2, type: 3}
+  m_Actions: {fileID: 0}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -1715,7 +1743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15bc4cc5e0855db4d909f893f7beb461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAttacking: 0
+  isAttacking: 1
   animator: {fileID: 5817951291928251923}
   isMoving: 0
   neutral: {fileID: 5817951293646849566}
@@ -2216,7 +2244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5817951293646849567
 Transform:
   m_ObjectHideFlags: 0

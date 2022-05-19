@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 416707759196887310}
   - component: {fileID: 416707759196887307}
   - component: {fileID: 6525462948067990196}
+  - component: {fileID: 5154465861263550648}
   m_Layer: 0
   m_Name: Cursorplayer1
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416707759196887311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,8 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed3ce7106b7c244994f0a8821c72626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNo: 0
   spriteRenderer: {fileID: 416707759196887305}
-  position: 0
+  position: 1
   bounds: 0000000001000000
   player: Player 1
   isSelected: 0
@@ -213,3 +215,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTwo: {fileID: 4909575955567756279, guid: 2fafe67705412544cbb67892dc51fd5a, type: 3}
+--- !u!114 &5154465861263550648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416707759196887311}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c82e2b61796484e8ff14774ca7a590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActionAssetPlayerOne: {fileID: -944628639613478452, guid: 8dc532a95373a944686dfadd05c46079, type: 3}
+  inputActionAssetPlayerTwo: {fileID: -944628639613478452, guid: d264af006cd2a594f8101f16fdf47f48, type: 3}
