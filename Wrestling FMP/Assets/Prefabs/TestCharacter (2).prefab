@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 2958498870681795801}
   - component: {fileID: -530986793204823909}
   - component: {fileID: 7857946625379553993}
+  - component: {fileID: -4655701261760999438}
   m_Layer: 0
   m_Name: TestCharacter (2)
   m_TagString: Player
@@ -225,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
+  m_Actions: {fileID: -944628639613478452, guid: dbb5d49c7a58e4544a3702883bde1fd2, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -360,8 +361,8 @@ MonoBehaviour:
     m_ActionName: Player/Super Attack[/XInputControllerWindows/rightShoulder,/Keyboard/k]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2958498870681795801}
-        m_TargetAssemblyTypeName: PinningAndSubmissionAttacks, Assembly-CSharp
+      - m_Target: {fileID: -4655701261760999438}
+        m_TargetAssemblyTypeName: NewPinningAndSubmittingAndMashing, Assembly-CSharp
         m_MethodName: Pin
         m_Mode: 0
         m_Arguments:
@@ -376,9 +377,9 @@ MonoBehaviour:
     m_ActionName: Player/ToPinSomeone[/XInputControllerWindows/leftTrigger,/Keyboard/backspace]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -530986793204823909}
-        m_TargetAssemblyTypeName: SubmissionInput, Assembly-CSharp
-        m_MethodName: Pin
+      - m_Target: {fileID: -4655701261760999438}
+        m_TargetAssemblyTypeName: NewPinningAndSubmittingAndMashing, Assembly-CSharp
+        m_MethodName: Submit
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -392,8 +393,8 @@ MonoBehaviour:
     m_ActionName: Player/Submit[/XInputControllerWindows/rightTrigger,/Keyboard/rightShift]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1097543221296233361}
-        m_TargetAssemblyTypeName: PinningButtonMash, Assembly-CSharp
+      - m_Target: {fileID: 1097543222201420176}
+        m_TargetAssemblyTypeName: PlayerOneHurtboxes, Assembly-CSharp
         m_MethodName: Mashing
         m_Mode: 0
         m_Arguments:
@@ -538,11 +539,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAttacking: 1
-  animator: {fileID: 0}
+  animator: {fileID: 7857946625379553993}
   isMoving: 0
   neutral: {fileID: 1097543222240949151}
   special: {fileID: 1097543221373514881}
   strong: {fileID: 1097543221329960016}
+  pinHitbox: {fileID: 3408424059331805061}
+  submitHitbox: {fileID: 8112981955954163366}
 --- !u!114 &1097543221296233361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,7 +553,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097543221296233371}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a23bfddff8cc844e8bb95ad220b570f, type: 3}
   m_Name: 
@@ -650,12 +653,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097543221296233371}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00d7edf64bfc61c4c926e640703e61c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pinHitbox: {fileID: 3408424059331805061}
+  player: {fileID: 0}
 --- !u!114 &-530986793204823909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,7 +667,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097543221296233371}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d115fc16acdd904aa9f48c62597b753, type: 3}
   m_Name: 
@@ -689,6 +693,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-4655701261760999438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097543221296233371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1077be2c52927d4395cfe148ece66c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinHitbox: {fileID: 3408424059331805061}
+  submitHitbox: {fileID: 8112981955954163366}
+  player: {fileID: 1097543221296233371}
 --- !u!1 &1097543221314417836
 GameObject:
   m_ObjectHideFlags: 0

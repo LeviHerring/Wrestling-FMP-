@@ -1257,6 +1257,7 @@ GameObject:
   - component: {fileID: -4432146637140137289}
   - component: {fileID: 2468875937371432243}
   - component: {fileID: -6691331372014842436}
+  - component: {fileID: 6617284995883786636}
   m_Layer: 0
   m_Name: TestCharacter
   m_TagString: Player
@@ -1376,7 +1377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
+  m_Actions: {fileID: -944628639613478452, guid: dbb5d49c7a58e4544a3702883bde1fd2, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -1756,7 +1757,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5817951291928251930}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a23bfddff8cc844e8bb95ad220b570f, type: 3}
   m_Name: 
@@ -1868,12 +1869,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5817951291928251930}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00d7edf64bfc61c4c926e640703e61c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pinHitbox: {fileID: 1376136415303738116}
+  player: {fileID: 0}
 --- !u!114 &2468875937371432243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1893,13 +1895,28 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5817951291928251930}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d115fc16acdd904aa9f48c62597b753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   submitHitbox: {fileID: 1702437917118527287}
   opponentOne: {fileID: 0}
+--- !u!114 &6617284995883786636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5817951291928251930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1077be2c52927d4395cfe148ece66c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinHitbox: {fileID: 1376136415303738116}
+  submitHitbox: {fileID: 1702437917118527287}
+  player: {fileID: 5817951291928251930}
 --- !u!1 &5817951292325062606
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,8 @@ using TMPro;
 
 public class PlayerOneHurtboxes : MonoBehaviour
 {
-     public GameObject player; 
+     public GameObject player;
+    GameObject enemy; 
      public Animator animator;
      AnimationEvents animationEvents;
      public Rigidbody2D rigidbody2d; 
@@ -43,11 +44,13 @@ public class PlayerOneHurtboxes : MonoBehaviour
         {
             metre = ComponentManager.instance.player1MashingMetre;
             countdownDisplay = ComponentManager.instance.player1Countdown;
-       }
+            enemy = GameObject.FindGameObjectWithTag("PlayerTwo");
+        }
         else
         {
             metre = ComponentManager.instance.player2MashingMetre;
             countdownDisplay = ComponentManager.instance.player2Countdown;
+            enemy = GameObject.FindGameObjectWithTag("PlayerOne");
         }
     }
 

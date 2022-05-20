@@ -1,20 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem; 
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using TMPro;
 
-public class PinningAndSubmissionAttacks : MonoBehaviour
+public class NewPinningAndSubmittingAndMashing : MonoBehaviour
 {
     public GameObject pinHitbox;
+    public GameObject submitHitbox;
     Animator animator;
-     AnimationEvents animationEvents;
-     PlayerMovementFinal playerMovement;
-     GameObject opponentOne;
-     GloablVariablesManager globalVariables;
+    AnimationEvents animationEvents;
+    PlayerMovementFinal playerMovement;
+    GameObject opponentOne;
+    GloablVariablesManager globalVariables;
     Rigidbody2D rigidbody2d;
     PlayerAttachedMultiplayer playerAttachedMultiplayer;
     [SerializeField]
-    GameObject player; 
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -24,20 +28,18 @@ public class PinningAndSubmissionAttacks : MonoBehaviour
         animationEvents = GetComponent<AnimationEvents>();
         playerMovement = GetComponent<PlayerMovementFinal>();
         globalVariables = FindObjectOfType<GloablVariablesManager>();
-        playerAttachedMultiplayer = GetComponent<PlayerAttachedMultiplayer>(); 
-        if(GetComponent<PlayerAttachedMultiplayer>().playerNo == 1)
+        playerAttachedMultiplayer = GetComponent<PlayerAttachedMultiplayer>();
+        if (GetComponent<PlayerAttachedMultiplayer>().playerNo == 1)
         {
-            player = GameObject.FindGameObjectWithTag("PlayerOne");
             opponentOne = GameObject.FindGameObjectWithTag("PlayerTwo");
             Debug.Log(player.activeSelf);
         }
         else
         {
             opponentOne = GameObject.FindGameObjectWithTag("PlayerOne");
-            player = GameObject.FindGameObjectWithTag("PlayerTwo");
             Debug.Log(player.activeSelf);
         }
-        
+
 
 
     }
@@ -45,7 +47,7 @@ public class PinningAndSubmissionAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Pin(InputAction.CallbackContext context)
@@ -54,34 +56,35 @@ public class PinningAndSubmissionAttacks : MonoBehaviour
         if (context.performed)
         {
             Debug.Log(player.activeSelf);
-            StartCoroutine(Pinning()); 
+            animationEvents.isAttacking = true;
+            pinHitbox.SetActive(true);
+            animator.SetBool("IsGrabbing", true);
         }
     }
 
-    IEnumerator Pinning()
-    {
-        animationEvents.isAttacking = true; 
-        pinHitbox.SetActive(true);
-        animator.SetBool("IsGrabbing", true); 
-        yield return new WaitForSeconds(0.3f);
-        pinHitbox.SetActive(false);
-        animator.SetBool("IsGrabbing", false);
-    }
+       
+        
+        
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void Submit(InputAction.CallbackContext context)
     {
-        if(collision.gameObject.tag == "Player")
+        Debug.Log(player.active);
+        if (context.performed)
         {
-            animationEvents.isAttacking = true; 
-            animator.SetBool("IsPinning", true);
-            HasOpponentWon(); 
-
+            Debug.Log(player.activeSelf);
+            animationEvents.isAttacking = true;
+            submitHitbox.SetActive(true);
+            animator.SetBool("IsGrabbing", true);
         }
     }
+
+
+
+
 
     public void HasOpponentWon()
     {
-        while(opponentOne.GetComponent<PlayerOneHurtboxes>().hasWon == false)
+        while (opponentOne.GetComponent<PlayerOneHurtboxes>().hasWon == false)
         {
             if (opponentOne.GetComponent<PlayerOneHurtboxes>().hasWon == true)
             {
@@ -89,15 +92,15 @@ public class PinningAndSubmissionAttacks : MonoBehaviour
             }
             else
             {
-                return; 
+                return;
             }
         }
-       
+
     }
 
     IEnumerator LaunchBack()
     {
-        if(playerMovement.isFacingRight == true)
+        if (playerMovement.isFacingRight == true)
         {
             rigidbody2d.velocity = new Vector2(5, 5);
 
@@ -111,6 +114,6 @@ public class PinningAndSubmissionAttacks : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             animationEvents.isAttacking = false;
         }
-       
+
     }
 }

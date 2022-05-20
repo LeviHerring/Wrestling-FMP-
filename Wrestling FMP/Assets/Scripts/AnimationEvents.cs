@@ -16,6 +16,9 @@ public class AnimationEvents : MonoBehaviour
     [SerializeField] GameObject special;
 
     [SerializeField] GameObject strong;
+
+    [SerializeField] GameObject pinHitbox; 
+    [SerializeField] GameObject submitHitbox;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +39,7 @@ public class AnimationEvents : MonoBehaviour
         animator.SetBool("isSpecial", false);
         animator.SetBool("isUp", false);
         animator.SetBool("isDown", false);
+        animator.SetBool("IsGrabbing", false);
 
         isAttacking = false; 
     }
@@ -46,6 +50,8 @@ public class AnimationEvents : MonoBehaviour
         special.gameObject.SetActive(false);
         strong.gameObject.SetActive(false);
         GetComponent<PlayerMovementFinal>().neutral.gameObject.SetActive(false);
+        pinHitbox.SetActive(false);
+        submitHitbox.SetActive(false);
     }
 
     public void Histun()

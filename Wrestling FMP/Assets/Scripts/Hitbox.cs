@@ -29,11 +29,11 @@ public class Hitbox : MonoBehaviour
         playerMovementFinal = GetComponent<PlayerMovementFinal>(); 
         if(playerWithHitboxes.GetComponent<PlayerAttachedMultiplayer>().playerNo == 1)
         {
-            player = GameObject.FindGameObjectWithTag("PlayerOne");
+            player = GameObject.FindGameObjectWithTag("PlayerTwo");
         }
         else
         {
-            player = GameObject.FindGameObjectWithTag("PlayerTwo");
+            player = GameObject.FindGameObjectWithTag("PlayerOne");
         }
     }
 
