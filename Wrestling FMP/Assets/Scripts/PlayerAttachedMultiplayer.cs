@@ -49,12 +49,14 @@ public class PlayerAttachedMultiplayer : MonoBehaviour
         {
             playerNo = 1;
             gameObject.tag = "PlayerOne";
+            gameObject.name = "PlayerOne"; 
             gameObject.transform.position = FindObjectOfType<GloablVariablesManager>().playerOneSpawn.transform.position; 
         }
         else
         {
             playerNo = 2;
             gameObject.tag = "PlayerTwo";
+            gameObject.name = "PlayerTwo";
             gameObject.transform.position = FindObjectOfType<GloablVariablesManager>().playerTwoSpawn.transform.position;
         }
 

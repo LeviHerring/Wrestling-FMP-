@@ -416,7 +416,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.2368436, y: -0.42294478}
+  m_Offset: {x: 1.4949837, y: -0.08426952}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -427,7 +427,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5897417, y: 1.8458896}
+  m_Size: {x: 3.0734615, y: 2.52324}
   m_EdgeRadius: 0
 --- !u!114 &5047844900293849019
 MonoBehaviour:
@@ -487,7 +487,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.3649182, y: -0.4289019}
+  m_Offset: {x: 1.6230583, y: -0.122481585}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -498,7 +498,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8935461, y: 1.8578038}
+  m_Size: {x: 3.377266, y: 2.4706445}
   m_EdgeRadius: 0
 --- !u!114 &8061200352587696915
 MonoBehaviour:
@@ -584,6 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
+  staminaPoints: 0
   damageAmountDivide: 0.5
   damageManager: {fileID: 5817951292325062604}
   superMetreChargeAmount: 0
@@ -591,6 +592,7 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 10
   playerWithHitboxes: {fileID: 5817951291928251930}
+  player: {fileID: 0}
 --- !u!1 &2862198001693894035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 0
+  staminaPoints: 0
   damageAmountDivide: 0
   damageManager: {fileID: 5817951292325062604}
   superMetreChargeAmount: 0
@@ -1231,6 +1234,7 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 5817951291928251930}
+  player: {fileID: 0}
 --- !u!1 &5817951291928251930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,8 +1260,8 @@ GameObject:
   - component: {fileID: -4433272338499864133}
   - component: {fileID: -4432146637140137289}
   - component: {fileID: 2468875937371432243}
-  - component: {fileID: -6691331372014842436}
   - component: {fileID: 6617284995883786636}
+  - component: {fileID: 851449104377452429}
   m_Layer: 0
   m_Name: TestCharacter
   m_TagString: Player
@@ -1520,9 +1524,9 @@ MonoBehaviour:
     m_ActionName: Player/Mashing[/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -4432146637140137289}
-        m_TargetAssemblyTypeName: PinningAndSubmissionAttacks, Assembly-CSharp
-        m_MethodName: Pin
+      - m_Target: {fileID: 6617284995883786636}
+        m_TargetAssemblyTypeName: NewPinningAndSubmittingAndMashing, Assembly-CSharp
+        m_MethodName: Submit
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1536,8 +1540,8 @@ MonoBehaviour:
     m_ActionName: Player/Submit[/XInputControllerWindows/rightTrigger]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -4432146637140137289}
-        m_TargetAssemblyTypeName: PinningAndSubmissionAttacks, Assembly-CSharp
+      - m_Target: {fileID: 6617284995883786636}
+        m_TargetAssemblyTypeName: NewPinningAndSubmittingAndMashing, Assembly-CSharp
         m_MethodName: Pin
         m_Mode: 0
         m_Arguments:
@@ -1750,6 +1754,8 @@ MonoBehaviour:
   neutral: {fileID: 5817951293646849566}
   special: {fileID: 5817951291838316800}
   strong: {fileID: 5817951291797006801}
+  pinHitbox: {fileID: 1376136415303738116}
+  submitHitbox: {fileID: 1702437917118527287}
 --- !u!114 &5817951291928251920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1787,6 +1793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   superMetreCharge: 0
   playerNo: 
+  stamina: 100
   health: 0
 --- !u!114 &5817951291928251918
 MonoBehaviour:
@@ -1888,20 +1895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d8154b35c95f04e8a9b0cd393e3da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-6691331372014842436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5817951291928251930}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d115fc16acdd904aa9f48c62597b753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  submitHitbox: {fileID: 1702437917118527287}
-  opponentOne: {fileID: 0}
 --- !u!114 &6617284995883786636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1916,7 +1909,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pinHitbox: {fileID: 1376136415303738116}
   submitHitbox: {fileID: 1702437917118527287}
+  animator: {fileID: 5817951291928251923}
+  animationEvents: {fileID: 5817951291928251922}
   player: {fileID: 5817951291928251930}
+--- !u!114 &851449104377452429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5817951291928251930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589109b1f82ba3a42878022829d3ff53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5817951292325062606
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,6 +2237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5817951291928251930}
+  enemy: {fileID: 0}
   animator: {fileID: 5817951291928251923}
   rigidbody2d: {fileID: 5817951291928251931}
   isHit: 0
@@ -2261,7 +2269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5817951293646849567
 Transform:
   m_ObjectHideFlags: 0
@@ -2315,6 +2323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
+  staminaPoints: 1
   damageAmountDivide: 0.5
   damageManager: {fileID: 5817951292325062604}
   superMetreChargeAmount: 0
@@ -2322,6 +2331,7 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 10
   playerWithHitboxes: {fileID: 5817951291928251930}
+  player: {fileID: 0}
 --- !u!1 &5817951293667224698
 GameObject:
   m_ObjectHideFlags: 0

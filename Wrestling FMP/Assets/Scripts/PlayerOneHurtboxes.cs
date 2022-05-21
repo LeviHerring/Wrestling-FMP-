@@ -8,7 +8,7 @@ using TMPro;
 public class PlayerOneHurtboxes : MonoBehaviour
 {
      public GameObject player;
-    GameObject enemy; 
+    public GameObject enemy; 
      public Animator animator;
      AnimationEvents animationEvents;
      public Rigidbody2D rigidbody2d; 
@@ -29,7 +29,8 @@ public class PlayerOneHurtboxes : MonoBehaviour
     public float randomSubmit;
     public float submissionNo; 
      Text countdownDisplay;
-    int loopNumber = 0; 
+    int loopNumber = 0;
+    string playerString; 
     // Start is called before the first frame update
     void Start()
     {
@@ -45,12 +46,14 @@ public class PlayerOneHurtboxes : MonoBehaviour
             metre = ComponentManager.instance.player1MashingMetre;
             countdownDisplay = ComponentManager.instance.player1Countdown;
             enemy = GameObject.FindGameObjectWithTag("PlayerTwo");
+            playerString = "PlayerTwo"; 
         }
         else
         {
             metre = ComponentManager.instance.player2MashingMetre;
             countdownDisplay = ComponentManager.instance.player2Countdown;
             enemy = GameObject.FindGameObjectWithTag("PlayerOne");
+            playerString = "PlayerOne";
         }
     }
 
@@ -77,6 +80,11 @@ public class PlayerOneHurtboxes : MonoBehaviour
                  loopNumber++; 
             }
           
+        }
+
+        if(enemy == null)
+        {
+            enemy = GameObject.FindGameObjectWithTag(playerString); 
         }
       
     }

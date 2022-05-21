@@ -10,22 +10,24 @@ public class NewPinningAndSubmittingAndMashing : MonoBehaviour
 {
     public GameObject pinHitbox;
     public GameObject submitHitbox;
-    Animator animator;
-    AnimationEvents animationEvents;
+    public Animator animator;
+    public AnimationEvents animationEvents;
     PlayerMovementFinal playerMovement;
     GameObject opponentOne;
     GloablVariablesManager globalVariables;
     Rigidbody2D rigidbody2d;
     PlayerAttachedMultiplayer playerAttachedMultiplayer;
-    [SerializeField]
+    
     public GameObject player;
+
+    string playerTwoString; 
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         rigidbody2d = GetComponent<Rigidbody2D>();
-        animationEvents = GetComponent<AnimationEvents>();
+        //animationEvents = GetComponent<AnimationEvents>();
         playerMovement = GetComponent<PlayerMovementFinal>();
         globalVariables = FindObjectOfType<GloablVariablesManager>();
         playerAttachedMultiplayer = GetComponent<PlayerAttachedMultiplayer>();
@@ -33,11 +35,13 @@ public class NewPinningAndSubmittingAndMashing : MonoBehaviour
         {
             opponentOne = GameObject.FindGameObjectWithTag("PlayerTwo");
             Debug.Log(player.activeSelf);
+            playerTwoString = "PlayerTwo";
         }
         else
         {
             opponentOne = GameObject.FindGameObjectWithTag("PlayerOne");
             Debug.Log(player.activeSelf);
+            playerTwoString = "PlayerOne";
         }
 
 
@@ -47,18 +51,20 @@ public class NewPinningAndSubmittingAndMashing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(opponentOne == null)
+        {
+            Debug.Log("Enters If in update"); 
+            opponentOne = GameObject.FindGameObjectWithTag(playerTwoString); 
+        }
     }
 
     public void Pin(InputAction.CallbackContext context)
     {
-        Debug.Log(player.active);
         if (context.performed)
         {
-            Debug.Log(player.activeSelf);
             animationEvents.isAttacking = true;
             pinHitbox.SetActive(true);
-            animator.SetBool("IsGrabbing", true);
+            animator.SetBool("isGrabbing", true);
         }
     }
 
@@ -74,7 +80,7 @@ public class NewPinningAndSubmittingAndMashing : MonoBehaviour
             Debug.Log(player.activeSelf);
             animationEvents.isAttacking = true;
             submitHitbox.SetActive(true);
-            animator.SetBool("IsGrabbing", true);
+            animator.SetBool("isGrabbing", true);
         }
     }
 
@@ -84,9 +90,12 @@ public class NewPinningAndSubmittingAndMashing : MonoBehaviour
 
     public void HasOpponentWon()
     {
-        while (opponentOne.GetComponent<PlayerOneHurtboxes>().hasWon == false)
+        Debug.Log(opponentOne);
+        while (opponentOne.GetComponentInChildren<PlayerOneHurtboxes>().hasWon == false)
         {
-            if (opponentOne.GetComponent<PlayerOneHurtboxes>().hasWon == true)
+            Debug.Log(opponentOne);
+            Debug.Log("Enters while"); 
+            if (opponentOne.GetComponentInChildren<PlayerOneHurtboxes>().hasWon == true)
             {
                 StartCoroutine(LaunchBack());
             }

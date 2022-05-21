@@ -4,22 +4,38 @@ using UnityEngine;
 
 public class SubmissionHitbox : MonoBehaviour
 {
-    public GameObject player; 
+    public GameObject player;
+    GameObject opponentOne;
+    string opponentTag;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (player.GetComponent<PlayerAttachedMultiplayer>().playerNo == 1)
+        {
+            opponentOne = GameObject.FindGameObjectWithTag("PlayerTwo");
+            opponentTag = "PlayerTwo";
+            Debug.Log(player.activeSelf);
+        }
+        else
+        {
+            opponentTag = "PlayerOne";
+            opponentOne = GameObject.FindGameObjectWithTag("PlayerOne");
+            Debug.Log(player.activeSelf);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(opponentOne == null)
+        {
+            opponentOne = GameObject.FindGameObjectWithTag(opponentTag);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == player.GetComponent<SubmissionInput>().opponentOne.tag)
+        if (collision.gameObject.tag == opponentTag)
         {
             player.GetComponent<AnimationEvents>().isAttacking = true;
             player.GetComponent<Animator>().SetBool("IsPinning", true);

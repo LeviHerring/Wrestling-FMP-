@@ -4,6 +4,7 @@ public class Hitbox : MonoBehaviour
 {
 
     [SerializeField] public float damageAmount;
+    [SerializeField] public float staminaPoints;
     [SerializeField] public float damageAmountDivide;
     public DamageManager damageManager; 
     [SerializeField] public float superMetreChargeAmount;
@@ -13,11 +14,12 @@ public class Hitbox : MonoBehaviour
     public GameObject playerWithHitboxes;
     PlayerMovementFinal playerMovementFinal; 
 
-    GameObject player;
+    [SerializeField] GameObject player;
     //public GameObject player2;
     //public GameObject player3;
     //public GameObject player4;
 
+    string playerString; 
 
 
     Health health; 
@@ -30,17 +32,22 @@ public class Hitbox : MonoBehaviour
         if(playerWithHitboxes.GetComponent<PlayerAttachedMultiplayer>().playerNo == 1)
         {
             player = GameObject.FindGameObjectWithTag("PlayerTwo");
+            playerString = "PlayerTwo"; 
         }
         else
         {
             player = GameObject.FindGameObjectWithTag("PlayerOne");
+            playerString = "PlayerOne"; 
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag(playerString);
+        }
     }
 
 
@@ -50,12 +57,12 @@ public class Hitbox : MonoBehaviour
 
         //Debug.Log("HIT DETECTED");
 
-        if (collision.gameObject.name == player.gameObject.name)
+        if (collision.gameObject.name == playerString)
         {
            
 
             Debug.Log("DETECTION");
-            player.GetComponent<Health>().Damage(damageAmount, superMetreChargeAmount);
+            player.GetComponent<Health>().Damage(damageAmount, superMetreChargeAmount, staminaPoints);
             if (playerWithHitboxes.GetComponent<PlayerMovementFinal>().isFacingRight == true)
             {
                 Vector2 newKnockback = new Vector2(knockback.x * damageManager.knockbackMultiplierX, knockback.y * damageManager.knockbackMultiplierY);

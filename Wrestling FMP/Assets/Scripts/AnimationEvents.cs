@@ -39,7 +39,7 @@ public class AnimationEvents : MonoBehaviour
         animator.SetBool("isSpecial", false);
         animator.SetBool("isUp", false);
         animator.SetBool("isDown", false);
-        animator.SetBool("IsGrabbing", false);
+        animator.SetBool("isGrabbing", false);
 
         isAttacking = false; 
     }

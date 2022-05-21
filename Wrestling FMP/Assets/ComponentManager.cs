@@ -30,4 +30,6 @@ public class ComponentManager : MonoBehaviour
     public Image player2MashingMetre;
     public Text player1WinnerText;
     public Text player2WinnerText;
+    public Text player1Stamina;
+    public Text player2Stamina; 
 }

@@ -2,18 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem; 
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement; 
 
 public class Health : MonoBehaviour
 {
     Text healthText;
-
+    Text staminaText; 
     Image superMetre;
     public float superMetreCharge = 0f; 
 
-    [SerializeField] string playerNo; 
+    [SerializeField] string playerNo;
+
+    [SerializeField] public float stamina; 
 
     public float health = 0f;
+
+    string playerWins; 
 
     
     // Start is called before the first frame update
@@ -23,11 +28,15 @@ public class Health : MonoBehaviour
         {
             healthText = ComponentManager.instance.player1HealthText;
             superMetre = ComponentManager.instance.player1Metre;
+            staminaText = ComponentManager.instance.player1Stamina;
+            playerWins = "PlayerTwoWins";
         }
         else
         {
             healthText = ComponentManager.instance.player2HealthText;
             superMetre = ComponentManager.instance.player2Metre;
+            staminaText = ComponentManager.instance.player2Stamina;
+            playerWins = "PlayerOneWins";
         }
         
     }
@@ -35,18 +44,26 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        staminaText.text = stamina + ""; 
         healthText.text = health + "%";  
         if (superMetreCharge > 1)
         {
             superMetreCharge = 1f; 
         }
         superMetre.fillAmount = superMetreCharge;
+
+        if(stamina <= 0)
+        {
+            Debug.Log("Lose!");
+            SceneManager.LoadScene(playerWins); 
+        }
     }
 
-    public void Damage(float damagePoints, float superMetreChargePoints)
+    public void Damage(float damagePoints, float superMetreChargePoints, float staminaPoints)
     {
         health += damagePoints;
-        superMetreCharge += superMetreChargePoints; 
+        superMetreCharge += superMetreChargePoints;
+        stamina -= staminaPoints; 
     }
 
     public void Finisher(InputAction.CallbackContext context)

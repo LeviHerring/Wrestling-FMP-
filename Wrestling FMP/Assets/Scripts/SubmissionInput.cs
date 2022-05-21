@@ -9,7 +9,7 @@ public class SubmissionInput : MonoBehaviour
     Animator animator;
     AnimationEvents animationEvents;
     PlayerMovementFinal playerMovement;
-    public GameObject opponentOne;
+    GameObject opponentOne;
     GloablVariablesManager globalVariables;
     Rigidbody2D rigidbody2d;
     PlayerAttachedMultiplayer playerAttachedMultiplayer; 

@@ -104,9 +104,9 @@ GameObject:
   - component: {fileID: 1097543221296233357}
   - component: {fileID: -447327266426939530}
   - component: {fileID: 2958498870681795801}
-  - component: {fileID: -530986793204823909}
   - component: {fileID: 7857946625379553993}
   - component: {fileID: -4655701261760999438}
+  - component: {fileID: 5285265484298985524}
   m_Layer: 0
   m_Name: TestCharacter (2)
   m_TagString: Player
@@ -583,6 +583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   superMetreCharge: 0
   playerNo: 
+  stamina: 100
   health: 0
 --- !u!114 &1097543221296233359
 MonoBehaviour:
@@ -659,21 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinHitbox: {fileID: 3408424059331805061}
-  player: {fileID: 0}
---- !u!114 &-530986793204823909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097543221296233371}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d115fc16acdd904aa9f48c62597b753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  submitHitbox: {fileID: 8112981955954163366}
-  opponentOne: {fileID: 0}
+  player: {fileID: 1097543221296233371}
 --- !u!95 &7857946625379553993
 Animator:
   serializedVersion: 3
@@ -707,7 +694,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pinHitbox: {fileID: 3408424059331805061}
   submitHitbox: {fileID: 8112981955954163366}
+  animator: {fileID: 7857946625379553993}
+  animationEvents: {fileID: 1097543221296233363}
   player: {fileID: 1097543221296233371}
+--- !u!114 &5285265484298985524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097543221296233371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589109b1f82ba3a42878022829d3ff53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1097543221314417836
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,6 +941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 0
+  staminaPoints: 0
   damageAmountDivide: 0
   damageManager: {fileID: 1097543220886770253}
   superMetreChargeAmount: 0
@@ -947,6 +949,7 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 1097543221296233371}
+  player: {fileID: 0}
 --- !u!1 &1097543221424677174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,6 +1288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1097543221296233371}
+  enemy: {fileID: 0}
   animator: {fileID: 0}
   rigidbody2d: {fileID: 1097543221296233370}
   isHit: 0
@@ -1346,7 +1350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1097543222240949150
 Transform:
   m_ObjectHideFlags: 0
@@ -1400,6 +1404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
+  staminaPoints: 1
   damageAmountDivide: 0.5
   damageManager: {fileID: 1097543220886770253}
   superMetreChargeAmount: 0
@@ -1407,6 +1412,7 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 1097543221296233371}
+  player: {fileID: 0}
 --- !u!1 &1097543222611400095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,7 +1664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5230835110102696494}
   - component: {fileID: 5649692497803072250}
-  - component: {fileID: 4618781977775972067}
+  - component: {fileID: 4967615130789777666}
   m_Layer: 0
   m_Name: Pin
   m_TagString: Pin
@@ -1706,26 +1712,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8522959, y: 1.5667539}
   m_EdgeRadius: 0
---- !u!114 &4618781977775972067
+--- !u!114 &4967615130789777666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3408424059331805061}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Script: {fileID: 11500000, guid: f1d4f82fa60f58c4d8a6c9bf154dcd51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  damageAmountDivide: 0.5
-  damageManager: {fileID: 1097543220886770253}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
-  verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  player: {fileID: 1097543221296233371}
 --- !u!1 &3457983189042969219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,7 +1933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5073132816774818851}
   - component: {fileID: 6499507578553425498}
-  - component: {fileID: 1126893171549585149}
+  - component: {fileID: 1645792765712175719}
   m_Layer: 0
   m_Name: Submission
   m_TagString: Submission
@@ -1982,7 +1981,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9901552, y: 1.8277974}
   m_EdgeRadius: 0
---- !u!114 &1126893171549585149
+--- !u!114 &1645792765712175719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1991,14 +1990,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8112981955954163366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bff21309d346eb4c942bbab4d0430f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  damageAmountDivide: 0.5
-  damageManager: {fileID: 1097543220886770253}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
-  verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  player: {fileID: 1097543221296233371}
