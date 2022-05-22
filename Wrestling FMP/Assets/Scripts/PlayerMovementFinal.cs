@@ -103,6 +103,10 @@ public class PlayerMovementFinal : MonoBehaviour
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         }
+        if(IsGrounded())
+        {
+            animator.SetBool("isJumping", false); 
+        }
         
    
     }
@@ -112,7 +116,8 @@ public class PlayerMovementFinal : MonoBehaviour
         if (context.performed && IsGrounded() && GetComponent<AnimationEvents>().isAttacking == false)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            canDoubleJump = true; 
+            canDoubleJump = true;
+            animator.SetBool("isJumping", true); 
         }
         else if (context.performed && !IsGrounded() && canDoubleJump)
         {
