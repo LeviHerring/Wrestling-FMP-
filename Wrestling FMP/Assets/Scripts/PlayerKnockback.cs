@@ -23,18 +23,20 @@ public class PlayerKnockback : MonoBehaviour
 
     public void DoKnockBack(/*float knockbackLength,*/ Vector2 knockback)
     {
-        //StartCoroutine(DisablePlayerMovement(knockbackLength)); 
-        rigidbody2d.velocity = knockback; 
+        StartCoroutine(DisablePlayerMovement(/*knockbackLength*/)); 
+        animationEvents.isAttacking = true; 
+        rigidbody2d.velocity = knockback;
+        playerMovement.hitHorizontal = 10; 
 
     }
 
-    //IEnumerator DisablePlayerMovement(float time)
-    //{
-    //    animationEvents.isAttacking = true;
+    IEnumerator DisablePlayerMovement(/*float time*/)
+    {
+        animationEvents.isAttacking = true;
 
-    //    yield return new WaitForSeconds(time);
-    //    animationEvents.isAttacking = false; 
-    //}
+        yield return new WaitForSeconds(0.5f);
+        animationEvents.isAttacking = false;
+    }
 
 
 }

@@ -10,7 +10,8 @@ public class PlayerMovementFinal : MonoBehaviour
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
-
+    public float hitHorizontal;
+    public float hitVertical; 
     public Text countdownText; 
     public float horizontal;
     private float speed = 10f;
@@ -78,7 +79,7 @@ public class PlayerMovementFinal : MonoBehaviour
 
     void Update()
     {
-        lastVelocity = rb.velocity; 
+        //lastVelocity = rb.velocity; 
 
         if (!isFacingRight && horizontal > 0f)
         {
@@ -97,13 +98,18 @@ public class PlayerMovementFinal : MonoBehaviour
 
     }
 
+
     private void FixedUpdate()
     {
-        if(GetComponent<AnimationEvents>().isAttacking == false)
+        if (GetComponent<AnimationEvents>().isAttacking == false)
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         }
-        if(IsGrounded())
+        if (GetComponent<AnimationEvents>().isAttacking == true)
+        {
+            rb.velocity = new Vector2(hitHorizontal, hitVertical);
+        }
+        if (IsGrounded())
         {
             animator.SetBool("isJumping", false); 
         }

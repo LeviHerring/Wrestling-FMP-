@@ -31,5 +31,8 @@ public class ComponentManager : MonoBehaviour
     public Text player1WinnerText;
     public Text player2WinnerText;
     public Text player1Stamina;
-    public Text player2Stamina; 
+    public Text player2Stamina;
+    public Text player1MashingNeededText;
+    public Text player2MashingNeededText;
+    public TextMeshProUGUI playerJoin; 
 }

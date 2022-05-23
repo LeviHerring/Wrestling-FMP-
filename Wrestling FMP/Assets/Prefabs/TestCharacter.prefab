@@ -459,7 +459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7277123650702459947
 Transform:
   m_ObjectHideFlags: 0
@@ -1680,6 +1680,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  hitHorizontal: 0
+  hitVertical: 0
   countdownText: {fileID: 5515707254003693708, guid: 61f5c26e6ac61874f97f42e7125c4f99, type: 3}
   horizontal: 0
   isFacingRight: 1
@@ -1896,7 +1898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d8154b35c95f04e8a9b0cd393e3da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 5817951291928251923}
 --- !u!114 &6617284995883786636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2250,7 +2252,7 @@ MonoBehaviour:
   hasWonSubmit: 0
   isMashingNeeded: 0
   fillAmount: 0
-  mashingAmountNeeded: 0
+  mashingAmountNeeded: 1
   countdownTime: 0
   randomSubmit: 0
   submissionNo: 0

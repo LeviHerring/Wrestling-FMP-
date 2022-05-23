@@ -90,14 +90,14 @@ public class NewPinningAndSubmittingAndMashing : MonoBehaviour
 
     public void HasOpponentWon()
     {
-        Debug.Log(opponentOne);
         while (opponentOne.GetComponentInChildren<PlayerOneHurtboxes>().hasWon == false)
         {
-            Debug.Log(opponentOne);
+            animationEvents.isAttacking = true; 
             Debug.Log("Enters while"); 
             if (opponentOne.GetComponentInChildren<PlayerOneHurtboxes>().hasWon == true)
             {
                 StartCoroutine(LaunchBack());
+
             }
             else
             {

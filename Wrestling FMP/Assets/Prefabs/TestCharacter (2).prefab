@@ -1289,7 +1289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1097543221296233371}
   enemy: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 7857946625379553993}
   rigidbody2d: {fileID: 1097543221296233370}
   isHit: 0
   stopwatch: 0
@@ -1299,7 +1299,7 @@ MonoBehaviour:
   hasWonSubmit: 0
   isMashingNeeded: 0
   fillAmount: 0
-  mashingAmountNeeded: 0
+  mashingAmountNeeded: 1
   countdownTime: 0
   randomSubmit: 0
   submissionNo: 0

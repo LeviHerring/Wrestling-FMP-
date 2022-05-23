@@ -39,7 +39,7 @@ public class SubmissionHitbox : MonoBehaviour
         {
             player.GetComponent<AnimationEvents>().isAttacking = true;
             player.GetComponent<Animator>().SetBool("IsPinning", true);
-            player.GetComponent<SubmissionInput>().HasOpponentWon();
+            player.GetComponent<NewPinningAndSubmittingAndMashing>().HasOpponentWon();
 
         }
     }

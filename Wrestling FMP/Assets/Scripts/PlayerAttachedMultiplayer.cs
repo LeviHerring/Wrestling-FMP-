@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro; 
+using TMPro;
+using UnityEngine.UI; 
 
 public class PlayerAttachedMultiplayer : MonoBehaviour
 {
+    TextMeshProUGUI playerJoinText;
     public GameObject redCircle;
     public GameObject greenSquare;
     public int playerNo; 
@@ -50,7 +52,10 @@ public class PlayerAttachedMultiplayer : MonoBehaviour
             playerNo = 1;
             gameObject.tag = "PlayerOne";
             gameObject.name = "PlayerOne"; 
-            gameObject.transform.position = FindObjectOfType<GloablVariablesManager>().playerOneSpawn.transform.position; 
+            gameObject.transform.position = FindObjectOfType<GloablVariablesManager>().playerOneSpawn.transform.position;
+            playerJoinText = ComponentManager.instance.playerJoin;
+            playerJoinText.text = "Player 2 press button to join";
+
         }
         else
         {
@@ -58,6 +63,9 @@ public class PlayerAttachedMultiplayer : MonoBehaviour
             gameObject.tag = "PlayerTwo";
             gameObject.name = "PlayerTwo";
             gameObject.transform.position = FindObjectOfType<GloablVariablesManager>().playerTwoSpawn.transform.position;
+            playerJoinText = ComponentManager.instance.playerJoin; 
+            playerJoinText.gameObject.SetActive(false);
+            FindObjectOfType<GloablVariablesManager>().realPlayerNumber = 2;
         }
 
     }

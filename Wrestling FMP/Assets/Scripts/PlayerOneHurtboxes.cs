@@ -7,6 +7,7 @@ using TMPro;
 
 public class PlayerOneHurtboxes : MonoBehaviour
 {
+    Text mashingAmountText;
      public GameObject player;
     public GameObject enemy; 
      public Animator animator;
@@ -43,6 +44,7 @@ public class PlayerOneHurtboxes : MonoBehaviour
         globalVariables = FindObjectOfType<GloablVariablesManager>();
         if (player.GetComponent<PlayerAttachedMultiplayer>().playerNo == 1)
         {
+            mashingAmountText = ComponentManager.instance.player1MashingNeededText;
             metre = ComponentManager.instance.player1MashingMetre;
             countdownDisplay = ComponentManager.instance.player1Countdown;
             enemy = GameObject.FindGameObjectWithTag("PlayerTwo");
@@ -50,11 +52,13 @@ public class PlayerOneHurtboxes : MonoBehaviour
         }
         else
         {
+            mashingAmountText = ComponentManager.instance.player2MashingNeededText;
             metre = ComponentManager.instance.player2MashingMetre;
             countdownDisplay = ComponentManager.instance.player2Countdown;
             enemy = GameObject.FindGameObjectWithTag("PlayerOne");
             playerString = "PlayerOne";
         }
+        mashingAmountNeeded = 1; 
     }
 
     // Update is called once per frame
@@ -86,6 +90,11 @@ public class PlayerOneHurtboxes : MonoBehaviour
         {
             enemy = GameObject.FindGameObjectWithTag(playerString); 
         }
+
+        if(hasWon == true)
+        {
+            StartCoroutine(HasWon()); 
+        }
       
     }
 
@@ -100,6 +109,8 @@ public class PlayerOneHurtboxes : MonoBehaviour
 
         if(collision.gameObject.tag == "Pin")
         {
+            mashingAmountText.text = globalVariables.player1MashingDone + "/" + mashingAmountNeeded; 
+            mashingAmountText.gameObject.SetActive(true); 
             animationEvents.isAttacking = true;
             isMashingNeeded = true;
             StartCoroutine(CountdownToStart(3));
@@ -126,7 +137,7 @@ public class PlayerOneHurtboxes : MonoBehaviour
         if (collision.gameObject.tag == "RopesRight")
         {
             Debug.Log("Hit Right");
-            rigidbody2d.velocity = new Vector2(10f, 10f);
+            rigidbody2d.velocity = new Vector2(-10f, 10f);
         }
         if (collision.gameObject.tag == "RopesLeft")
         {
@@ -174,23 +185,31 @@ public class PlayerOneHurtboxes : MonoBehaviour
             //else
             //{
             countdownDisplay.text = countdownTime2.ToString();
-
+            animationEvents.isAttacking = true; 
             yield return new WaitForSeconds(1f);
 
             countdownTime2--;
             //}
-
+            if (hasWon == true)
+            {
+                Debug.Log("Entered The first if"); 
+                countdownDisplay.text = "Pinsgsgsgsgsg broken!";
+                yield return new WaitForSeconds(1f);
+                countdownDisplay.gameObject.SetActive(false);
+                mashingAmountText.gameObject.SetActive(false);
+                hasWon = false;
+            }
             
 
         }
         if (hasWon == true)
         {
-            countdownDisplay.text = "Pin broken!";
+            countdownDisplay.text = "Pinsnfkngklsnlks broken!";
             yield return new WaitForSeconds(1f);
             countdownDisplay.gameObject.SetActive(false);
             hasWon = false; 
         }
-        else
+        else 
         {
             countdownDisplay.text = "Pinned!";
 
@@ -221,6 +240,14 @@ public class PlayerOneHurtboxes : MonoBehaviour
             rigidbody2d.velocity = new Vector2(-5, -5);
             animationEvents.isAttacking = false;
         }
+    }
+
+    public IEnumerator HasWon()
+    {
+        countdownDisplay.text = "Pingsgsgsgsgsg broken!";
+        yield return new WaitForSeconds(1f);
+        countdownDisplay.gameObject.SetActive(false);
+        hasWon = false;
     }
 
     public void SubmissionNumberChanger()
