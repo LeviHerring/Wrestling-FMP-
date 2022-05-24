@@ -20,6 +20,7 @@ public class CharacterSelectScreenController : MonoBehaviour
     void Start()
     {
         spriteRenderer.enabled = true;
+        isSelected = false; 
     }
 
     // Update is called once per frame
@@ -35,7 +36,7 @@ public class CharacterSelectScreenController : MonoBehaviour
             if(!(position <= bounds[0]))
             {
                 position = position - 1;
-                transform.position += new Vector3(-7, 0, 0);
+                transform.position += new Vector3(-3.5f, 0, 0);
             }
                 
         }
@@ -48,7 +49,7 @@ public class CharacterSelectScreenController : MonoBehaviour
             if(!(position >= bounds[1]))
             {
                 position = position + 1;
-                transform.position += new Vector3(7, 0, 0);
+                transform.position += new Vector3(3.5f, 0, 0);
             }
           
         }
@@ -63,6 +64,17 @@ public class CharacterSelectScreenController : MonoBehaviour
             spriteRenderer.enabled = false; 
         }
       
+    }
+
+    public void Back(InputAction.CallbackContext context)
+    {
+        Debug.Log("Pressed");
+        if (context.performed)
+        {
+            isSelected = false;
+            spriteRenderer.enabled = true;
+        }
+
     }
 
     public void Trigger(InputAction.CallbackContext context)

@@ -10,6 +10,8 @@ public class PlayerAttachedMultiplayer : MonoBehaviour
     TextMeshProUGUI playerJoinText;
     public GameObject redCircle;
     public GameObject greenSquare;
+    public GameObject astronaut;
+    public GameObject narbyDallin;
     public int playerNo; 
     // Start is called before the first frame update
     void Start()
@@ -37,12 +39,12 @@ public class PlayerAttachedMultiplayer : MonoBehaviour
                 FindObjectOfType<PlayerInputManager>().playerPrefab = greenSquare;
                 Debug.Log("Spawned player 2 as green square");
                 break;
-                //case "PlayerThree":
-                //    Instantiate(playerThree, spawnPosition.transform.position, Quaternion.identity);
-                //    break;
-                //case "PlayerFour":
-                //    Instantiate(playerFour, spawnPosition.transform.position, Quaternion.identity);
-                //    break;
+            case "Astronaut":
+                FindObjectOfType<PlayerInputManager>().playerPrefab = astronaut;
+                break;
+            case "NarbyDallin":
+                FindObjectOfType<PlayerInputManager>().playerPrefab = narbyDallin;
+                break;
         }
 
         FindObjectOfType<GloablVariablesManager>().playersJoined++;

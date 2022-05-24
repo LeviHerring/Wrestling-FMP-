@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 4909575955567756276}
   - component: {fileID: 8873351427029141530}
   - component: {fileID: 4857426581667517088}
-  - component: {fileID: 4638338739332035518}
   m_Layer: 0
   m_Name: CursorPlayer2
-  m_TagString: Untagged
+  m_TagString: PlayerTwo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,10 +99,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNo: 0
   spriteRenderer: {fileID: 4909575955567756277}
-  position: 1
-  bounds: 0000000001000000
+  position: 2
+  bounds: 0000000003000000
   player: Player 2
-  isSelected: 0
+  isSelected: 1
 --- !u!114 &8873351427029141530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcc0f56d3824fe1438af716e3bde77dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joinText: {fileID: 5120906688651510790, guid: b130fd65107dd2d4ea678b41cd18a664, type: 3}
 --- !u!114 &4857426581667517088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +155,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 889e5c6c-dd66-4092-a46d-0840cd00dcd1
-    m_ActionName: CharacterSelectScreen/Right[/XInputControllerWindows/leftStick/right,/XInputControllerWindows/leftStick/right]
+    m_ActionName: CharacterSelectScreen/Right[/Keyboard/d,/Keyboard/rightArrow,/XInputControllerWindows/dpad/right]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4909575955567756276}
@@ -173,7 +171,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 9f665a85-195b-41be-ace5-488a10244e72
-    m_ActionName: CharacterSelectScreen/Left[/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/left]
+    m_ActionName: CharacterSelectScreen/Left[/Keyboard/a,/Keyboard/leftArrow,/XInputControllerWindows/dpad/left]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4909575955567756276}
@@ -189,16 +187,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 91a77a51-eff0-47c6-80f3-341100eb53b4
-    m_ActionName: CharacterSelectScreen/Select[/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonSouth]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 5d3ffe3b-08e1-48a7-84b4-40625a2b4ba4
-    m_ActionName: CharacterSelectScreen/Back[/XInputControllerWindows/buttonEast,/XInputControllerWindows/buttonEast]
+    m_ActionName: CharacterSelectScreen/Select[/XInputControllerWindows/buttonSouth,/Keyboard/enter,/Keyboard/numpadEnter]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4909575955567756276}
         m_TargetAssemblyTypeName: CharacterSelectScreenController, Assembly-CSharp
-        m_MethodName: Trigger
+        m_MethodName: Back
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -208,6 +202,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_ActionId: 5d3ffe3b-08e1-48a7-84b4-40625a2b4ba4
+    m_ActionName: CharacterSelectScreen/Back[/XInputControllerWindows/buttonEast,/Keyboard/backspace]
+  - m_PersistentCalls:
+      m_Calls: []
     m_ActionId: d89132c4-1dde-4bed-8d3f-48becc9d295b
     m_ActionName: CharacterSelectScreen/Trigger[/XInputControllerWindows/rightTrigger]
   m_NeverAutoSwitchControlSchemes: 0
@@ -215,17 +213,3 @@ MonoBehaviour:
   m_DefaultActionMap: CharacterSelectScreen
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &4638338739332035518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4909575955567756279}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28c82e2b61796484e8ff14774ca7a590, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputActionAssetPlayerOne: {fileID: -944628639613478452, guid: 8dc532a95373a944686dfadd05c46079, type: 3}
-  inputActionAssetPlayerTwo: {fileID: -944628639613478452, guid: d264af006cd2a594f8101f16fdf47f48, type: 3}

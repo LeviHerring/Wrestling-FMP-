@@ -7,6 +7,8 @@ public class MainSceneMultiplayerAwake : MonoBehaviour
 {
     public GameObject greenSquare;
     public GameObject redCircle;
+    public GameObject astronaut; 
+    public GameObject narbyDallin; 
     public Transform playerOneSpawn;
     public Transform playerTwoSpawn; 
     PlayerInputManager playerInputManager;
@@ -41,12 +43,14 @@ public class MainSceneMultiplayerAwake : MonoBehaviour
                 greenSquare.transform.position = playerOneSpawn.position;
                 Debug.Log("PLAYER 1 Green Square");
                 break;
-                //case "PlayerThree":
-                //    Instantiate(playerThree, spawnPosition.transform.position, Quaternion.identity);
-                //    break;
-                //case "PlayerFour":
-                //    Instantiate(playerFour, spawnPosition.transform.position, Quaternion.identity);
-                //    break;
+            case "Astronaut":
+                playerInputManager.playerPrefab = astronaut;
+                astronaut.transform.position = playerOneSpawn.position;
+                break;
+            case "NarbyDallin":
+                playerInputManager.playerPrefab = narbyDallin;
+                narbyDallin.transform.position = playerOneSpawn.position;
+                break;
         }
     }
     void OnPlayerJoined(PlayerInput playerInput)

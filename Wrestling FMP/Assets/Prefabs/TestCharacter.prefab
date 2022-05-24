@@ -1682,17 +1682,17 @@ MonoBehaviour:
     m_Bits: 64
   hitHorizontal: 0
   hitVertical: 0
-  countdownText: {fileID: 5515707254003693708, guid: 61f5c26e6ac61874f97f42e7125c4f99, type: 3}
   horizontal: 0
   isFacingRight: 1
   directionFloat: 0
   startDashTime: 0
   Tags1: []
   pinDistance: 3
-  countdownTimer: {fileID: 8479601176483674282, guid: 57782f0644b5f034a9b4fa0abb74f4cc, type: 3}
   neutral: {fileID: 5817951293646849566}
   special: {fileID: 5817951291838316800}
   strong: {fileID: 5817951291797006801}
+  forwardNeutralAerial: {fileID: 0}
+  forwardStrongAerial: {fileID: 0}
   playerIndex: 0
   projectile: {fileID: 7750513875867062296, guid: 52d24d310ef93304ea523e6a77c9ca45, type: 3}
   isShooting: 0
@@ -1871,6 +1871,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redCircle: {fileID: 1097543221296233371, guid: 1b9f1519aed982140975a2a9fb928d2d, type: 3}
   greenSquare: {fileID: 5817951291928251930}
+  astronaut: {fileID: 229860932542687020, guid: 59801480f8908534da088fe84a808b94, type: 3}
+  narbyDallin: {fileID: 5534267963017594214, guid: 1a74f8ae51111bc4b9e9a955f4407b9e, type: 3}
   playerNo: 0
 --- !u!114 &-4432146637140137289
 MonoBehaviour:

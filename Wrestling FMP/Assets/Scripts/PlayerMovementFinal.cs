@@ -12,7 +12,7 @@ public class PlayerMovementFinal : MonoBehaviour
     public LayerMask groundLayer;
     public float hitHorizontal;
     public float hitVertical; 
-    public Text countdownText; 
+    //public Text countdownText; 
     public float horizontal;
     private float speed = 10f;
     private float baseSpeed = 10f; 
@@ -32,13 +32,15 @@ public class PlayerMovementFinal : MonoBehaviour
     private Mover mover;
     public GameObject[] Tags1;
     public float pinDistance = 10f;
-    [SerializeField] public CountdownTimer countdownTimer; 
+    //[SerializeField] public CountdownTimer countdownTimer; 
 
     [SerializeField] public GameObject neutral;
 
     [SerializeField] GameObject special;
 
     [SerializeField] GameObject strong;
+    [SerializeField] GameObject forwardNeutralAerial;
+    [SerializeField] GameObject forwardStrongAerial;
 
     //[SerializeField] GameObject Pin;
 
@@ -196,16 +198,26 @@ public class PlayerMovementFinal : MonoBehaviour
             GetComponent<AnimationEvents>().isAttacking = true; 
             neutral.gameObject.SetActive(true); 
             animator.SetBool("isNeutral", true);
+            animator.SetBool("isForward", true); 
             Debug.Log("Pressed neutral button"); 
+        }
+        else if (context.performed && GetComponent<AnimationEvents>().isAttacking == false && !IsGrounded())
+        {
+            GetComponent<AnimationEvents>().isAttacking = true;
+            forwardNeutralAerial.gameObject.SetActive(true);
+            animator.SetBool("isNeutral", true);
+            animator.SetBool("isForward", true);
+
         }
     }
 
     public void Special(InputAction.CallbackContext context)
     {
-        if (context.performed && GetComponent<AnimationEvents>().isAttacking == false && IsGrounded())
+        if (context.performed && GetComponent<AnimationEvents>().isAttacking == false)
         {
             special.gameObject.SetActive(true);
             animator.SetBool("isSpecial", true);
+            animator.SetBool("isForward", true);
             Debug.Log("Pressed Special button");
         }
     }
@@ -216,7 +228,16 @@ public class PlayerMovementFinal : MonoBehaviour
         {
             strong.gameObject.SetActive(true); 
             animator.SetBool("isStrong", true);
+            animator.SetBool("isForward", true);
             Debug.Log("Pressed Strong button");
+        }
+        else if (context.performed && GetComponent<AnimationEvents>().isAttacking == false && !IsGrounded())
+        {
+            GetComponent<AnimationEvents>().isAttacking = true;
+            forwardStrongAerial.gameObject.SetActive(true);
+            animator.SetBool("isNeutral", true);
+            animator.SetBool("isForward", true);
+
         }
     }
 
@@ -237,40 +258,40 @@ public class PlayerMovementFinal : MonoBehaviour
         isDashing = false; 
     }
 
-    public void Pinning(InputAction.CallbackContext context)
-    {
-        if (context.performed && GetComponent<AnimationEvents>().isAttacking == false && IsGrounded())
-        {
-            Debug.Log("Pressed Pin Button button");
-            foreach(GameObject go in Tags1)
-            {
-                if (Vector3.Distance(transform.position, go.transform.position) < pinDistance)
-                {
-                    Debug.Log("Pin Worked");
-                    countdownText.gameObject.SetActive(true); 
-                    StartCoroutine(countdownTimer.CountdownToStart(3)); 
+    //public void Pinning(InputAction.CallbackContext context)
+    //{
+    //    if (context.performed && GetComponent<AnimationEvents>().isAttacking == false && IsGrounded())
+    //    {
+    //        Debug.Log("Pressed Pin Button button");
+    //        foreach(GameObject go in Tags1)
+    //        {
+    //            if (Vector3.Distance(transform.position, go.transform.position) < pinDistance)
+    //            {
+    //                Debug.Log("Pin Worked");
+    //                countdownText.gameObject.SetActive(true); 
+    //                StartCoroutine(countdownTimer.CountdownToStart(3)); 
 
-                }
-            }
-        }
-    }
+    //            }
+    //        }
+    //    }
+    //}
 
-    public void Submission(InputAction.CallbackContext context)
-    {
-        if (context.performed && GetComponent<AnimationEvents>().isAttacking == false && IsGrounded())
-        {
-            GetComponent<AnimationEvents>().isAttacking = true; 
-            Debug.Log("Pressed Submission Button button");
-            foreach (GameObject go in Tags1)
-            {
-                if (Vector3.Distance(transform.position, go.transform.position) < pinDistance)
-                {
-                    GetComponent<PinningButtonMash>().SubmissionTest(); 
+    //public void Submission(InputAction.CallbackContext context)
+    //{
+    //    if (context.performed && GetComponent<AnimationEvents>().isAttacking == false && IsGrounded())
+    //    {
+    //        GetComponent<AnimationEvents>().isAttacking = true; 
+    //        Debug.Log("Pressed Submission Button button");
+    //        foreach (GameObject go in Tags1)
+    //        {
+    //            if (Vector3.Distance(transform.position, go.transform.position) < pinDistance)
+    //            {
+    //                GetComponent<PinningButtonMash>().SubmissionTest(); 
 
-                }
-            }
-        }
-    }
+    //            }
+    //        }
+    //    }
+    //}
 
     public void Projectile(InputAction.CallbackContext context)
     {

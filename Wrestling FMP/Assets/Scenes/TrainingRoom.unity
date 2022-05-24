@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
+  staminaPoints: 0
   damageAmountDivide: 0.5
   damageManager: {fileID: 0}
   superMetreChargeAmount: 0
@@ -1077,16 +1078,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 572222707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 2064916234097673511, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: -1967631576421560919, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 8056856818456041789, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: 3279352641294131588, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: 3837173908680883260, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 4502412055082496612, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!114 &572222709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1267,6 +1276,8 @@ MonoBehaviour:
   neutral: {fileID: 1865944164}
   special: {fileID: 1895270245}
   strong: {fileID: 2000830895}
+  pinHitbox: {fileID: 0}
+  submitHitbox: {fileID: 0}
 --- !u!95 &598684089
 Animator:
   serializedVersion: 3
@@ -1324,17 +1335,19 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  countdownText: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   horizontal: 0
   isFacingRight: 1
   directionFloat: 0
   startDashTime: 0
   Tags1: []
   pinDistance: 2
-  countdownTimer: {fileID: 0}
   neutral: {fileID: 1865944164}
   special: {fileID: 1895270245}
   strong: {fileID: 2000830895}
+  forwardNeutralAerial: {fileID: 0}
+  forwardStrongAerial: {fileID: 0}
   playerIndex: 0
   projectile: {fileID: 0}
   isShooting: 0
@@ -2447,10 +2460,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93101b4934b2441478b71bcf5b974cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthText: {fileID: 838217671}
-  superMetre: {fileID: 1695248970}
   superMetreCharge: 0
   playerNo: 
+  stamina: 0
   health: 0
 --- !u!50 &1298094729
 Rigidbody2D:
@@ -2516,17 +2528,19 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  countdownText: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   horizontal: 0
   isFacingRight: 1
   directionFloat: 0
   startDashTime: 0
   Tags1: []
   pinDistance: 10
-  countdownTimer: {fileID: 43271952}
   neutral: {fileID: 0}
   special: {fileID: 0}
   strong: {fileID: 0}
+  forwardNeutralAerial: {fileID: 0}
+  forwardStrongAerial: {fileID: 0}
   playerIndex: 0
   projectile: {fileID: 0}
   isShooting: 0
@@ -2773,6 +2787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d18920a7ff98e104b84005e806789c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barriers: {fileID: 0}
+  globalVariables: {fileID: 0}
   countdownTime: 0
   countdownDisplay: {fileID: 518377786}
   playerOne: {fileID: 1312730628}

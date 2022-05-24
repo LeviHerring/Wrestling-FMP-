@@ -1,5 +1,5 @@
 {
-    "name": "CharacterSelectScreen",
+    "name": "Player1CSS",
     "maps": [
         {
             "name": "CharacterSelectScreen",
@@ -49,17 +49,6 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "4127bfe3-7771-4f0a-a54b-06d70714b20f",
-                    "path": "<Gamepad>/leftStick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Right",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "0839b0cc-5554-4fa4-bf1a-32f5090ad1da",
                     "path": "<Keyboard>/d",
                     "interactions": "",
@@ -82,12 +71,12 @@
                 },
                 {
                     "name": "",
-                    "id": "230f369c-5290-4991-85ca-bd9a4a488a01",
-                    "path": "<Gamepad>/leftStick/left",
+                    "id": "d61e9da7-82e0-4e6b-a83e-466edea3422b",
+                    "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Left",
+                    "action": "Right",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -106,6 +95,17 @@
                     "name": "",
                     "id": "e6dc2fd9-172e-41c8-91b2-31e8bcd98c02",
                     "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7e2a4b9d-58f8-4f68-9f5f-a421c5416b1e",
+                    "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -150,6 +150,17 @@
                     "name": "",
                     "id": "14243685-0724-454c-aa46-4e15874a7bf8",
                     "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Back",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bfad7f59-7c1c-46d2-86fc-ac4b30c7e34f",
+                    "path": "<Keyboard>/backspace",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

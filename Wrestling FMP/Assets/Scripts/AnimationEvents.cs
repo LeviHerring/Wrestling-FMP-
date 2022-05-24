@@ -35,6 +35,7 @@ public class AnimationEvents : MonoBehaviour
     public void AnimationEnd()
     {
         animator.SetBool("isNeutral", false);
+        animator.SetBool("isForward", false);
         animator.SetBool("isStrong", false);
         animator.SetBool("isSpecial", false);
         animator.SetBool("isUp", false);

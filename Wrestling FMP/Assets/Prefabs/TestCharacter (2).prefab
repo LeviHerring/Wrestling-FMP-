@@ -489,17 +489,19 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  countdownText: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   horizontal: 0
   isFacingRight: 1
   directionFloat: 0
   startDashTime: 0
   Tags1: []
   pinDistance: 3
-  countdownTimer: {fileID: 0}
   neutral: {fileID: 1097543222240949151}
   special: {fileID: 1097543221373514881}
   strong: {fileID: 1097543221329960016}
+  forwardNeutralAerial: {fileID: 0}
+  forwardStrongAerial: {fileID: 0}
   playerIndex: 0
   projectile: {fileID: 7750513875867062296, guid: 52d24d310ef93304ea523e6a77c9ca45, type: 3}
   isShooting: 0
@@ -646,6 +648,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redCircle: {fileID: 1097543221296233371}
   greenSquare: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
+  astronaut: {fileID: 229860932542687020, guid: 59801480f8908534da088fe84a808b94, type: 3}
+  narbyDallin: {fileID: 5534267963017594214, guid: 1a74f8ae51111bc4b9e9a955f4407b9e, type: 3}
   playerNo: 0
 --- !u!114 &2958498870681795801
 MonoBehaviour:

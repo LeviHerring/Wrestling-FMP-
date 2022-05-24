@@ -5,11 +5,12 @@ using TMPro;
 
 public class Player2Join : MonoBehaviour
 {
-    public TextMeshProUGUI joinText; 
+    TextMeshProUGUI joinText; 
     // Start is called before the first frame update
     void Start()
     {
-        joinText.enabled = false; 
+        joinText = FindObjectOfType<TextMeshProUGUI>();
+        joinText.enabled = false;
     }
 
     // Update is called once per frame
