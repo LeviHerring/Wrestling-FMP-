@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class PlayerMovementFinal : MonoBehaviour
 {
+    public bool isHit;
+    public PlayerOneHurtboxes hurtboxes; 
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;

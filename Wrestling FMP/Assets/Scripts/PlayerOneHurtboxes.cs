@@ -102,7 +102,8 @@ public class PlayerOneHurtboxes : MonoBehaviour
     {
         if (collision.tag == "Hitbox")
         {
-            //StartCoroutine(DisablePlayerMovement(disabledTime));
+            disabledTime = collision.gameObject.GetComponent<Hitbox>().hitstun; 
+            StartCoroutine(DisablePlayerMovement(disabledTime));
 
 
         }
@@ -112,6 +113,7 @@ public class PlayerOneHurtboxes : MonoBehaviour
             mashingAmountText.text = globalVariables.player1MashingDone + "/" + mashingAmountNeeded; 
             mashingAmountText.gameObject.SetActive(true); 
             animationEvents.isAttacking = true;
+            enemy.GetComponent<AnimationEvents>().isAttacking = true; 
             isMashingNeeded = true;
             StartCoroutine(CountdownToStart(3));
         }
@@ -185,7 +187,8 @@ public class PlayerOneHurtboxes : MonoBehaviour
             //else
             //{
             countdownDisplay.text = countdownTime2.ToString();
-            animationEvents.isAttacking = true; 
+            animationEvents.isAttacking = true;
+            enemy.GetComponent<AnimationEvents>().isAttacking = true;
             yield return new WaitForSeconds(1f);
 
             countdownTime2--;
@@ -223,9 +226,12 @@ public class PlayerOneHurtboxes : MonoBehaviour
     {
         animator.SetBool("IsHit", true);
         animationEvents.isAttacking = true;
+        playerMovement.isHit = true; 
 
         yield return new WaitForSeconds(time);
         animationEvents.isAttacking = false;
+        playerMovement.isHit = false;
+        animator.SetBool("IsHit", false);
     }
 
     public void KnockBack()
@@ -247,6 +253,8 @@ public class PlayerOneHurtboxes : MonoBehaviour
         countdownDisplay.text = "Pingsgsgsgsgsg broken!";
         yield return new WaitForSeconds(1f);
         countdownDisplay.gameObject.SetActive(false);
+        animationEvents.isAttacking = false;
+        enemy.GetComponent<AnimationEvents>().isAttacking = false;
         hasWon = false;
     }
 

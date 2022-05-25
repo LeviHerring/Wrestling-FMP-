@@ -9,7 +9,18 @@ public class DirectionalAttacks : MonoBehaviour
 {
     PlayerMovementFinal PlayerMovementFinal;
     AnimationEvents animationEvents;
-    public Animator animator; 
+    public Animator animator;
+    [SerializeField] GameObject downTiltHitbox;
+    [SerializeField] GameObject upTiltHitbox;
+    [SerializeField] GameObject downAirHitbox;
+    [SerializeField] GameObject upAirHitbox;
+    [SerializeField] GameObject upStrongAirHitbox;
+    [SerializeField] GameObject downStrongHitbox;
+    [SerializeField] GameObject downStrongAirHitbox;
+    [SerializeField] GameObject upSpecialHitbox;
+    [SerializeField] GameObject downSpecialHitbox;
+    [SerializeField] GameObject upStrongHitbox;
+
     //public DamageManager damageManager;
     //public GameObject detector;
 

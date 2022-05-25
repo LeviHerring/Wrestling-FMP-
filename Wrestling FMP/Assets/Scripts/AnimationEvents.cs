@@ -19,6 +19,16 @@ public class AnimationEvents : MonoBehaviour
 
     [SerializeField] GameObject pinHitbox; 
     [SerializeField] GameObject submitHitbox;
+    [SerializeField] GameObject downTiltHitbox;
+    [SerializeField] GameObject upTiltHitbox;
+    [SerializeField] GameObject downAirHitbox;
+    [SerializeField] GameObject upAirHitbox;
+    [SerializeField] GameObject upStrongAirHitbox;
+    [SerializeField] GameObject downStrongHitbox;
+    [SerializeField] GameObject downStrongAirHitbox;
+    [SerializeField] GameObject upSpecialHitbox;
+    [SerializeField] GameObject upStrongHitbox;
+    [SerializeField] GameObject downSpecialHitbox;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +63,17 @@ public class AnimationEvents : MonoBehaviour
         GetComponent<PlayerMovementFinal>().neutral.gameObject.SetActive(false);
         pinHitbox.SetActive(false);
         submitHitbox.SetActive(false);
+        downTiltHitbox.SetActive(false);
+        upTiltHitbox.SetActive(false);
+        downAirHitbox.SetActive(false);
+        upAirHitbox.SetActive(false);
+        upStrongAirHitbox.SetActive(false);
+        upStrongHitbox.SetActive(false);
+        downStrongHitbox.SetActive(false);
+        downStrongAirHitbox.SetActive(false);
+        upSpecialHitbox.SetActive(false);
+        downSpecialHitbox.SetActive(false);
+
     }
 
     public void Histun()

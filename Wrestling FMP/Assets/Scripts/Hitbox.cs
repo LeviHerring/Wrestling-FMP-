@@ -12,7 +12,9 @@ public class Hitbox : MonoBehaviour
     [SerializeField] public float verticalKnockbackForce;
     [SerializeField] public float hitstun;
     public GameObject playerWithHitboxes;
-    PlayerMovementFinal playerMovementFinal; 
+    PlayerMovementFinal playerMovementFinal;
+    [SerializeField] public float hitHorizontal; 
+    [SerializeField] public float hitVertical; 
 
     [SerializeField] GameObject player;
     //public GameObject player2;
@@ -66,12 +68,13 @@ public class Hitbox : MonoBehaviour
             if (playerWithHitboxes.GetComponent<PlayerMovementFinal>().isFacingRight == true)
             {
                 Vector2 newKnockback = new Vector2(knockback.x * damageManager.knockbackMultiplierX, knockback.y * damageManager.knockbackMultiplierY);
-                player.GetComponent<PlayerKnockback>().DoKnockBack(/*hitstun,*/ newKnockback);
+                player.GetComponent<PlayerKnockback>().DoKnockBack(/*hitstun,*/ /*newKnockback,*/ hitHorizontal, hitVertical);
+
             }
             else
             {
                 Vector2 newKnockback = new Vector2(-knockback.x * damageManager.knockbackMultiplierX, knockback.y * damageManager.knockbackMultiplierY);
-                player.GetComponent<PlayerKnockback>().DoKnockBack(/*hitstun,*/ newKnockback);
+                player.GetComponent<PlayerKnockback>().DoKnockBack(/*hitstun,*/ /*newKnockback,*/ hitHorizontal * -1, hitVertical);
             }
         }
         

@@ -307,6 +307,8 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
 --- !u!1 &5534267961240940866
 GameObject:
@@ -387,6 +389,8 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
 --- !u!1 &5534267961261493326
 GameObject:
@@ -531,6 +535,8 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
 --- !u!1 &5534267961455671741
 GameObject:
@@ -611,6 +617,8 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
 --- !u!1 &5534267961628529125
 GameObject:
@@ -691,6 +699,8 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
 --- !u!1 &5534267961642740595
 GameObject:
@@ -771,6 +781,8 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
 --- !u!1 &5534267961644927797
 GameObject:
@@ -943,6 +955,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea61fef5af7249e46a140af1cf06f518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHit: 0
+  hurtboxes: {fileID: 0}
   rb: {fileID: 5534267961644927793}
   groundCheck: {fileID: 5534267961644927796}
   groundLayer:
@@ -1195,7 +1209,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5534267961644927797}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15bc4cc5e0855db4d909f893f7beb461, type: 3}
   m_Name: 
@@ -1208,6 +1222,16 @@ MonoBehaviour:
   strong: {fileID: 5534267963025594496}
   pinHitbox: {fileID: 929735185477431821}
   submitHitbox: {fileID: 3628445460917098235}
+  downTiltHitbox: {fileID: 5534267962371808452}
+  upTiltHitbox: {fileID: 5534267961315733908}
+  downAirHitbox: {fileID: 5534267962288933108}
+  upAirHitbox: {fileID: 5534267962239345941}
+  upStrongAirHitbox: {fileID: 5534267961628529125}
+  downStrongHitbox: {fileID: 5534267961455671741}
+  downStrongAirHitbox: {fileID: 5534267961642740595}
+  upSpecialHitbox: {fileID: 5534267962796368018}
+  upStrongHitbox: {fileID: 5534267962059615537}
+  downSpecialHitbox: {fileID: 5534267962796368018}
 --- !u!114 &5534267961644927807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1221,6 +1245,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5534267961644927795}
+  downTiltHitbox: {fileID: 5534267962371808452}
+  upTiltHitbox: {fileID: 5534267961315733908}
+  downAirHitbox: {fileID: 5534267962288933108}
+  upAirHitbox: {fileID: 5534267962239345941}
+  upStrongAirHitbox: {fileID: 5534267961628529125}
+  downStrongHitbox: {fileID: 5534267961455671741}
+  downStrongAirHitbox: {fileID: 5534267961642740595}
+  upSpecialHitbox: {fileID: 5534267962796368018}
+  downSpecialHitbox: {fileID: 5534267962796368018}
+  upStrongHitbox: {fileID: 5534267962059615537}
 --- !u!114 &5223153132791939250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1333,6 +1367,8 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
 --- !u!1 &5534267962059615537
 GameObject:
@@ -1413,6 +1449,8 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
 --- !u!1 &5534267962146511166
 GameObject:
@@ -1493,6 +1531,8 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
 --- !u!1 &5534267962239345941
 GameObject:
@@ -1573,6 +1613,8 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
 --- !u!1 &5534267962288933108
 GameObject:
@@ -1653,6 +1695,8 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
 --- !u!1 &5534267962371808452
 GameObject:
@@ -1733,6 +1777,8 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
 --- !u!1 &5534267962396338454
 GameObject:
@@ -1813,6 +1859,8 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
 --- !u!1 &5534267962796368018
 GameObject:
@@ -1893,6 +1941,8 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
 --- !u!1 &5534267963017594214
 GameObject:
@@ -2004,4 +2054,6 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 0}
+  hitHorizontal: 0
+  hitVertical: 0
   player: {fileID: 5534267963017594214}
