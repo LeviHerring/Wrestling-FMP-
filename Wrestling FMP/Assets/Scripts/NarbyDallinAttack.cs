@@ -14,6 +14,7 @@ public class NarbyDallinAttack : MonoBehaviour
     AnimationEvents animationEvents;
     public DamageManager damageManager;
     public GameObject detector;
+    Animator animator; 
 
     public NarbyDallinHitbox darbyHitbox;
     public bool isActivatedHere;
@@ -23,6 +24,7 @@ public class NarbyDallinAttack : MonoBehaviour
         PlayerMovementFinal = GetComponent<PlayerMovementFinal>();
         animationEvents = GetComponent<AnimationEvents>();
         darbyHitbox.stopwatch = 0;
+        animator = GetComponent<Animator>(); 
 
     }
 
@@ -48,13 +50,15 @@ public class NarbyDallinAttack : MonoBehaviour
         if (context.performed)
         {
             animationEvents.isAttacking = true;
-            detector.gameObject.SetActive(true);
+            detector.SetActive(true);
 
         }
         switch (context.phase)
         {
             case InputActionPhase.Performed:
                 UnityEngine.Debug.Log("Performed");
+                animator.SetBool("isSpecial", true);
+                animator.SetBool("isDown", true);
 
                 break;
             case InputActionPhase.Started:
@@ -62,6 +66,9 @@ public class NarbyDallinAttack : MonoBehaviour
                 break;
             case InputActionPhase.Canceled:
                 UnityEngine.Debug.Log("Cancelled");
+                animator.SetBool("isSpecial", false);
+                animator.SetBool("isDown", false);
+                animationEvents.isAttacking = false; 
          
                 //DamageMultiplier();
                 damageManager.damageMultiplier += 5;
