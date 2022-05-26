@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerMovementFinal : MonoBehaviour
 {
+    public Vector2 knockback; 
     public bool isHit;
     public PlayerOneHurtboxes hurtboxes; 
     public Rigidbody2D rb;
@@ -105,13 +106,16 @@ public class PlayerMovementFinal : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GetComponent<AnimationEvents>().isAttacking == false)
+
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+
+        if (GetComponent<AnimationEvents>().isAttacking == true && IsGrounded() == false) 
         {
-            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            rb.velocity = new Vector2(0f, 0f);
         }
-        if (GetComponent<AnimationEvents>().isAttacking == true)
+        if (isHit == true)
         {
-            rb.velocity = new Vector2(hitHorizontal, hitVertical);
+            rb.velocity = (knockback);
         }
         if (IsGrounded())
         {

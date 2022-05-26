@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 1803069702}
+    m_SelectOnUp: {fileID: 831561086}
     m_SelectOnDown: {fileID: 1803069702}
     m_SelectOnLeft: {fileID: 1901899197}
     m_SelectOnRight: {fileID: 1901899197}
@@ -448,7 +448,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 427613366}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061811942}
+        m_TargetAssemblyTypeName: CharacterSelectScreenManager, Assembly-CSharp
+        m_MethodName: Powerups
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &427613366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,7 +762,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 831561087}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061811942}
+        m_TargetAssemblyTypeName: CharacterSelectScreenManager, Assembly-CSharp
+        m_MethodName: Hazards
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &831561087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,7 +947,7 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 1901899197}
-    m_SelectOnDown: {fileID: 1901899197}
+    m_SelectOnDown: {fileID: 831561086}
     m_SelectOnLeft: {fileID: 1803069702}
     m_SelectOnRight: {fileID: 1803069702}
   m_Transition: 1
@@ -1097,7 +1121,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1072539105
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1781,7 +1805,7 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 427613365}
-    m_SelectOnDown: {fileID: 427613365}
+    m_SelectOnDown: {fileID: 831561086}
     m_SelectOnLeft: {fileID: 912394632}
     m_SelectOnRight: {fileID: 912394632}
   m_Transition: 1
@@ -1951,7 +1975,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 912394632}
+    m_SelectOnUp: {fileID: 831561086}
     m_SelectOnDown: {fileID: 912394632}
     m_SelectOnLeft: {fileID: 427613365}
     m_SelectOnRight: {fileID: 427613365}
@@ -1979,7 +2003,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1901899195}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061811942}
+        m_TargetAssemblyTypeName: CharacterSelectScreenManager, Assembly-CSharp
+        m_MethodName: Items
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2006807402
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,6 +2207,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1072539104}
+  items: {fileID: 878674901}
+  powerups: {fileID: 221282909}
+  hazards: {fileID: 479123935}
+  isItemsOn: 0
+  isPowerupsOn: 0
+  isHazardsOn: 0
 --- !u!4 &2061811943
 Transform:
   m_ObjectHideFlags: 0

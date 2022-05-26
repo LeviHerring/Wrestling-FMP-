@@ -39,7 +39,7 @@ public class FillingUpMetre : MonoBehaviour
         countdown.text = stopwatch.ToString("F1");
         lives.text = "lives: " + livesAmount;
         metre.fillAmount = fillAmount;
-        if(stopwatch <= 0 && hasWon == false && canMash == true)
+        if(stopwatch <= 0 && hasWon == false && canMash == true & canLose == true)
         {
             livesAmount--;
             stopwatch = 3; 
@@ -77,7 +77,8 @@ public class FillingUpMetre : MonoBehaviour
         yield return new WaitForSeconds(3f); 
         stopwatch = 3;
         canMash = true;
-        canLose = true; 
+        canLose = true;
+        hasWon = false; 
     }
 
     IEnumerator StartCoroutine()

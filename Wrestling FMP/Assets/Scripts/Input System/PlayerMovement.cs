@@ -470,7 +470,7 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""bf9f4079-57a4-4b35-a189-c54e8f7857ab"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -481,7 +481,7 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d67497c7-d752-4c5e-b9ec-fbb6c5ae4d32"",
-                    ""path"": ""<Keyboard>/rightShift"",
+                    ""path"": ""<Keyboard>/semicolon"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -492,7 +492,7 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""ebe50a7a-7107-4cc7-8798-2cd96b0c9ecb"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -503,7 +503,7 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""cd7abe73-c6e9-473f-9d39-12d848e2d057"",
-                    ""path"": ""<Keyboard>/backspace"",
+                    ""path"": ""<Keyboard>/quote"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -514,7 +514,7 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""8561640b-24a2-4485-aaac-927a92538255"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""path"": ""<Gamepad>/select"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -536,7 +536,18 @@ public class @PlayerMovement : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""03801007-d6e5-4243-841b-d833c547157a"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pickup"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df81c9a8-2f93-4e8c-bf83-b0e524b60465"",
+                    ""path"": ""<Keyboard>/l"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

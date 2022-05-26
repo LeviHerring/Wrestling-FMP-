@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    Rigidbody2D rb; 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();    
     }
 
     // Update is called once per frame
@@ -32,6 +33,41 @@ public class EnemyScript : MonoBehaviour
         if (collision.gameObject.name == "Strong")
         {
             Debug.Log("I was hit by STRONGSTRONGSTRONG");
+        }
+        if (collision.gameObject.tag == "RopesRight")
+        {
+            rb.velocity = new Vector2(-50f, 0f);
+
+        }
+        if (collision.gameObject.tag == "RopesLeft")
+        {
+            rb.velocity = new Vector2(50f, 0f);
+
+        }
+        if (collision.gameObject.tag == "RopesUp")
+        {
+            rb.velocity = new Vector2(0f, -5f);
+
+        }
+
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "RopesRight")
+        {
+            rb.velocity = new Vector2(-10f, 0f);
+
+        }
+        if (collision.gameObject.tag == "RopesLeft")
+        {
+            rb.velocity = new Vector2(10f, 0f);
+
+        }
+        if (collision.gameObject.tag == "RopesUp")
+        {
+            rb.velocity = new Vector2(0f, -10f);
+
         }
     }
 }

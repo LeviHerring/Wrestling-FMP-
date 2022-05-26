@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement; 
 
 public class PlayerOneHurtboxes : MonoBehaviour
 {
+
     Text mashingAmountText;
      public GameObject player;
     public GameObject enemy; 
@@ -31,7 +33,7 @@ public class PlayerOneHurtboxes : MonoBehaviour
     public float submissionNo; 
      Text countdownDisplay;
     int loopNumber = 0;
-    string playerString; 
+    string playerString;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +66,7 @@ public class PlayerOneHurtboxes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         stopwatch = Time.deltaTime; 
 
         if(stopwatch <= 0 && isHit == true)
@@ -139,16 +142,22 @@ public class PlayerOneHurtboxes : MonoBehaviour
         if (collision.gameObject.tag == "RopesRight")
         {
             Debug.Log("Hit Right");
-            rigidbody2d.velocity = new Vector2(-10f, 10f);
+            playerMovement.isHit = true;
+            playerMovement.knockback = new Vector2(10f, 0f);
+            playerMovement.isHit = false;
         }
         if (collision.gameObject.tag == "RopesLeft")
         {
-            rigidbody2d.AddForce(transform.right * 10f);
+            playerMovement.isHit = true;
+            playerMovement.knockback = new Vector2(-10f, 0f);
+            playerMovement.isHit = false;
             Debug.Log("Hit Left");
         }
         if (collision.gameObject.tag == "RopesUp")
         {
-            rigidbody2d.AddForce(transform.up * -10f);
+            playerMovement.isHit = true;
+            playerMovement.knockback = new Vector2(0f, -7f);
+            playerMovement.isHit = false;
         }
     }
 
@@ -169,6 +178,18 @@ public class PlayerOneHurtboxes : MonoBehaviour
             {
                 hasWon = true;
                 isMashingNeeded = false; 
+            }
+        }
+        if(isMashingNeeded && context.performed)
+        {
+            globalVariables.player1MashingDone++;
+            fillAmount = globalVariables.player1MashingDone / 10;
+            metre.fillAmount = fillAmount;
+
+            if(globalVariables.player1MashingDone == mashingAmountNeeded)
+            {
+                hasWon = true;
+                isMashingNeeded = false;
             }
         }
 
@@ -196,7 +217,7 @@ public class PlayerOneHurtboxes : MonoBehaviour
             if (hasWon == true)
             {
                 Debug.Log("Entered The first if"); 
-                countdownDisplay.text = "Pinsgsgsgsgsg broken!";
+                countdownDisplay.text = "Pin broken!";
                 yield return new WaitForSeconds(1f);
                 countdownDisplay.gameObject.SetActive(false);
                 mashingAmountText.gameObject.SetActive(false);
@@ -207,7 +228,7 @@ public class PlayerOneHurtboxes : MonoBehaviour
         }
         if (hasWon == true)
         {
-            countdownDisplay.text = "Pinsnfkngklsnlks broken!";
+            countdownDisplay.text = "Pin broken!";
             yield return new WaitForSeconds(1f);
             countdownDisplay.gameObject.SetActive(false);
             hasWon = false; 
@@ -218,6 +239,8 @@ public class PlayerOneHurtboxes : MonoBehaviour
 
             yield return new WaitForSeconds(1f);
             countdownDisplay.gameObject.SetActive(false);
+            SceneManager.LoadScene(playerString + "Wins");
+
         }
 
        
@@ -250,7 +273,7 @@ public class PlayerOneHurtboxes : MonoBehaviour
 
     public IEnumerator HasWon()
     {
-        countdownDisplay.text = "Pingsgsgsgsgsg broken!";
+        countdownDisplay.text = "Pin broken!";
         yield return new WaitForSeconds(1f);
         countdownDisplay.gameObject.SetActive(false);
         animationEvents.isAttacking = false;

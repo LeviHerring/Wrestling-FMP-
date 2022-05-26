@@ -68,13 +68,13 @@ public class Hitbox : MonoBehaviour
             if (playerWithHitboxes.GetComponent<PlayerMovementFinal>().isFacingRight == true)
             {
                 Vector2 newKnockback = new Vector2(knockback.x * damageManager.knockbackMultiplierX, knockback.y * damageManager.knockbackMultiplierY);
-                player.GetComponent<PlayerKnockback>().DoKnockBack(/*hitstun,*/ /*newKnockback,*/ hitHorizontal, hitVertical);
+                player.GetComponent<PlayerKnockback>().DoKnockBack(/*hitstun,*/ newKnockback /*hitHorizontal, hitVertical*/);
 
             }
             else
             {
                 Vector2 newKnockback = new Vector2(-knockback.x * damageManager.knockbackMultiplierX, knockback.y * damageManager.knockbackMultiplierY);
-                player.GetComponent<PlayerKnockback>().DoKnockBack(/*hitstun,*/ /*newKnockback,*/ hitHorizontal * -1, hitVertical);
+                player.GetComponent<PlayerKnockback>().DoKnockBack(newKnockback /*hitHorizontal * -1, hitVertical*/);
             }
         }
         

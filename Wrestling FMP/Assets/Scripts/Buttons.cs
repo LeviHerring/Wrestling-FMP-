@@ -80,4 +80,19 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("BreakTheTargets");
     }
 
+    public void MultiplayerModes()
+    {
+        SceneManager.LoadScene("MultiplayerModes"); 
+    }
+
+    public void SingleplayerModes()
+    {
+        SceneManager.LoadScene("SingeplayerModes"); 
+    }
+
+    public void StaminaMode()
+    {
+        SceneManager.LoadScene("StaminaCSS");
+    }
+
 }

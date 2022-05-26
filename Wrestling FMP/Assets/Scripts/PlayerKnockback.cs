@@ -21,13 +21,14 @@ public class PlayerKnockback : MonoBehaviour
         animationEvents = GetComponent<AnimationEvents>(); 
     }
 
-    public void DoKnockBack(/*float knockbackLength,*/ /*Vector2 knockback,*/ float hitHorizontal, float hitVertical)
+    public void DoKnockBack(/*float knockbackLength,*/ Vector2 knockback /*float hitHorizontal, float hitVertical*/)
     {
         //StartCoroutine(DisablePlayerMovement(/*knockbackLength*/)); 
-        animationEvents.isAttacking = true; 
-        //rigidbody2d.velocity = knockback;
-        playerMovement.hitHorizontal = hitHorizontal;
-        playerMovement.hitVertical = hitVertical; 
+        animationEvents.isAttacking = true;
+        playerMovement.knockback = knockback; 
+        rigidbody2d.velocity = playerMovement.knockback;
+        //playerMovement.hitHorizontal = hitHorizontal;
+        //playerMovement.hitVertical = hitVertical; 
 
     }
 
