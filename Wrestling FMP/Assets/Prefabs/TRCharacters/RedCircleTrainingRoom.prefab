@@ -667,7 +667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7200521914070512858}
   - component: {fileID: 2884996305904924924}
-  - component: {fileID: 6650524650371107398}
+  - component: {fileID: 6696816151410230567}
   m_Layer: 0
   m_Name: DownStrongAerial
   m_TagString: Hitbox
@@ -715,7 +715,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6890965, y: 0.7961426}
   m_EdgeRadius: 0
---- !u!114 &6650524650371107398
+--- !u!114 &6696816151410230567
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -724,18 +724,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 687065820678413709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 005f5c84e9f8b104fba66c4a0fd59f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 4
-  damageAmountDivide: 0.5
+  damageAmount: 0
+  staminaPoints: 0
+  damageAmountDivide: 0
   damageManager: {fileID: 1119557662266554095}
   superMetreChargeAmount: 0
   knockback: {x: 0, y: 0}
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 1119557662662532921}
+  playerMovementFinal: {fileID: 1119557662662532923}
   hitHorizontal: 0
   hitVertical: 0
   player: {fileID: 0}
@@ -1358,6 +1359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea61fef5af7249e46a140af1cf06f518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockback: {x: 0, y: 0}
   isHit: 0
   hurtboxes: {fileID: 0}
   rb: {fileID: 1119557662662532920}
@@ -1646,7 +1648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1119557662753017890}
   - component: {fileID: 1119557662753017885}
-  - component: {fileID: 7901230575691122915}
+  - component: {fileID: 7351247011441058699}
   m_Layer: 0
   m_Name: Strong
   m_TagString: Hitbox
@@ -1694,7 +1696,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.7426758, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7901230575691122915
+--- !u!114 &7351247011441058699
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1703,7 +1705,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1119557662753017891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 005f5c84e9f8b104fba66c4a0fd59f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 0
@@ -1715,6 +1717,7 @@ MonoBehaviour:
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 1119557662662532921}
+  playerMovementFinal: {fileID: 1119557662662532923}
   hitHorizontal: 0
   hitVertical: 0
   player: {fileID: 0}
@@ -2104,7 +2107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1119557663074670396}
   - component: {fileID: 1119557663074670399}
-  - component: {fileID: 1119557663074670398}
+  - component: {fileID: 2881552483334503713}
   m_Layer: 0
   m_Name: Neutral
   m_TagString: Hitbox
@@ -2152,7 +2155,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4085484, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1119557663074670398
+--- !u!114 &2881552483334503713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2161,18 +2164,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1119557663074670397}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 005f5c84e9f8b104fba66c4a0fd59f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 1
-  damageAmountDivide: 0.5
+  damageAmount: 0
+  staminaPoints: 0
+  damageAmountDivide: 0
   damageManager: {fileID: 1119557662266554095}
   superMetreChargeAmount: 0
   knockback: {x: 0, y: 0}
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 1119557662662532921}
+  playerMovementFinal: {fileID: 1119557662662532923}
   hitHorizontal: 0
   hitVertical: 0
   player: {fileID: 0}
@@ -2431,7 +2435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1659958041425293908}
   - component: {fileID: 5558137008453227842}
-  - component: {fileID: 8002437227731422202}
+  - component: {fileID: 1769102610861858422}
   m_Layer: 0
   m_Name: DownNeutral
   m_TagString: Hitbox
@@ -2479,7 +2483,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8955069, y: 0.5267587}
   m_EdgeRadius: 0
---- !u!114 &8002437227731422202
+--- !u!114 &1769102610861858422
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2488,18 +2492,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1287147773962452044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 005f5c84e9f8b104fba66c4a0fd59f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 1
-  damageAmountDivide: 0.5
+  damageAmount: 0
+  staminaPoints: 0
+  damageAmountDivide: 0
   damageManager: {fileID: 1119557662266554095}
   superMetreChargeAmount: 0
   knockback: {x: 0, y: 0}
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 1119557662662532921}
+  playerMovementFinal: {fileID: 1119557662662532923}
   hitHorizontal: 0
   hitVertical: 0
   player: {fileID: 0}
@@ -2513,7 +2518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1128970605687924126}
   - component: {fileID: 2455733522531119597}
-  - component: {fileID: 7639297473263339463}
+  - component: {fileID: 5764735588035965797}
   m_Layer: 0
   m_Name: UpStrongAerial
   m_TagString: Hitbox
@@ -2561,7 +2566,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7862978, y: 1.6916609}
   m_EdgeRadius: 0
---- !u!114 &7639297473263339463
+--- !u!114 &5764735588035965797
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2570,18 +2575,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2089254087910351458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 005f5c84e9f8b104fba66c4a0fd59f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 4
-  damageAmountDivide: 0.5
+  damageAmount: 0
+  staminaPoints: 0
+  damageAmountDivide: 0
   damageManager: {fileID: 1119557662266554095}
   superMetreChargeAmount: 0
   knockback: {x: 0, y: 0}
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 1119557662662532921}
+  playerMovementFinal: {fileID: 1119557662662532923}
   hitHorizontal: 0
   hitVertical: 0
   player: {fileID: 0}
@@ -2912,7 +2918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5824806563208481209}
   - component: {fileID: 3228256929557610922}
-  - component: {fileID: 3777342953736409549}
+  - component: {fileID: 5853260656202252998}
   m_Layer: 0
   m_Name: UpStrong
   m_TagString: Hitbox
@@ -2960,7 +2966,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7862978, y: 1.6916609}
   m_EdgeRadius: 0
---- !u!114 &3777342953736409549
+--- !u!114 &5853260656202252998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2969,18 +2975,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 3822413652266100497}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 005f5c84e9f8b104fba66c4a0fd59f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 4
-  damageAmountDivide: 0.5
+  damageAmount: 0
+  staminaPoints: 0
+  damageAmountDivide: 0
   damageManager: {fileID: 1119557662266554095}
   superMetreChargeAmount: 0
   knockback: {x: 0, y: 0}
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 1119557662662532921}
+  playerMovementFinal: {fileID: 1119557662662532923}
   hitHorizontal: 0
   hitVertical: 0
   player: {fileID: 0}
@@ -3034,7 +3041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491448871158127123}
   - component: {fileID: 2296298247250057458}
-  - component: {fileID: 7454794989703386859}
+  - component: {fileID: 5594103537356233165}
   m_Layer: 0
   m_Name: UpNeutralAir
   m_TagString: Hitbox
@@ -3082,7 +3089,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5678787, y: 1.043684}
   m_EdgeRadius: 0
---- !u!114 &7454794989703386859
+--- !u!114 &5594103537356233165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3091,18 +3098,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 4797486135009288681}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 005f5c84e9f8b104fba66c4a0fd59f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 1
-  damageAmountDivide: 0.5
+  damageAmount: 0
+  staminaPoints: 0
+  damageAmountDivide: 0
   damageManager: {fileID: 1119557662266554095}
   superMetreChargeAmount: 0
   knockback: {x: 0, y: 0}
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 1119557662662532921}
+  playerMovementFinal: {fileID: 1119557662662532923}
   hitHorizontal: 0
   hitVertical: 0
   player: {fileID: 0}
@@ -3116,7 +3124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3110278053640827627}
   - component: {fileID: 515413529837040808}
-  - component: {fileID: 123585789831296246}
+  - component: {fileID: 6256637432940344216}
   m_Layer: 0
   m_Name: DownNeutralAir
   m_TagString: Hitbox
@@ -3164,7 +3172,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6334038, y: 0.5267587}
   m_EdgeRadius: 0
---- !u!114 &123585789831296246
+--- !u!114 &6256637432940344216
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3173,18 +3181,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 5052253450961594902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 005f5c84e9f8b104fba66c4a0fd59f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 1
-  damageAmountDivide: 0.5
+  damageAmount: 0
+  staminaPoints: 0
+  damageAmountDivide: 0
   damageManager: {fileID: 1119557662266554095}
   superMetreChargeAmount: 0
   knockback: {x: 0, y: 0}
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 1119557662662532921}
+  playerMovementFinal: {fileID: 1119557662662532923}
   hitHorizontal: 0
   hitVertical: 0
   player: {fileID: 0}
@@ -3198,7 +3207,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8738375208872856674}
   - component: {fileID: 6823334246670021829}
-  - component: {fileID: 6476072643290204763}
+  - component: {fileID: 5973815445561779283}
+  - component: {fileID: 3667425343259453295}
   m_Layer: 0
   m_Name: UpNeutral
   m_TagString: Hitbox
@@ -3246,7 +3256,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5678787, y: 1.043684}
   m_EdgeRadius: 0
---- !u!114 &6476072643290204763
+--- !u!114 &5973815445561779283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3255,18 +3265,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 6177486078869061684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 005f5c84e9f8b104fba66c4a0fd59f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 1
-  damageAmountDivide: 0.5
+  damageAmount: 0
+  staminaPoints: 0
+  damageAmountDivide: 0
   damageManager: {fileID: 1119557662266554095}
   superMetreChargeAmount: 0
   knockback: {x: 0, y: 0}
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 1119557662662532921}
+  playerMovementFinal: {fileID: 1119557662662532923}
+  hitHorizontal: 0
+  hitVertical: 0
+  player: {fileID: 0}
+--- !u!114 &3667425343259453295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6177486078869061684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005f5c84e9f8b104fba66c4a0fd59f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 0
+  staminaPoints: 0
+  damageAmountDivide: 0
+  damageManager: {fileID: 0}
+  superMetreChargeAmount: 0
+  knockback: {x: 0, y: 0}
+  verticalKnockbackForce: 0
+  hitstun: 0
+  playerWithHitboxes: {fileID: 0}
+  playerMovementFinal: {fileID: 0}
   hitHorizontal: 0
   hitVertical: 0
   player: {fileID: 0}
@@ -3433,7 +3469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7231658324747640014}
   - component: {fileID: 6477225827254271190}
-  - component: {fileID: 8429282836254030326}
+  - component: {fileID: 1636511922889148042}
   m_Layer: 0
   m_Name: DownStrong
   m_TagString: Hitbox
@@ -3481,7 +3517,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7862978, y: 0.6214075}
   m_EdgeRadius: 0
---- !u!114 &8429282836254030326
+--- !u!114 &1636511922889148042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3490,18 +3526,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 9158442460963804642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 005f5c84e9f8b104fba66c4a0fd59f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 4
-  damageAmountDivide: 0.5
+  damageAmount: 0
+  staminaPoints: 0
+  damageAmountDivide: 0
   damageManager: {fileID: 1119557662266554095}
   superMetreChargeAmount: 0
   knockback: {x: 0, y: 0}
   verticalKnockbackForce: 0
   hitstun: 0
   playerWithHitboxes: {fileID: 1119557662662532921}
+  playerMovementFinal: {fileID: 1119557662662532923}
   hitHorizontal: 0
   hitVertical: 0
   player: {fileID: 0}

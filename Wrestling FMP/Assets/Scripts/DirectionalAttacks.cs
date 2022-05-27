@@ -48,6 +48,7 @@ public class DirectionalAttacks : MonoBehaviour
             //animator.SetBool("isJumping", true);
             animator.SetBool("isNeutral", true);
             animator.SetBool("isDown", true);
+            downTiltHitbox.SetActive(true);
 
         }
         else if (context.performed && GetComponent<PlayerMovementFinal>().IsGrounded() == false && animationEvents.isAttacking == false)
@@ -55,6 +56,7 @@ public class DirectionalAttacks : MonoBehaviour
             Debug.Log("Down and A and Aerial");
             animator.SetBool("isNeutral", true);
             animator.SetBool("isDown", true);
+            downAirHitbox.SetActive(true);
         }
     }
     public void DownStrong(InputAction.CallbackContext context)
@@ -64,12 +66,14 @@ public class DirectionalAttacks : MonoBehaviour
             Debug.Log("Up and A");
             animator.SetBool("isStrong", true);
             animator.SetBool("isDown", true);
+            downStrongHitbox.SetActive(true);
         }
-        else
+        else if (context.performed && PlayerMovementFinal.IsGrounded() == false && animationEvents.isAttacking == false)
         {
             Debug.Log("Down and X and Aerial");
             animator.SetBool("isStrong", true);
             animator.SetBool("isDown", true);
+            downStrongAirHitbox.SetActive(true);
         }
     }
     public void DownSpecial(InputAction.CallbackContext context)
@@ -79,27 +83,24 @@ public class DirectionalAttacks : MonoBehaviour
             Debug.Log("Up and A");
             animator.SetBool("isSpecial", true);
             animator.SetBool("isDown", true);
-        }
-        else
-        {
-            Debug.Log("Down and B and Aerial");
-            animator.SetBool("isSpecial", true);
-            animator.SetBool("isDown", true);
+            downSpecialHitbox.SetActive(true);
         }
     }
 
     public void UpTilt(InputAction.CallbackContext context)
     {
-        if (context.performed && animationEvents.isAttacking == false)
+        if (context.performed && animationEvents.isAttacking == false && GetComponent<PlayerMovementFinal>().IsGrounded())
         {
             Debug.Log("Up and A");
+            upTiltHitbox.SetActive(true);
             animator.SetBool("isUp", true);
-            animator.SetBool("isNeutral", true); 
+            animator.SetBool("isNeutral", true);
 
         }
-        else
+        else if (context.performed && PlayerMovementFinal.IsGrounded() == false && animationEvents.isAttacking == false) 
         {
             Debug.Log("Up and A and Aerial");
+            upAirHitbox.SetActive(true);
             animator.SetBool("isUp", true);
             animator.SetBool("isNeutral", true);
         }
@@ -108,12 +109,14 @@ public class DirectionalAttacks : MonoBehaviour
     {
         if (context.performed && GetComponent<PlayerMovementFinal>().IsGrounded() && animationEvents.isAttacking == false)
         {
+            upStrongHitbox.SetActive(true);
             Debug.Log("Up and A");
             animator.SetBool("isUp", true);
             animator.SetBool("isStrong", true);
         }
-        else
+        else if(context.performed && PlayerMovementFinal.IsGrounded() == false && animationEvents.isAttacking == false)
         {
+            upStrongAirHitbox.SetActive(true);
             Debug.Log("Up and X and Aerial");
             animator.SetBool("isUp", true);
             animator.SetBool("isStrong", true);
@@ -123,16 +126,12 @@ public class DirectionalAttacks : MonoBehaviour
     {
         if (context.performed && animationEvents.isAttacking == false)
         {
-            Debug.Log("Up and A");
+            Debug.Log("Up and B");
+            upSpecialHitbox.SetActive(true);
             animator.SetBool("isUp", true);
             animator.SetBool("isSpecial", true);
         }
-        else
-        {
-            Debug.Log("Up and B and Aerial");
-            animator.SetBool("isUp", true);
-            animator.SetBool("isSpecial", true);
-        }
+
     }
   
 

@@ -24,11 +24,21 @@ public class EndlessRunnerGenerator : MonoBehaviour
       
     }
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player"); 
+    }
+
     private void Update()
     {
         if(Vector3.Distance(player.transform.position, lastEndPosition) < playerDistanceSpawnLevel)
         {
             SpawnLevelPart(); 
+        }
+
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
         }
     }
 

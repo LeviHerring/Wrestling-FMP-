@@ -298,18 +298,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0
   damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  hitstun: 0.005
+  playerWithHitboxes: {fileID: 5534267961644927797}
   hitHorizontal: 0
   hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  player: {fileID: 0}
 --- !u!1 &5534267961240940866
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,18 +380,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0
   damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  hitstun: 0.005
+  playerWithHitboxes: {fileID: 5534267961644927797}
   hitHorizontal: 0
   hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  player: {fileID: 0}
 --- !u!1 &5534267961261493326
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,18 +526,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0
   damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  hitstun: 0.005
+  playerWithHitboxes: {fileID: 5534267961644927797}
   hitHorizontal: 0
   hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  player: {fileID: 0}
 --- !u!1 &5534267961455671741
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,18 +608,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0
   damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  hitstun: 0.005
+  playerWithHitboxes: {fileID: 5534267961644927797}
   hitHorizontal: 0
   hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  player: {fileID: 0}
 --- !u!1 &5534267961628529125
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,18 +690,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0
   damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  hitstun: 0.005
+  playerWithHitboxes: {fileID: 5534267961644927797}
   hitHorizontal: 0
   hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  player: {fileID: 0}
 --- !u!1 &5534267961642740595
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,18 +772,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0
   damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  hitstun: 0.005
+  playerWithHitboxes: {fileID: 5534267961644927797}
   hitHorizontal: 0
   hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  player: {fileID: 0}
 --- !u!1 &5534267961644927797
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,6 +803,10 @@ GameObject:
   - component: {fileID: 5534267961644927807}
   - component: {fileID: 5223153132791939250}
   - component: {fileID: 689327189425998061}
+  - component: {fileID: 2316445238458469317}
+  - component: {fileID: 9139116952892054345}
+  - component: {fileID: 2025506217993814793}
+  - component: {fileID: 3351083817642724784}
   m_Layer: 0
   m_Name: Idle_0
   m_TagString: Player
@@ -823,6 +827,7 @@ Transform:
   m_Children:
   - {fileID: 5534267961261493325}
   - {fileID: 8989285287729463640}
+  - {fileID: 4949060009924901454}
   m_Father: {fileID: 5534267963017594213}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -957,7 +962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockback: {x: 0, y: 0}
   isHit: 0
-  hurtboxes: {fileID: 0}
+  hurtboxes: {fileID: 8128351599222685311}
   rb: {fileID: 5534267961644927793}
   groundCheck: {fileID: 5534267961644927796}
   groundLayer:
@@ -1039,7 +1044,19 @@ MonoBehaviour:
     m_ActionId: 69c55be8-e0a2-40e6-baa7-3aebd63988ef
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5534267961644927804}
+        m_TargetAssemblyTypeName: PlayerMovementFinal, Assembly-CSharp
+        m_MethodName: AirDash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 20e1c919-321a-4d87-8f3e-94c731094f82
     m_ActionName: Player/Air Dash[/Keyboard/leftShift]
   - m_PersistentCalls:
@@ -1059,34 +1076,94 @@ MonoBehaviour:
     m_ActionId: 205c49b8-4dd5-4caa-a442-e54a6099fb38
     m_ActionName: Player/Neutral Attack[/Keyboard/p]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5534267961644927804}
+        m_TargetAssemblyTypeName: PlayerMovementFinal, Assembly-CSharp
+        m_MethodName: Special
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 150ae4b6-d978-4c91-a482-e05c236cefac
     m_ActionName: Player/Special[/Keyboard/i]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2025506217993814793}
+        m_TargetAssemblyTypeName: NarbyDallinAttack, Assembly-CSharp
+        m_MethodName: PictureInPicture
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e463154f-8f4d-45d2-b875-0e6b747d9c2a
     m_ActionName: Player/Down B[/Keyboard/s,/Keyboard/i]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9139116952892054345}
+        m_TargetAssemblyTypeName: GrabController, Assembly-CSharp
+        m_MethodName: PickUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 02db68ba-e410-465e-804f-297bbb9e995c
     m_ActionName: Player/Pickup
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5534267961644927807}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: UpTilt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ac58de69-d6ff-4c73-bdf8-cbba580136ee
     m_ActionName: Player/Up Tilt[/Keyboard/w,/Keyboard/p]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 689327189425998061}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: Finisher
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b04d15c4-6514-47f4-836c-34fcebf359bc
     m_ActionName: Player/Super Attack[/Keyboard/k]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5534267961644927797}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 3351083817642724784}
+        m_TargetAssemblyTypeName: NewPinningAndSubmittingAndMashing, Assembly-CSharp
+        m_MethodName: Pin
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1096,13 +1173,13 @@ MonoBehaviour:
     m_ActionName: Player/ToPinSomeone[/Keyboard/backspace]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5534267961644927797}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 3351083817642724784}
+        m_TargetAssemblyTypeName: NewPinningAndSubmittingAndMashing, Assembly-CSharp
+        m_MethodName: Submit
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1167,19 +1244,67 @@ MonoBehaviour:
     m_ActionId: a4402376-a96d-47e3-ae50-e0721e1b453e
     m_ActionName: Player/Select[/Keyboard/p]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5534267961644927807}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: DownTilt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: c0ae2745-1f03-41f2-96f5-b35371c64b63
     m_ActionName: Player/Down tilt
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5534267961644927807}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: DownStrong
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 5accc085-d357-4494-86dc-eaf37e84d331
     m_ActionName: Player/down smash
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5534267961644927807}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: UpStrong
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 58d6ae47-942e-4c00-aec3-87573990563d
     m_ActionName: Player/up smash
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5534267961644927807}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: UpSpecial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 4f4738db-2ad4-4660-847c-c0688028abce
     m_ActionName: Player/up b
   - m_PersistentCalls:
@@ -1240,7 +1365,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5534267961644927797}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66d8154b35c95f04e8a9b0cd393e3da4, type: 3}
   m_Name: 
@@ -1289,6 +1414,66 @@ MonoBehaviour:
   playerNo: 
   stamina: 100
   health: 0
+--- !u!114 &2316445238458469317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5534267961644927797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589109b1f82ba3a42878022829d3ff53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9139116952892054345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5534267961644927797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3de18c67827fd544b4a7c7bcd570118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabDetect: {fileID: 4949060009924901454}
+  holder: {fileID: 4949060009924901454}
+  rayDist: 0
+--- !u!114 &2025506217993814793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5534267961644927797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b50f3580307965c4fbb8299ebb2c7c76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageManager: {fileID: 2823114259710043524}
+  detector: {fileID: 5534267962146511166}
+  darbyHitbox: {fileID: 5737205027517297378}
+  isActivatedHere: 0
+--- !u!114 &3351083817642724784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5534267961644927797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1077be2c52927d4395cfe148ece66c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinHitbox: {fileID: 929735185477431821}
+  submitHitbox: {fileID: 3628445460917098235}
+  animator: {fileID: 5534267961644927795}
+  animationEvents: {fileID: 5534267961644927806}
+  player: {fileID: 0}
 --- !u!1 &5534267961855828450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,18 +1544,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0
   damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  hitstun: 0.005
+  playerWithHitboxes: {fileID: 5534267961644927797}
   hitHorizontal: 0
   hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  player: {fileID: 0}
 --- !u!1 &5534267962059615537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,18 +1626,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0
   damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  hitstun: 0.005
+  playerWithHitboxes: {fileID: 5534267961644927797}
   hitHorizontal: 0
   hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  player: {fileID: 0}
 --- !u!1 &5534267962146511166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,7 +1648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5534267962146511165}
   - component: {fileID: 5534267962146511164}
-  - component: {fileID: 650586661955277628}
+  - component: {fileID: 5737205027517297378}
   m_Layer: 0
   m_Name: SpecialDown
   m_TagString: Hitbox
@@ -1511,7 +1696,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6561965, y: 0.5518275}
   m_EdgeRadius: 0
---- !u!114 &650586661955277628
+--- !u!114 &5737205027517297378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1520,21 +1705,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5534267962146511166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Script: {fileID: 11500000, guid: f75e5914639ad66439cb36224d9d392e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
-  damageAmountDivide: 0
-  damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
-  verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
-  hitHorizontal: 0
-  hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  dm: {fileID: 2823114259710043524}
+  isActivated: 0
+  stopwatch: 0
 --- !u!1 &5534267962239345941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,18 +1781,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0
   damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  hitstun: 0.005
+  playerWithHitboxes: {fileID: 5534267961644927797}
   hitHorizontal: 0
   hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  player: {fileID: 0}
 --- !u!1 &5534267962288933108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1687,18 +1863,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0
   damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  hitstun: 0.005
+  playerWithHitboxes: {fileID: 5534267961644927797}
   hitHorizontal: 0
   hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  player: {fileID: 0}
 --- !u!1 &5534267962371808452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,18 +1945,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0
   damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  hitstun: 0.005
+  playerWithHitboxes: {fileID: 5534267961644927797}
   hitHorizontal: 0
   hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  player: {fileID: 0}
 --- !u!1 &5534267962396338454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,18 +2027,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0
   damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  hitstun: 0.005
+  playerWithHitboxes: {fileID: 5534267961644927797}
   hitHorizontal: 0
   hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  player: {fileID: 0}
 --- !u!1 &5534267962796368018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,18 +2109,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 5
+  staminaPoints: 8
   damageAmountDivide: 0
   damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.0001
+  knockback: {x: 5, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  hitstun: 0.001
+  playerWithHitboxes: {fileID: 5534267961644927797}
   hitHorizontal: 0
   hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  player: {fileID: 0}
 --- !u!1 &5534267963017594214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,15 +2222,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0
   damageManager: {fileID: 2823114259710043524}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
-  playerWithHitboxes: {fileID: 0}
+  hitstun: 0.005
+  playerWithHitboxes: {fileID: 5534267961644927797}
   hitHorizontal: 0
   hitVertical: 0
-  player: {fileID: 5534267963017594214}
+  player: {fileID: 0}
+--- !u!1 &8170477644776081329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4949060009924901454}
+  m_Layer: 0
+  m_Name: GrabDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4949060009924901454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8170477644776081329}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.432, y: 0.072, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5534267961644927796}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

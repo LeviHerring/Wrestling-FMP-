@@ -72,7 +72,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.111672044, y: 0.04424733}
@@ -100,14 +100,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 15
   damageAmountDivide: 0
   damageManager: {fileID: 8203655997748410210}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.006
   playerWithHitboxes: {fileID: 4984386384245026592}
   hitHorizontal: 0
   hitVertical: 0
@@ -184,7 +184,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.100319386, y: -0.0011635721}
@@ -212,14 +212,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 2
+  damageAmount: 10
+  staminaPoints: 15
   damageAmountDivide: 0
   damageManager: {fileID: 8203655997748410210}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.006
   playerWithHitboxes: {fileID: 4984386384245026592}
   hitHorizontal: 0
   hitVertical: 0
@@ -266,7 +266,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.10768455, y: -0.04397607}
@@ -294,14 +294,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 15
   damageAmountDivide: 0
   damageManager: {fileID: 8203655997748410210}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.006
   playerWithHitboxes: {fileID: 4984386384245026592}
   hitHorizontal: 0
   hitVertical: 0
@@ -348,7 +348,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.1256418, y: 0.1889072}
@@ -376,14 +376,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 15
   damageAmountDivide: 0
   damageManager: {fileID: 8203655997748410210}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.006
   playerWithHitboxes: {fileID: 4984386384245026592}
   hitHorizontal: 0
   hitVertical: 0
@@ -501,7 +501,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.13318102, y: -0.11718682}
@@ -529,14 +529,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 15
   damageAmountDivide: 0
   damageManager: {fileID: 8203655997748410210}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.006
   playerWithHitboxes: {fileID: 4984386384245026592}
   hitHorizontal: 0
   hitVertical: 0
@@ -583,7 +583,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0856837, y: 0.048676997}
@@ -611,14 +611,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 15
   damageAmountDivide: 0
   damageManager: {fileID: 8203655997748410210}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.006
   playerWithHitboxes: {fileID: 4984386384245026592}
   hitHorizontal: 0
   hitVertical: 0
@@ -665,7 +665,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.040717445, y: 0.04424733}
@@ -693,14 +693,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 3
+  damageAmount: 10
+  staminaPoints: 15
   damageAmountDivide: 0
   damageManager: {fileID: 8203655997748410210}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.006
   playerWithHitboxes: {fileID: 4984386384245026592}
   hitHorizontal: 0
   hitVertical: 0
@@ -747,7 +747,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.08439773, y: -0.0181541}
@@ -775,14 +775,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 15
   damageAmountDivide: 0
   damageManager: {fileID: 8203655997748410210}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.006
   playerWithHitboxes: {fileID: 4984386384245026592}
   hitHorizontal: 0
   hitVertical: 0
@@ -829,7 +829,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.03290879, y: -0.12397204}
@@ -857,14 +857,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 15
   damageAmountDivide: 0
   damageManager: {fileID: 8203655997748410210}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.006
   playerWithHitboxes: {fileID: 4984386384245026592}
   hitHorizontal: 0
   hitVertical: 0
@@ -997,7 +997,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.16979773, y: -0.07683031}
@@ -1025,14 +1025,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 15
   damageAmountDivide: 0
   damageManager: {fileID: 8203655997748410210}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.006
   playerWithHitboxes: {fileID: 4984386384245026592}
   hitHorizontal: 0
   hitVertical: 0
@@ -1058,7 +1058,6 @@ GameObject:
   - component: {fileID: 7092779657401183419}
   - component: {fileID: 6207077700240526236}
   - component: {fileID: 1487822417266744229}
-  - component: {fileID: 7854414813302114010}
   - component: {fileID: 1278932430937332609}
   - component: {fileID: 7213999472626345405}
   m_Layer: 0
@@ -1295,23 +1294,83 @@ MonoBehaviour:
     m_ActionId: 205c49b8-4dd5-4caa-a442-e54a6099fb38
     m_ActionName: Player/Neutral Attack[/XInputControllerWindows/buttonSouth,/Keyboard/p]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4107318208953481410}
+        m_TargetAssemblyTypeName: PlayerMovementFinal, Assembly-CSharp
+        m_MethodName: Special
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 150ae4b6-d978-4c91-a482-e05c236cefac
     m_ActionName: Player/Special[/XInputControllerWindows/buttonEast,/Keyboard/i]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6451691912319586692}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: DownSpecial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e463154f-8f4d-45d2-b875-0e6b747d9c2a
     m_ActionName: Player/Down B[/XInputControllerWindows/leftStick/down,/XInputControllerWindows/buttonEast,/Keyboard/s,/Keyboard/i]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7213999472626345405}
+        m_TargetAssemblyTypeName: GrabController, Assembly-CSharp
+        m_MethodName: PickUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 02db68ba-e410-465e-804f-297bbb9e995c
     m_ActionName: Player/Pickup[/XInputControllerWindows/leftShoulder]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6451691912319586692}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: UpTilt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ac58de69-d6ff-4c73-bdf8-cbba580136ee
     m_ActionName: Player/Up Tilt[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/buttonSouth,/Keyboard/w,/Keyboard/p]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8648408368572895064}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: Finisher
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b04d15c4-6514-47f4-836c-34fcebf359bc
     m_ActionName: Player/Super Attack[/XInputControllerWindows/rightShoulder,/Keyboard/k]
   - m_PersistentCalls:
@@ -1367,19 +1426,67 @@ MonoBehaviour:
     m_ActionId: a4402376-a96d-47e3-ae50-e0721e1b453e
     m_ActionName: Player/Select[/XInputControllerWindows/buttonSouth,/Keyboard/p]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6451691912319586692}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: DownTilt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: c0ae2745-1f03-41f2-96f5-b35371c64b63
     m_ActionName: Player/Down tilt[/XInputControllerWindows/leftStick/down,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6451691912319586692}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: DownStrong
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 5accc085-d357-4494-86dc-eaf37e84d331
     m_ActionName: Player/down smash[/XInputControllerWindows/leftStick/down,/XInputControllerWindows/buttonWest]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6451691912319586692}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: UpStrong
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 58d6ae47-942e-4c00-aec3-87573990563d
     m_ActionName: Player/up smash[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/buttonWest]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6451691912319586692}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: UpSpecial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 4f4738db-2ad4-4660-847c-c0688028abce
     m_ActionName: Player/up b[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
@@ -1432,7 +1539,7 @@ MonoBehaviour:
   Tags1: []
   pinDistance: 10
   neutral: {fileID: 331957716398971998}
-  special: {fileID: 0}
+  special: {fileID: 331957716398971998}
   strong: {fileID: 1688288271367265260}
   forwardNeutralAerial: {fileID: 2934468546368433271}
   forwardStrongAerial: {fileID: 8741218060560672901}
@@ -1468,9 +1575,9 @@ MonoBehaviour:
   upStrongAirHitbox: {fileID: 2425395984212676901}
   downStrongHitbox: {fileID: 1322518900838461337}
   downStrongAirHitbox: {fileID: 4128646326244830212}
-  upSpecialHitbox: {fileID: 0}
+  upSpecialHitbox: {fileID: 1017624912015386561}
   upStrongHitbox: {fileID: 1228876360587155694}
-  downSpecialHitbox: {fileID: 0}
+  downSpecialHitbox: {fileID: 1849154319875684972}
 --- !u!114 &8648408368572895064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1507,8 +1614,8 @@ MonoBehaviour:
   upStrongAirHitbox: {fileID: 2425395984212676901}
   downStrongHitbox: {fileID: 1322518900838461337}
   downStrongAirHitbox: {fileID: 4128646326244830212}
-  upSpecialHitbox: {fileID: 0}
-  downSpecialHitbox: {fileID: 0}
+  upSpecialHitbox: {fileID: 1017624912015386561}
+  downSpecialHitbox: {fileID: 1849154319875684972}
   upStrongHitbox: {fileID: 1228876360587155694}
 --- !u!114 &7092779657401183419
 MonoBehaviour:
@@ -1556,34 +1663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589109b1f82ba3a42878022829d3ff53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7854414813302114010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4984386384245026592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 365787bcea37faf43b5b35f2099ab4b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4984386384245026592}
-  enemy: {fileID: 0}
-  animator: {fileID: 4984386384245026593}
-  rigidbody2d: {fileID: 7270891117295156405}
-  isHit: 0
-  stopwatch: 0
-  stopwatchTime: 0
-  disabledTime: 0
-  hasWon: 0
-  hasWonSubmit: 0
-  isMashingNeeded: 0
-  fillAmount: 0
-  mashingAmountNeeded: 0
-  countdownTime: 0
-  randomSubmit: 0
-  submissionNo: 0
 --- !u!114 &1278932430937332609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1653,7 +1732,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.14072026, y: 0.050938785}
@@ -1681,14 +1760,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 15
   damageAmountDivide: 0
   damageManager: {fileID: 8203655997748410210}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.006
   playerWithHitboxes: {fileID: 4984386384245026592}
   hitHorizontal: 0
   hitVertical: 0
@@ -1836,7 +1915,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.14120173, y: 0.13179998}
@@ -1864,14 +1943,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 15
   damageAmountDivide: 0
   damageManager: {fileID: 8203655997748410210}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.006
   playerWithHitboxes: {fileID: 4984386384245026592}
   hitHorizontal: 0
   hitVertical: 0
@@ -2011,7 +2090,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.03290879, y: -0.12397204}
@@ -2039,14 +2118,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 15
   damageAmountDivide: 0
   damageManager: {fileID: 8203655997748410210}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.006
   playerWithHitboxes: {fileID: 4984386384245026592}
   hitHorizontal: 0
   hitVertical: 0
@@ -2093,7 +2172,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.090207264, y: -0.10587795}
@@ -2121,14 +2200,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 15
   damageAmountDivide: 0
   damageManager: {fileID: 8203655997748410210}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.006
   playerWithHitboxes: {fileID: 4984386384245026592}
   hitHorizontal: 0
   hitVertical: 0

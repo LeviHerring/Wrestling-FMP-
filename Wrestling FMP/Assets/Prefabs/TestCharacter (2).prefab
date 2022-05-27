@@ -657,6 +657,88 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &580660945368402552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6132160573256989525}
+  - component: {fileID: 4445784594127841228}
+  - component: {fileID: 223551580391775263}
+  m_Layer: 0
+  m_Name: ForwardNeutralAir
+  m_TagString: Hitbox
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6132160573256989525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580660945368402552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.93, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1097543220886770254}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &4445784594127841228
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580660945368402552}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.3125286, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.4085484, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &223551580391775263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580660945368402552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+  staminaPoints: 12
+  damageAmountDivide: 0.5
+  damageManager: {fileID: 1097543220886770253}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
+  verticalKnockbackForce: 0
+  hitstun: 0.001
+  playerWithHitboxes: {fileID: 1097543221296233371}
+  hitHorizontal: 0
+  hitVertical: 0
+  player: {fileID: 0}
 --- !u!1 &665060244584905007
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,14 +809,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 4
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0.5
   damageManager: {fileID: 1097543220886770253}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.001
   playerWithHitboxes: {fileID: 1097543221296233371}
   hitHorizontal: 0
   hitVertical: 0
@@ -781,6 +863,8 @@ Transform:
   - {fileID: 3142346047080797769}
   - {fileID: 460436271371353777}
   - {fileID: 1446094849}
+  - {fileID: 6132160573256989525}
+  - {fileID: 2231306781238467607}
   m_Father: {fileID: 1097543221296233364}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1069,7 +1153,19 @@ MonoBehaviour:
     m_ActionId: 150ae4b6-d978-4c91-a482-e05c236cefac
     m_ActionName: Player/Special[/XInputControllerWindows/buttonEast,/Keyboard/i]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5343393514066908331}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: DownSpecial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e463154f-8f4d-45d2-b875-0e6b747d9c2a
     m_ActionName: Player/Down B[/XInputControllerWindows/leftStick/down,/XInputControllerWindows/buttonEast,/Keyboard/s,/Keyboard/i]
   - m_PersistentCalls:
@@ -1089,7 +1185,19 @@ MonoBehaviour:
     m_ActionId: 02db68ba-e410-465e-804f-297bbb9e995c
     m_ActionName: Player/Pickup[/XInputControllerWindows/leftShoulder]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5343393514066908331}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: UpTilt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ac58de69-d6ff-4c73-bdf8-cbba580136ee
     m_ActionName: Player/Up Tilt[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/buttonSouth,/Keyboard/w,/Keyboard/p]
   - m_PersistentCalls:
@@ -1157,7 +1265,19 @@ MonoBehaviour:
     m_ActionId: 8ffa5dca-bf40-4c2b-9ae8-5436298b8aeb
     m_ActionName: Player/Mashing[/XInputControllerWindows/buttonSouth,/Keyboard/p]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1097543221296233369}
+        m_TargetAssemblyTypeName: PlayerMovementFinal, Assembly-CSharp
+        m_MethodName: Strong
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 41c76f69-fc63-428b-bae5-ec0fb6504f90
     m_ActionName: Player/Strong Attack[/XInputControllerWindows/buttonWest,/Keyboard/o]
   - m_PersistentCalls:
@@ -1185,19 +1305,67 @@ MonoBehaviour:
     m_ActionId: a4402376-a96d-47e3-ae50-e0721e1b453e
     m_ActionName: Player/Select[/XInputControllerWindows/buttonSouth,/Keyboard/p]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5343393514066908331}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: DownTilt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: c0ae2745-1f03-41f2-96f5-b35371c64b63
     m_ActionName: Player/Down tilt[/XInputControllerWindows/leftStick/down,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5343393514066908331}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: DownStrong
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 5accc085-d357-4494-86dc-eaf37e84d331
     m_ActionName: Player/down smash[/XInputControllerWindows/leftStick/down,/XInputControllerWindows/buttonWest]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5343393514066908331}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: UpStrong
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 58d6ae47-942e-4c00-aec3-87573990563d
     m_ActionName: Player/up smash[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/buttonWest]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5343393514066908331}
+        m_TargetAssemblyTypeName: DirectionalAttacks, Assembly-CSharp
+        m_MethodName: UpSpecial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 4f4738db-2ad4-4660-847c-c0688028abce
     m_ActionName: Player/up b[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
@@ -1252,8 +1420,8 @@ MonoBehaviour:
   neutral: {fileID: 1097543222240949151}
   special: {fileID: 1097543221373514881}
   strong: {fileID: 1097543221329960016}
-  forwardNeutralAerial: {fileID: 0}
-  forwardStrongAerial: {fileID: 0}
+  forwardNeutralAerial: {fileID: 580660945368402552}
+  forwardStrongAerial: {fileID: 8353385700338987839}
   playerIndex: 0
   projectile: {fileID: 7750513875867062296, guid: 52d24d310ef93304ea523e6a77c9ca45, type: 3}
   isShooting: 0
@@ -1496,7 +1664,7 @@ MonoBehaviour:
   downStrongHitbox: {fileID: 9199557270515806528}
   downStrongAirHitbox: {fileID: 665060244584905007}
   upSpecialHitbox: {fileID: 1097543222240949151}
-  downSpecialHitbox: {fileID: 1097543222240949151}
+  downSpecialHitbox: {fileID: 1446094848}
   upStrongHitbox: {fileID: 3871343656707441587}
 --- !u!1 &1097543221314417836
 GameObject:
@@ -1729,14 +1897,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0
   damageManager: {fileID: 1097543220886770253}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.001
   playerWithHitboxes: {fileID: 1097543221296233371}
   hitHorizontal: 0
   hitVertical: 0
@@ -2194,14 +2362,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 1
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0.5
   damageManager: {fileID: 1097543220886770253}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.001
   playerWithHitboxes: {fileID: 1097543221296233371}
   hitHorizontal: 0
   hitVertical: 0
@@ -2353,14 +2521,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 1
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0.5
   damageManager: {fileID: 1097543220886770253}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.001
   playerWithHitboxes: {fileID: 1097543221296233371}
   hitHorizontal: 0
   hitVertical: 0
@@ -2435,14 +2603,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 4
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0.5
   damageManager: {fileID: 1097543220886770253}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.001
   playerWithHitboxes: {fileID: 1097543221296233371}
   hitHorizontal: 0
   hitVertical: 0
@@ -2834,14 +3002,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 4
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0.5
   damageManager: {fileID: 1097543220886770253}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.001
   playerWithHitboxes: {fileID: 1097543221296233371}
   hitHorizontal: 0
   hitVertical: 0
@@ -2956,14 +3124,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 1
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0.5
   damageManager: {fileID: 1097543220886770253}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.001
   playerWithHitboxes: {fileID: 1097543221296233371}
   hitHorizontal: 0
   hitVertical: 0
@@ -3038,14 +3206,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 1
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0.5
   damageManager: {fileID: 1097543220886770253}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.001
   playerWithHitboxes: {fileID: 1097543221296233371}
   hitHorizontal: 0
   hitVertical: 0
@@ -3120,14 +3288,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 1
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0.5
   damageManager: {fileID: 1097543220886770253}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.001
   playerWithHitboxes: {fileID: 1097543221296233371}
   hitHorizontal: 0
   hitVertical: 0
@@ -3285,6 +3453,88 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1097543221296233371}
+--- !u!1 &8353385700338987839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2231306781238467607}
+  - component: {fileID: 744373162401726604}
+  - component: {fileID: 2456655557467617351}
+  m_Layer: 0
+  m_Name: ForwardStrongAir
+  m_TagString: Hitbox
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2231306781238467607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8353385700338987839}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.93, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1097543220886770254}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &744373162401726604
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8353385700338987839}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.6624801, y: 0.49936867}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.1084514, y: 1.9987373}
+  m_EdgeRadius: 0
+--- !u!114 &2456655557467617351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8353385700338987839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+  staminaPoints: 12
+  damageAmountDivide: 0.5
+  damageManager: {fileID: 1097543220886770253}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
+  verticalKnockbackForce: 0
+  hitstun: 0.001
+  playerWithHitboxes: {fileID: 1097543221296233371}
+  hitHorizontal: 0
+  hitVertical: 0
+  player: {fileID: 0}
 --- !u!1 &9199557270515806528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3355,14 +3605,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
-  staminaPoints: 4
+  damageAmount: 10
+  staminaPoints: 12
   damageAmountDivide: 0.5
   damageManager: {fileID: 1097543220886770253}
-  superMetreChargeAmount: 0
-  knockback: {x: 0, y: 0}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 6, y: 2}
   verticalKnockbackForce: 0
-  hitstun: 0
+  hitstun: 0.001
   playerWithHitboxes: {fileID: 1097543221296233371}
   hitHorizontal: 0
   hitVertical: 0

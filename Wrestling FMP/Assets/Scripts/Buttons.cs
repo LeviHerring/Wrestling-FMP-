@@ -87,7 +87,7 @@ public class Buttons : MonoBehaviour
 
     public void SingleplayerModes()
     {
-        SceneManager.LoadScene("SingeplayerModes"); 
+        SceneManager.LoadScene("SingleplayerModes"); 
     }
 
     public void StaminaMode()
