@@ -53,29 +53,29 @@ public class MainSceneMultiplayerAwake : MonoBehaviour
                 break;
         }
     }
-    void OnPlayerJoined(PlayerInput playerInput)
-    {
-        Debug.Log("Player joined the game - Hello!");
-        string player2 = PlayerPrefs.GetString("playerTwo");
-        switch (player2)
-        {
-            case "RedCircle":
-                playerInputManager.playerPrefab = redCircle;
-                redCircle.transform.position = playerTwoSpawn.position;
-                Debug.Log("PLAYER 2 RED CIRCLE");
-                break;
-            case "GreenSquare":
-                playerInputManager.playerPrefab = greenSquare;
-                greenSquare.transform.position = playerTwoSpawn.position;
-                Debug.Log("PLAYER 2 Green Square");
-                break;
-                //case "PlayerThree":
-                //    Instantiate(playerThree, spawnPosition.transform.position, Quaternion.identity);
-                //    break;
-                //case "PlayerFour":
-                //    Instantiate(playerFour, spawnPosition.transform.position, Quaternion.identity);
-                //    break;
-        }
+    //void OnPlayerJoined(PlayerInput playerInput)
+    //{
+    //    Debug.Log("Player joined the game - Hello!");
+    //    string player2 = PlayerPrefs.GetString("playerTwo");
+    //    switch (player2)
+    //    {
+    //        case "RedCircle":
+    //            playerInputManager.playerPrefab = redCircle;
+    //            redCircle.transform.position = playerTwoSpawn.position;
+    //            Debug.Log("PLAYER 2 RED CIRCLE");
+    //            break;
+    //        case "GreenSquare":
+    //            playerInputManager.playerPrefab = greenSquare;
+    //            greenSquare.transform.position = playerTwoSpawn.position;
+    //            Debug.Log("PLAYER 2 Green Square");
+    //            break;
+    //            //case "PlayerThree":
+    //            //    Instantiate(playerThree, spawnPosition.transform.position, Quaternion.identity);
+    //            //    break;
+    //            //case "PlayerFour":
+    //            //    Instantiate(playerFour, spawnPosition.transform.position, Quaternion.identity);
+    //            //    break;
+    //    }
 
-    }
+    //}
 }

@@ -18,6 +18,7 @@ TagManager:
   - RopesDown
   - PlayerOne
   - PlayerTwo
+  - Box
   layers:
   - Default
   - TransparentFX

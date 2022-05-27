@@ -1564,7 +1564,7 @@ MonoBehaviour:
   animator: {fileID: 4984386384245026593}
   isMoving: 0
   neutral: {fileID: 331957716398971998}
-  special: {fileID: 0}
+  special: {fileID: 331957716398971998}
   strong: {fileID: 1688288271367265260}
   pinHitbox: {fileID: 5721353759587248777}
   submitHitbox: {fileID: 1312659438064619056}
@@ -1632,7 +1632,7 @@ MonoBehaviour:
   redCircle: {fileID: 16619163561104165, guid: 2bdf60b866f7eb84d97e56a47acb7b67, type: 3}
   greenSquare: {fileID: 5282293512886239477, guid: a0c28cfaf78b35c42b5c4b1259e75840, type: 3}
   astronaut: {fileID: 4984386384245026592}
-  narbyDallin: {fileID: 7060163434291303149, guid: 5d83b83be830f2c409f63dacb9b7951e, type: 3}
+  narbyDallin: {fileID: 4663134724265259534, guid: 85d1c001e34df8f4db8d616a44eaa05d, type: 3}
   playerNo: 0
 --- !u!114 &6207077700240526236
 MonoBehaviour:

@@ -1579,7 +1579,7 @@ MonoBehaviour:
   redCircle: {fileID: 1097543221296233371}
   greenSquare: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
   astronaut: {fileID: 229860932542687020, guid: 59801480f8908534da088fe84a808b94, type: 3}
-  narbyDallin: {fileID: 5534267963017594214, guid: 1a74f8ae51111bc4b9e9a955f4407b9e, type: 3}
+  narbyDallin: {fileID: 8568263124897379617, guid: 2903ebed4b91fd84fa35f1d1c8a71f65, type: 3}
   playerNo: 0
 --- !u!114 &2958498870681795801
 MonoBehaviour:
@@ -2796,7 +2796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5230835110102696494
 Transform:
   m_ObjectHideFlags: 0

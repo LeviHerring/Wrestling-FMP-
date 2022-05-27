@@ -101,6 +101,15 @@ public class PlayerMovementFinal : MonoBehaviour
             FindObjectOfType<GloablVariablesManager>().playersJoined = 0; 
         }
 
+        //if(IsGrounded() == false)
+        //{
+        //    animator.SetBool("isJumping", true);
+        //}
+        //else
+        //{
+        //    animator.SetBool("isJumping", false); 
+        //}
+
     }
 
 

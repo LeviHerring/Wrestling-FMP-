@@ -1384,6 +1384,7 @@ GameObject:
   - component: {fileID: 502838704}
   - component: {fileID: 502838703}
   - component: {fileID: 502838707}
+  - component: {fileID: 502838708}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1479,6 +1480,7 @@ RectTransform:
   - {fileID: 302476502}
   - {fileID: 1289109974}
   - {fileID: 1068479020}
+  - {fileID: 946510025}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1516,6 +1518,20 @@ MonoBehaviour:
   player1MashingNeededText: {fileID: 1289109975}
   player2MashingNeededText: {fileID: 1068479021}
   playerJoin: {fileID: 403135693}
+--- !u!114 &502838708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502838702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165fe90f3efac17489c5d7f88c3ec12e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopwatch: 0
+  timer: {fileID: 946510026}
 --- !u!1 &518377785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,7 +1549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &518377786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2959,6 +2975,87 @@ Transform:
   m_Father: {fileID: 682248370}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &946510024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 946510025}
+  - component: {fileID: 946510027}
+  - component: {fileID: 946510026}
+  m_Layer: 5
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &946510025
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946510024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 502838706}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 119.29611, y: 259.88}
+  m_SizeDelta: {x: 543.7852, y: 108.13}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &946510026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946510024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 70
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 82
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Timer
+
+'
+--- !u!222 &946510027
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946510024}
+  m_CullTransparentMesh: 1
 --- !u!1 &982113449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3515,7 +3612,7 @@ MonoBehaviour:
         m_Action: Join
         m_Flags: 0
     m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 5282293512886239477, guid: a0c28cfaf78b35c42b5c4b1259e75840, type: 3}
+  m_PlayerPrefab: {fileID: 0}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
@@ -3554,7 +3651,7 @@ MonoBehaviour:
   greenSquare: {fileID: 5282293512886239477, guid: a0c28cfaf78b35c42b5c4b1259e75840, type: 3}
   redCircle: {fileID: 16619163561104165, guid: 2bdf60b866f7eb84d97e56a47acb7b67, type: 3}
   astronaut: {fileID: 4984386384245026592, guid: 7af42e69bf7c4b847a4ac49d3587b702, type: 3}
-  narbyDallin: {fileID: 7060163434291303149, guid: 5d83b83be830f2c409f63dacb9b7951e, type: 3}
+  narbyDallin: {fileID: 4663134724265259534, guid: 85d1c001e34df8f4db8d616a44eaa05d, type: 3}
   playerOneSpawn: {fileID: 1351001461}
   playerTwoSpawn: {fileID: 6719893769396485900}
   playerCount: 1
@@ -4248,7 +4345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1678071453
 MonoBehaviour:
   m_ObjectHideFlags: 0

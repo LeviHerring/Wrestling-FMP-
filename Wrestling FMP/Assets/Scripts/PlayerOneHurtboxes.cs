@@ -128,7 +128,8 @@ public class PlayerOneHurtboxes : MonoBehaviour
             if (submissionNo == randomSubmit)
             {
                 Debug.Log("Submitted");
-                hasWonSubmit = false; 
+                hasWonSubmit = false;
+                SceneManager.LoadScene(playerString + "Wins"); 
                 //go to gave overscreen!!!
             }
             else

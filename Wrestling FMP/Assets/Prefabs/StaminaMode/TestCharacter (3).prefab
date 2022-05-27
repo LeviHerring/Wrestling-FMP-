@@ -945,7 +945,7 @@ MonoBehaviour:
   redCircle: {fileID: 16619163561104165}
   greenSquare: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
   astronaut: {fileID: 229860932542687020, guid: 59801480f8908534da088fe84a808b94, type: 3}
-  narbyDallin: {fileID: 5534267963017594214, guid: 1a74f8ae51111bc4b9e9a955f4407b9e, type: 3}
+  narbyDallin: {fileID: 4663134724265259534, guid: 85d1c001e34df8f4db8d616a44eaa05d, type: 3}
   playerNo: 0
 --- !u!114 &2742403793480586343
 MonoBehaviour:

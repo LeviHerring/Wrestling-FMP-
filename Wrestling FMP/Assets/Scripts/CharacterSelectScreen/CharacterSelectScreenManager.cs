@@ -28,6 +28,36 @@ public class CharacterSelectScreenManager : MonoBehaviour
     {
         //playerOne = GameObject.FindGameObjectWithTag("PlayerOne");
         //playerTwo = GameObject.FindGameObjectWithTag("PlayerTwo");
+        string powerupsText = PlayerPrefs.GetString("powerups");
+        string hazardsText = PlayerPrefs.GetString("hazards");
+        string itemsText = PlayerPrefs.GetString("items"); 
+
+        if(powerupsText == "true")
+        {
+            powerups.text = "powerups: On";
+        }
+        else
+        {
+            powerups.text = "powerups: off";
+        }
+
+        if(hazardsText == "true")
+        {
+            hazards.text = "hazards: On";
+        }
+        else
+        {
+            hazards.text = "hazards: off";
+        }
+
+        if(itemsText == "true")
+        {
+            items.text = "items: On";
+        }
+        else
+        {
+            items.text = "items: off";
+        }
     }
 
     // Update is called once per frame
@@ -36,11 +66,11 @@ public class CharacterSelectScreenManager : MonoBehaviour
         if(playerOne == null)
         {
             playerOne = GameObject.FindGameObjectWithTag("PlayerOne");
-            playerTwo = GameObject.FindGameObjectWithTag("PlayerTwo");
+            //playerTwo = GameObject.FindGameObjectWithTag("PlayerTwo");
         }
         if (playerTwo == null)
         {
-            playerOne = GameObject.FindGameObjectWithTag("PlayerOne");
+            //playerOne = GameObject.FindGameObjectWithTag("PlayerOne");
             playerTwo = GameObject.FindGameObjectWithTag("PlayerTwo");
         }
 
@@ -49,6 +79,10 @@ public class CharacterSelectScreenManager : MonoBehaviour
         {
             panel.SetActive(true); 
         }
+
+
+
+
     }
 
     public void StartButton()
@@ -57,39 +91,44 @@ public class CharacterSelectScreenManager : MonoBehaviour
         {
             case 0:
                 PlayerPrefs.SetString("playerOne", "Astronaut");
-                Debug.Log("Player 1 selected");
+                Debug.Log("Player 1 selected Astronaut");
                 break;
 
             case 1:
                 PlayerPrefs.SetString("playerOne", "RedCircle");
+                Debug.Log("Player 1 selected RedCirlce");
                 break;
 
             case 2:
                 PlayerPrefs.SetString("playerOne", "GreenSquare");
+                Debug.Log("Player 1 selected Green Square");
                 break;
 
             case 3:
                 PlayerPrefs.SetString("playerOne", "NarbyDallin");
+                Debug.Log("Player 1 selected NarbyDallin");
                 break;
         }
         switch (playerTwo.GetComponent<CharacterSelectScreenController>().position)
         {
             case 0:
                 PlayerPrefs.SetString("playerTwo", "Astronaut");
-                Debug.Log("Player 2 selected Red circle");
+                Debug.Log("Player 2 selected Astronaut");
                 break;
 
             case 1:
                 PlayerPrefs.SetString("playerTwo", "RedCircle");
-                Debug.Log("Player 2 selected Green Square");
+                Debug.Log("Player 2 selected Red circle");
                 break;
 
             case 2:
                 PlayerPrefs.SetString("playerTwo", "Greensquare");
+                Debug.Log("Player 2 selected Green Square");
                 break;
 
             case 3:
                 PlayerPrefs.SetString("playerOne", "NarbyDallin");
+                Debug.Log("Player 2 selected Skeleton");
                 break;
         }
         SceneManager.LoadScene("SampleScene");

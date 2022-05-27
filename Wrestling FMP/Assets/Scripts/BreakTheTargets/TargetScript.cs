@@ -13,7 +13,7 @@ public class TargetScript : MonoBehaviour
             Destroy(gameObject);
             targetGlobalVariables.targetNo--; 
         }
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "PlayerOne")
         {
             Destroy(gameObject);
             targetGlobalVariables.targetNo--;

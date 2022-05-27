@@ -44,7 +44,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        staminaText.text = stamina + ""; 
+        staminaText.text = stamina + "/100"; 
         healthText.text = health + "%";  
         if (superMetreCharge > 1)
         {

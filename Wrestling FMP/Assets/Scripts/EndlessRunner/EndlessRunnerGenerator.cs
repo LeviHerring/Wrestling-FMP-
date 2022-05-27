@@ -26,7 +26,7 @@ public class EndlessRunnerGenerator : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player"); 
+        player = GameObject.FindGameObjectWithTag("PlayerOne"); 
     }
 
     private void Update()
@@ -38,7 +38,7 @@ public class EndlessRunnerGenerator : MonoBehaviour
 
         if(player == null)
         {
-            player = GameObject.FindGameObjectWithTag("Player");
+            player = GameObject.FindGameObjectWithTag("PlayerOne");
         }
     }
 

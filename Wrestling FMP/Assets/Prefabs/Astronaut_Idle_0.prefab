@@ -426,11 +426,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15bc4cc5e0855db4d909f893f7beb461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAttacking: 0
+  isAttacking: 1
   animator: {fileID: 229860932542687021}
   isMoving: 0
   neutral: {fileID: 4794048294163354706}
-  special: {fileID: 0}
+  special: {fileID: 4794048294163354706}
   strong: {fileID: 5868957164408165344}
   pinHitbox: {fileID: 683118468212368005}
   submitHitbox: {fileID: 6065003458797389372}
@@ -498,7 +498,7 @@ MonoBehaviour:
   redCircle: {fileID: 1097543221296233371, guid: 1b9f1519aed982140975a2a9fb928d2d, type: 3}
   greenSquare: {fileID: 5817951291928251930, guid: 8eebd5defbb66cc4ba7c67eaaf211a1f, type: 3}
   astronaut: {fileID: 229860932542687020}
-  narbyDallin: {fileID: 5534267963017594214, guid: 1a74f8ae51111bc4b9e9a955f4407b9e, type: 3}
+  narbyDallin: {fileID: 8568263124897379617, guid: 2903ebed4b91fd84fa35f1d1c8a71f65, type: 3}
   playerNo: 0
 --- !u!114 &1170724826542785424
 MonoBehaviour:
@@ -639,12 +639,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7859d6c961fca41892804b985ec9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  staminaPoints: 0
+  damageAmount: 6
+  staminaPoints: 7
   damageAmountDivide: 0
   damageManager: {fileID: 4018765459121667950}
-  superMetreChargeAmount: 0
-  knockback: {x: 5, y: 5}
+  superMetreChargeAmount: 0.001
+  knockback: {x: 5, y: 6}
   verticalKnockbackForce: 0
   hitstun: 0.001
   playerWithHitboxes: {fileID: 229860932542687020}
@@ -1109,7 +1109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1323453726216790540
 Transform:
   m_ObjectHideFlags: 0
